@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
 import { JsonLd, generateBreadcrumbSchema, generateWebPageSchema } from '@/lib/seo/schema';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserGroup, faUsers, faHeart, faGift, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Despre Cabană - Dotări, Facilități și Poveste',
@@ -120,7 +122,7 @@ export default function CabanaPage() {
               <div key={index} className="card p-6">
                 <h3 className="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
                   <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary">
-                    ✓
+                    <FontAwesomeIcon icon={faCheck} className="w-4 h-4" />
                   </span>
                   {section.category}
                 </h3>
@@ -214,11 +216,13 @@ export default function CabanaPage() {
       <section className="section bg-surface">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-12 text-center">
-            Pentru Cine Este Potrivită Cabana?
+            Pentru cine este potrivită cabana?
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="card p-8 text-center">
-              <div className="text-5xl mb-4">👨‍👩‍👧‍👦</div>
+              <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
+                <FontAwesomeIcon icon={faUserGroup} className="w-12 h-12" />
+              </div>
               <h3 className="text-xl font-semibold text-primary mb-3">Familii cu Copii</h3>
               <p className="text-text-light">
                 Spațiu amplu, curte sigură, jocuri pentru copii și facilități complete pentru
@@ -226,14 +230,18 @@ export default function CabanaPage() {
               </p>
             </div>
             <div className="card p-8 text-center">
-              <div className="text-5xl mb-4">👫</div>
+              <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
+                <FontAwesomeIcon icon={faUsers} className="w-12 h-12" />
+              </div>
               <h3 className="text-xl font-semibold text-primary mb-3">Grupuri de Prieteni</h3>
               <p className="text-text-light">
                 Perfectă pentru reuniuni, weekend-uri relaxante sau petreceri private în natură.
               </p>
             </div>
             <div className="card p-8 text-center">
-              <div className="text-5xl mb-4">💑</div>
+              <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
+                <FontAwesomeIcon icon={faHeart} className="w-12 h-12" />
+              </div>
               <h3 className="text-xl font-semibold text-primary mb-3">Cupluri Romantice</h3>
               <p className="text-text-light">
                 Intimitate, liniște, ciubar sub stele și apusuri spectaculoase pentru momente de
@@ -241,7 +249,9 @@ export default function CabanaPage() {
               </p>
             </div>
             <div className="card p-8 text-center">
-              <div className="text-5xl mb-4">🎉</div>
+              <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
+                <FontAwesomeIcon icon={faGift} className="w-12 h-12" />
+              </div>
               <h3 className="text-xl font-semibold text-primary mb-3">Evenimente Speciale</h3>
               <p className="text-text-light">
                 Aniversări, cereri în căsătorie, team-building sau sărbători în cadru privat și
@@ -256,7 +266,7 @@ export default function CabanaPage() {
       <section className="section bg-primary text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            Convins? Rezervă Acum!
+            Convins? Rezervă acum!
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Nu lăsa pe altcineva să îți ia weekendul perfect. Verifică disponibilitatea și
