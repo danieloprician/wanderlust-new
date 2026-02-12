@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 // import { Inter, Merriweather } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/lib/seo/config';
+import { config } from '@fortawesome/fontawesome-svg-core';
+
+// Prevent Font Awesome from auto-adding CSS since we did it manually above
+config.autoAddCss = false;
 
 // Temporarily disabled Google Fonts due to certificate issues
 // Use system fonts fallback defined in CSS

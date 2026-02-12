@@ -2,6 +2,14 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
 import { JsonLd, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo/schema';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faMountain, 
+  faPersonHiking, 
+  faLandmark, 
+  faHorse,
+  faChildren 
+} from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Întrebări Frecvente (FAQ) - Tot Ce Trebuie Să Știi',
@@ -50,19 +58,14 @@ const faqs = [
     question: 'Bucătăria este echipată complet?',
     answer:
       'Da, bucătăria este complet utilată cu aragaz, cuptor, frigider, mașină de spălat vase, cafetieră, fierbător, ustensile de gătit și tacâmuri. Nu trebuie să aduci decât alimentele.',
-  },
-  {
-    question: 'Care este politica de anulare?',
-    answer:
-      'Anulare cu 30+ zile înainte: rambursare 100%. Anulare cu 15-29 zile înainte: rambursare 50%. Anulare cu mai puțin de 14 zile: fără rambursare. În cazuri de forță majoră, politica poate fi renegociată.',
-  },
+  },  
   {
     question: 'Ce atracții turistice sunt în apropiere?',
     answer: (
       <div className="space-y-4">
         <div>
           <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-            <span>🏞️</span> Natură & Peisaje
+            <span><FontAwesomeIcon icon={faMountain} className="text-primary" /></span> Natură & Peisaje
           </h4>
           <ul className="space-y-1 ml-6 list-disc">
             <li><strong>Valea Avrigului</strong> – zonă turistică ce se întinde de-a lungul râului Avrig, cu cabane, pensiuni și peisaje montane liniștite</li>
@@ -73,7 +76,7 @@ const faqs = [
 
         <div>
           <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-            <span>🥾</span> Trasee Montane
+            <span><FontAwesomeIcon icon={faPersonHiking} className="text-primary" /></span> Trasee Montane
           </h4>
           <ul className="space-y-1 ml-6 list-disc">
             <li>Avrig → Izvorul Florii → Suru → Lacul Avrig → Negoiu → Bâlea</li>
@@ -84,7 +87,7 @@ const faqs = [
 
         <div>
           <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-            <span>🏛️</span> Obiective Culturale & Istorice (în Avrig)
+            <span><FontAwesomeIcon icon={faLandmark} className="text-primary" /></span> Obiective Culturale & Istorice (în Avrig)
           </h4>
           <ul className="space-y-1 ml-6 list-disc">
             <li><strong>Palatul Brukenthal</strong> – palat baroc cu parc, alei și zone istorice</li>
@@ -100,7 +103,7 @@ const faqs = [
 
         <div>
           <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-            <span>🐎</span> Activități Recreative
+            <span><FontAwesomeIcon icon={faHorse} className="text-primary" /></span> Activități Recreative
           </h4>
           <ul className="space-y-1 ml-6 list-disc">
             <li>Drumeții pe trasee marcate</li>
@@ -112,7 +115,7 @@ const faqs = [
 
         <div>
           <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-            <span>🎠</span> Atracții Moderne / Parcuri
+            <span><FontAwesomeIcon icon={faChildren} className="text-primary" /></span> Atracții Moderne / Parcuri
           </h4>
           <ul className="space-y-1 ml-6 list-disc">
             <li><strong>Brambura Park & Casa Întoarsă</strong> – atracție pentru familii</li>
@@ -131,17 +134,7 @@ const faqs = [
   {
     question: 'Există magazine sau restaurante în apropiere?',
     answer:
-      'Cel mai apropiat magazin alimentar este la 5 km (10 minute cu mașina). În {{CITY}} (15 km) găsiți supermarketuri și restaurante. Recomandăm să vă aprovizionați înainte de a ajunge la cabană.',
-  },
-  {
-    question: 'Pot organiza un eveniment privat (aniversare, petrecere)?',
-    answer:
-      'Da, cabana este perfectă pentru evenimente private mici (până la 8 persoane). Pentru evenimente mai mari sau cu muzică puternică după ora 22:00, vă rugăm să ne contactați în avans pentru a discuta detaliile.',
-  },
-  {
-    question: 'Este posibilă plata cu cardul?',
-    answer:
-      'Da, acceptăm plata cu cardul la check-in. De asemenea, puteți face transfer bancar (IBAN furnizat la confirmare). Un avans de 30% este necesar pentru confirmarea rezervării.',
+       `Cel mai apropiat restaurant, Popasul Montan este la 3 minute cu mașina sau la 5 min restaurantul Ghiocelul. În ${siteConfig.contact.city} (7.5 km) găsiți supermarketuri, magazine și carmangerii. Recomandăm să vă aprovizionați înainte de a ajunge la cabană.`,
   },
   {
     question: 'Există semnal telefonic?',
