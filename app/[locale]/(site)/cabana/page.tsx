@@ -41,10 +41,11 @@ export default async function CabanaPage({ params: { locale } }: { params: { loc
     <>
       <JsonLd
         data={generateWebPageSchema(
-          'About the Cabin - Amenities and Facilities',
-          metadata.description as string,
+          t('title'),
+          t('subtitle'),
           `${siteConfig.url}/cabana`,
-          breadcrumbs
+          breadcrumbs,
+          locale
         )}
       />
       <JsonLd data={generateBreadcrumbSchema(breadcrumbs)} />
@@ -144,67 +145,67 @@ export default async function CabanaPage({ params: { locale } }: { params: { loc
       <section className="section">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-12 text-center">
-            Room Layout
+            {t('floorPlan.heading')}
           </h2>
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="card p-6">
-              <h3 className="text-2xl font-semibold text-primary mb-4">Ground Floor</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-4">{t('floorPlan.groundFloor')}</h3>
               <ul className="space-y-3 text-text-light">
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Main Living:</span>
-                  <span>Sofa bed, fireplace, smart TV, terrace access (35m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">{t('floorPlan.rooms.mainLiving.label')}</span>
+                  <span>{t('floorPlan.rooms.mainLiving.description')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Kitchen:</span>
-                  <span>Fully equipped, table for 8 people, bar (25m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">{t('floorPlan.rooms.kitchen.label')}</span>
+                  <span>{t('floorPlan.rooms.kitchen.description')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Bathroom:</span>
-                  <span>Shower, WC, sink, underfloor heating (6m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">{t('floorPlan.rooms.bathroom1.label')}</span>
+                  <span>{t('floorPlan.rooms.bathroom1.description')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Bedroom 1:</span>
-                  <span>Double bed, wardrobe, direct garden access (18m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">{t('floorPlan.rooms.bedroom1.label')}</span>
+                  <span>{t('floorPlan.rooms.bedroom1.description')}</span>
                 </li>
               </ul>
             </div>
 
             <div className="card p-6">
-              <h3 className="text-2xl font-semibold text-primary mb-4">First Floor</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-4">{t('floorPlan.firstFloor')}</h3>
               <ul className="space-y-3 text-text-light">
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Bedroom 2:</span>
-                  <span>Double bed, desk, balcony with view (20m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">{t('floorPlan.rooms.bedroom2.label')}</span>
+                  <span>{t('floorPlan.rooms.bedroom2.description')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Bedroom 3:</span>
-                  <span>2 bunk beds, children's play area (16m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">{t('floorPlan.rooms.bedroom3.label')}</span>
+                  <span>{t('floorPlan.rooms.bedroom3.description')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Bathroom:</span>
-                  <span>Bathtub, WC, sink, washing machine (7m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">{t('floorPlan.rooms.bathroom2.label')}</span>
+                  <span>{t('floorPlan.rooms.bathroom2.description')}</span>
                 </li>
               </ul>
             </div>
 
             <div className="card p-6 bg-primary/5">
-              <h3 className="text-2xl font-semibold text-primary mb-4">Outdoor</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-4">{t('floorPlan.outdoor')}</h3>
               <ul className="space-y-3 text-text-light">
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Hot Tub:</span>
-                  <span>Wood-heated, capacity 6 people</span>
+                  <span className="font-semibold text-accent min-w-[140px]">{t('floorPlan.rooms.hotTub.label')}</span>
+                  <span>{t('floorPlan.rooms.hotTub.description')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Sauna:</span>
-                  <span>Finnish, capacity 4 people, changing rooms</span>
+                  <span className="font-semibold text-accent min-w-[140px]">{t('floorPlan.rooms.sauna.label')}</span>
+                  <span>{t('floorPlan.rooms.sauna.description')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Barbecue:</span>
-                  <span>Covered area, outdoor table, chairs</span>
+                  <span className="font-semibold text-accent min-w-[140px]">{t('floorPlan.rooms.barbecue.label')}</span>
+                  <span>{t('floorPlan.rooms.barbecue.description')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Garden:</span>
-                  <span>500m², swings, children's playhouse, parking for 3 cars</span>
+                  <span className="font-semibold text-accent min-w-[140px]">{t('floorPlan.rooms.garden.label')}</span>
+                  <span>{t('floorPlan.rooms.garden.description')}</span>
                 </li>
               </ul>
             </div>

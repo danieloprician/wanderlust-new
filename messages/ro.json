@@ -17,6 +17,31 @@
     "email": "Email",
     "address": "Adresă"
   },
+  "footer": {
+    "description": "Cabană de închiriat în {region}, {country}. Experiență unică în natură, cu dotări premium pentru confortul tău.",
+    "address": "Adresă:",
+    "phone": "Telefon:",
+    "email": "Email:",
+    "explore": {
+      "heading": "Explorare",
+      "cabin": "Cabana",
+      "gallery": "Galerie",
+      "rates": "Tarife",
+      "reservations": "Rezervări"
+    },
+    "info": {
+      "heading": "Informații",
+      "contact": "Contact",
+      "faq": "FAQ",
+      "terms": "Termeni și condiții",
+      "privacy": "Politica de confidențialitate"
+    },
+    "social": {
+      "heading": "Urmărește-ne"
+    },
+    "copyright": "Toate drepturile rezervate.",
+    "tagline": "Dezvoltat cu ❤️ pentru experiențe unice în natură"
+  },
   "nav": {
     "home": "Acasă",
     "cabin": "Cabana",
@@ -33,6 +58,10 @@
     "virtualTour": "Tur virtual 360°"
   },
   "home": {
+    "metadata": {
+      "title": "{siteName} - Cabană de închiriat în {region}",
+      "description": "Descoperă {siteName}, cabana perfectă pentru vacanțe la munte în {region}. Ciubar, saună, semineu și natură autentică. Rezervă acum!"
+    },
     "cta": {
       "heading": "Gata să creezi amintiri de neuitat?",
       "description": "Rezervă acum și bucură-te de o experiență unică la munte",
@@ -122,6 +151,58 @@
       "events": {
         "title": "Evenimente Speciale",
         "description": "Aniversări, cereri în căsătorie, team-building sau sărbători în cadru privat și exclusivist."
+      }
+    },
+    "floorPlan": {
+      "heading": "Planul Camerelor",
+      "groundFloor": "Parter",
+      "firstFloor": "Etaj",
+      "outdoor": "Exterior",
+      "rooms": {
+        "mainLiving": {
+          "label": "Living Principal:",
+          "description": "Canapea extensibilă, șemineu, smart TV, acces terasă (35m²)"
+        },
+        "kitchen": {
+          "label": "Bucătărie:",
+          "description": "Complet utilată, masă pentru 8 persoane, bar (25m²)"
+        },
+        "bathroom1": {
+          "label": "Baie:",
+          "description": "Duș, WC, lavoar, încălzire în pardoseală (6m²)"
+        },
+        "bedroom1": {
+          "label": "Dormitor 1:",
+          "description": "Pat dublu, dulap, acces direct în grădină (18m²)"
+        },
+        "bedroom2": {
+          "label": "Dormitor 2:",
+          "description": "Pat dublu, birou, balcon cu vedere (20m²)"
+        },
+        "bedroom3": {
+          "label": "Dormitor 3:",
+          "description": "2 paturi suprapuse, zonă de joacă copii (16m²)"
+        },
+        "bathroom2": {
+          "label": "Baie:",
+          "description": "Cadă, WC, lavoar, mașină de spălat (7m²)"
+        },
+        "hotTub": {
+          "label": "Ciubar:",
+          "description": "Încălzit pe lemne, capacitate 6 persoane"
+        },
+        "sauna": {
+          "label": "Saună:",
+          "description": "Finlandeză, capacitate 4 persoane, vestiare"
+        },
+        "barbecue": {
+          "label": "Grătar:",
+          "description": "Zonă acoperită, masă exterior, scaune"
+        },
+        "garden": {
+          "label": "Grădină:",
+          "description": "500m², leagăne, căsuță copii, parcare 3 mașini"
+        }
       }
     },
     "cta": {
@@ -336,18 +417,5 @@
         "cancellation": "Politică de anulare flexibilă"
       }
     }
-  },
-  "footer": {
-    "description": "Cabană autentică în inima Munților Făgăraș. Cazare perfectă pentru familii, cupluri sau grupuri de prieteni care caută liniște, aventură și reconectare cu natura.",
-    "quickLinks": "Link-uri Rapide",
-    "legal": "Legal",
-    "followUs": "Urmărește-ne",
-    "newsletter": {
-      "title": "Newsletter",
-      "description": "Abonează-te pentru oferte exclusive",
-      "placeholder": "Adresa ta de email",
-      "subscribe": "Abonează-te"
-    },
-    "copyright": "Toate drepturile rezervate."
   }
 }

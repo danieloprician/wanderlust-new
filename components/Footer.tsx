@@ -1,23 +1,29 @@
 import Link from 'next/link';
 import { siteConfig } from '@/lib/seo/config';
+import { getTranslations } from 'next-intl/server';
 
-const footerLinks = {
-  explorare: [
-    { name: 'Cabana', href: '/cabana' },
-    { name: 'Galerie', href: '/galerie' },
-    { name: 'Tarife', href: '/tarife' },
-    { name: 'Rezervări', href: '/rezervari' },
-  ],
-  informatii: [
-    { name: 'Contact', href: '/contact' },
-    { name: 'FAQ', href: '/faq' },
-    { name: 'Termeni și condiții', href: '/termeni' },
-    { name: 'Politica de confidențialitate', href: '/politica-confidentialitate' },
-  ],
-};
+interface FooterProps {
+  locale: string;
+}
 
-export default function Footer() {
+export default async function Footer({ locale }: FooterProps) {
+  const t = await getTranslations({ locale, namespace: 'footer' });
   const currentYear = new Date().getFullYear();
+
+  const footerLinks = {
+    explorare: [
+      { name: t('explore.cabin'), href: '/cabana' },
+      { name: t('explore.gallery'), href: '/galerie' },
+      { name: t('explore.rates'), href: '/tarife' },
+      { name: t('explore.reservations'), href: '/rezervari' },
+    ],
+    informatii: [
+      { name: t('info.contact'), href: '/contact' },
+      { name: t('info.faq'), href: '/faq' },
+      { name: t('info.terms'), href: '/termeni' },
+      { name: t('info.privacy'), href: '/politica-confidentialitate' },
+    ],
+  };
 
   return (
     <footer className="bg-primary text-white" role="contentinfo">
@@ -36,19 +42,20 @@ export default function Footer() {
                 {siteConfig.tagline}
               </p>
               <p className="text-sm text-white/70 mb-6">
-                Cabană de închiriat în {siteConfig.contact.region},{' '}
-                {siteConfig.contact.country}. Experiență unică în natură, cu dotări premium
-                pentru confortul tău.
+                {t('description', { 
+                  region: siteConfig.contact.region, 
+                  country: siteConfig.contact.country 
+                })}
               </p>
 
               {/* NAP - Local SEO */}
               <address className="not-italic text-sm text-white/80 space-y-2">
                 <p>
-                  <strong>Adresă:</strong> {siteConfig.contact.address},{' '}
+                  <strong>{t('address')}</strong> {siteConfig.contact.address},{' '}
                   {siteConfig.contact.city}, {siteConfig.contact.region}
                 </p>
                 <p>
-                  <strong>Telefon:</strong>{' '}
+                  <strong>{t('phone')}</strong>{' '}
                   <a
                     href={`tel:${siteConfig.contact.phone}`}
                     className="hover:text-accent transition-colors"
@@ -57,7 +64,7 @@ export default function Footer() {
                   </a>
                 </p>
                 <p>
-                  <strong>Email:</strong>{' '}
+                  <strong>{t('email')}</strong>{' '}
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
                     className="hover:text-accent transition-colors"
@@ -70,7 +77,7 @@ export default function Footer() {
 
             {/* Explorare */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Explorare</h3>
+              <h3 className="text-lg font-semibold mb-4">{t('explore.heading')}</h3>
               <ul className="space-y-2">
                 {footerLinks.explorare.map((link) => (
                   <li key={link.name}>
@@ -87,7 +94,7 @@ export default function Footer() {
 
             {/* Informații */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Informații</h3>
+              <h3 className="text-lg font-semibold mb-4">{t('info.heading')}</h3>
               <ul className="space-y-2">
                 {footerLinks.informatii.map((link) => (
                   <li key={link.name}>
@@ -103,7 +110,7 @@ export default function Footer() {
 
               {/* Social Media */}
               <div className="mt-6">
-                <h4 className="text-sm font-semibold mb-3">Urmărește-ne</h4>
+                <h4 className="text-sm font-semibold mb-3">{t('social.heading')}</h4>
                 <div className="flex space-x-4">
                   {siteConfig.social.facebook && (
                     <a
@@ -154,10 +161,10 @@ export default function Footer() {
         <div className="border-t border-white/20 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
             <p>
-              &copy; {currentYear} {siteConfig.name}. Toate drepturile rezervate.
+              &copy; {currentYear} {siteConfig.name}. {t('copyright')}
             </p>
             <p className="mt-2 md:mt-0">
-              Dezvoltat cu ❤️ pentru experiențe unice în natură
+              {t('tagline')}
             </p>
           </div>
         </div>

@@ -177,7 +177,8 @@ export function generateWebPageSchema(
   name: string,
   description: string,
   url: string,
-  breadcrumbs?: { name: string; path: string }[]
+  breadcrumbs?: { name: string; path: string }[],
+  locale: string = 'ro'
 ) {
   return {
     '@context': 'https://schema.org',
@@ -188,7 +189,7 @@ export function generateWebPageSchema(
     ...(breadcrumbs && {
       breadcrumb: generateBreadcrumbSchema(breadcrumbs),
     }),
-    inLanguage: 'ro',
+    inLanguage: locale,
     isPartOf: {
       '@type': 'WebSite',
       name: siteConfig.name,

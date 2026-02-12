@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBath, faFire, faMountain, faUsers, faWifi } from "@fortawesome/free-solid-svg-icons";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { getTranslations } from 'next-intl/server';
 
 interface USP {
   icon: IconDefinition;
@@ -8,40 +9,41 @@ interface USP {
   description: string;
 }
 
-const defaultUSPs: USP[] = [
-  {
-    icon: faBath,
-    title: 'Ciubar cu apă caldă',
-    description: 'Relaxare totală sub cerul înstelat, în ciubarul tradițional cu apă încălzită pe lemne',
-  },
-  {
-    icon: faFire,
-    title: 'Semineu & Fire Pit',
-    description: 'Pentru seri memorabile în jurul focului, cu lemne de foc și șemineu interior pentru un plus de confort',
-  },
-  {
-    icon: faMountain,
-    title: 'Natură 100%',
-    description: 'Amplasată într-o zonă liniștită, înconjurată de pădure și cu privelişte spectaculoasă',
-  },
-  {
-    icon: faUsers,
-    title: 'Perfect pentru Familii',
-    description: 'Spațiu generos pentru 8 persoane, curte amenajată și activități pentru copii',
-  },
-  {
-    icon: faWifi,
-    title: 'WiFi',
-    description: 'Daca alegi sa lucrezi de la cabana, avem WiFi puternic pentru a te conecta cu lumea exterioară fără probleme',
-  },
-];
-
 interface USPListProps {
-  usps?: USP[];
+  locale: string;
   columns?: 2 | 3 | 4;
 }
 
-export default function USPList({ usps = defaultUSPs, columns = 3 }: USPListProps) {
+export default async function USPList({ locale, columns = 3 }: USPListProps) {
+  const t = await getTranslations({ locale, namespace: 'usp' });
+  
+  const usps: USP[] = [
+    {
+      icon: faBath,
+      title: t('hotTub.title'),
+      description: t('hotTub.description'),
+    },
+    {
+      icon: faFire,
+      title: t('firepit.title'),
+      description: t('firepit.description'),
+    },
+    {
+      icon: faMountain,
+      title: t('nature.title'),
+      description: t('nature.description'),
+    },
+    {
+      icon: faUsers,
+      title: t('family.title'),
+      description: t('family.description'),
+    },
+    {
+      icon: faWifi,
+      title: t('wifi.title'),
+      description: t('wifi.description'),
+    },
+  ];
   const gridCols = {
     2: 'md:grid-cols-2',
     3: 'md:grid-cols-2 lg:grid-cols-3',
@@ -53,10 +55,10 @@ export default function USPList({ usps = defaultUSPs, columns = 3 }: USPListProp
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
-            De ce să alegi cabana noastră?
+            {t('heading')}
           </h2>
           <p className="text-lg text-text-light max-w-2xl mx-auto">
-            Oferim o experiență completă pentru o evadare perfectă din rutină
+            {t('description')}
           </p>
         </div>
 
