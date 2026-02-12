@@ -4,23 +4,25 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/lib/seo/config';
 import LanguageSwitcher from './LanguageSwitcher';
 
-const navigation = [
-  { name: 'Acasă', href: '/' },
-  { name: 'Cabana', href: '/cabana' },
-  { name: 'Galerie', href: '/galerie' },
-  { name: 'Tarife', href: '/tarife' },
-  { name: 'Rezervări', href: '/rezervari' },
-  { name: 'Contact', href: '/contact' },
-  { name: 'FAQ', href: '/faq' },
-];
-
 export default function Header() {
+  const t = useTranslations('common');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  const navigation = [
+    { name: t('home'), href: '/' },
+    { name: t('cabin'), href: '/cabana' },
+    { name: t('gallery'), href: '/galerie' },
+    //{ name: t('rates'), href: '/tarife' },
+    //{ name: t('reservations'), href: '/rezervari' },
+    { name: t('contact'), href: '/contact' },
+    { name: t('faq'), href: '/faq' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +50,7 @@ export default function Header() {
   return (
     <>
       <a href="#main-content" className="skip-to-content">
-        Sari la conținut
+        {t('home')}
       </a>
 
       <header
@@ -56,7 +58,7 @@ export default function Header() {
           scrolled ? 'bg-surface/95 backdrop-blur-md shadow-md' : 'bg-transparent'
         }`}
       >
-        <nav className="container-custom" aria-label="Navigare principală">
+        <nav className="container-custom" aria-label="Main navigation">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link
@@ -94,7 +96,7 @@ export default function Header() {
               ))}
               <LanguageSwitcher />
               <Link href="/rezervari" className="btn-accent btn-sm">
-                Rezervă acum
+                {t('bookNow')}
               </Link>
             </div>
 
@@ -104,7 +106,7 @@ export default function Header() {
               className="lg:hidden p-2 text-text hover:text-accent transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}
-              aria-label="Deschide meniul"
+              aria-label="Open menu"
             >
               <svg
                 className="h-6 w-6"
@@ -150,7 +152,7 @@ export default function Header() {
                 <LanguageSwitcher />
               </div>
               <Link href="/rezervari" className="btn-accent w-full mt-4">
-                Rezervă acum
+                {t('bookNow')}
               </Link>
             </div>
           </div>

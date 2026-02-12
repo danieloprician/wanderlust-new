@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import { getTranslations } from 'next-intl/server';
 import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
 import { JsonLd, generateBreadcrumbSchema, generatePlaceSchema } from '@/lib/seo/schema';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,18 +18,25 @@ const Map = dynamic(() => import('@/components/Map'), {
   ),
 });
 
-export const metadata: Metadata = generatePageMetadata({
-  title: 'Contact - Address, Phone, Schedule and Map',
-  description: `Contact ${siteConfig.name}. Phone: ${siteConfig.contact.phone}. Email: ${siteConfig.contact.email}. Address: ${siteConfig.contact.address}, ${siteConfig.contact.city}.`,
-  path: '/contact',
-});
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'contact' });
+  
+  return generatePageMetadata({
+    title: t('title'),
+    description: t('subtitle'),
+    path: '/contact',
+  });
+}
 
 export const revalidate = 604800; // 1 week
 
-export default function ContactPage() {
+export default async function ContactPage({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'contact' });
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
+  
   const breadcrumbs = [
-    { name: 'Home', path: '/' },
-    { name: 'Contact', path: '/contact' },
+    { name: tCommon('home'), path: '/' },
+    { name: tCommon('contact'), path: '/contact' },
   ];
 
   return (
@@ -40,9 +48,10 @@ export default function ContactPage() {
       <section className="section bg-primary text-white">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4">
-            Contact Us</h1>
+            {t('title')}
+          </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            We're here to answer all your questions
+            {t('subtitle')}
           </p>
         </div>
       </section>
@@ -54,11 +63,11 @@ export default function ContactPage() {
             <ol className="flex items-center space-x-2 text-sm">
               <li>
                 <Link href="/" className="text-text-muted hover:text-accent">
-                  Home
+                  {tCommon('home')}
                 </Link>
               </li>
               <li className="text-text-muted">/</li>
-              <li className="text-text font-medium">Contact</li>
+              <li className="text-text font-medium">{tCommon('contact')}</li>
             </ol>
           </nav>
         </div>
@@ -73,14 +82,14 @@ export default function ContactPage() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4 mx-auto">
                 <FontAwesomeIcon icon={faPhone} className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Phone</h3>
+              <h3 className="text-xl font-semibold text-primary mb-2">{t('phone')}</h3>
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 className="text-lg text-text hover:text-accent transition-colors font-medium"
               >
                 {siteConfig.contact.phone}
               </a>
-              <p className="text-sm text-text-muted mt-2">Monday - Sunday, 9:00 AM - 9:00 PM</p>
+              <p className="text-sm text-text-muted mt-2">{t('phoneSchedule')}</p>
             </div>
 
             {/* Email */}
@@ -88,14 +97,14 @@ export default function ContactPage() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4 mx-auto">
                 <FontAwesomeIcon icon={faEnvelope} className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Email</h3>
+              <h3 className="text-xl font-semibold text-primary mb-2">{t('email')}</h3>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
                 className="text-lg text-text hover:text-accent transition-colors font-medium break-all"
               >
                 {siteConfig.contact.email}
               </a>
-              <p className="text-sm text-text-muted mt-2">We respond within 24 hours</p>
+              <p className="text-sm text-text-muted mt-2">{t('emailResponse')}</p>
             </div>
 
             {/* Address */}
@@ -103,7 +112,7 @@ export default function ContactPage() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4 mx-auto">
                 <FontAwesomeIcon icon={faLocationDot} className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Address</h3>
+              <h3 className="text-xl font-semibold text-primary mb-2">{t('address')}</h3>
               <address className="not-italic text-text-light">
                 {siteConfig.contact.address}
                 <br />
@@ -121,7 +130,7 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
-              Location on Map
+              {t('mapHeading')}
             </h2>
             <p className="text-lg text-text-light max-w-2xl mx-auto">
               GPS Coordinates: {siteConfig.geo.lat}, {siteConfig.geo.lng}
@@ -143,7 +152,7 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-8 text-center">
-              How to Get to the Cabin
+              {t('directionsHeading')}
             </h2>
             <div className="space-y-6">
               <div className="card p-6">

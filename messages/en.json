@@ -95,7 +95,15 @@
       "bedrooms": "Bedrooms",
       "bathrooms": "Bathrooms",
       "entertainment": "Entertainment",
-      "outdoor": "Outdoor"
+      "outdoor": "Outdoor",
+      "items": {
+        "relaxation": ["Hot tub", "Finnish sauna", "Stone fireplace", "Terrace with view"],
+        "kitchen": ["Stove", "Oven", "Refrigerator", "Dishwasher", "Complete utensils", "Coffee maker"],
+        "bedrooms": ["3 bedrooms", "Beds for 8 people", "Premium linen", "Spacious wardrobes"],
+        "bathrooms": ["2 complete bathrooms", "Hydromassage shower", "Underfloor heating", "Towels included"],
+        "entertainment": ["Smart TV", "High-speed WiFi", "Audio system", "Board games"],
+        "outdoor": ["Barbecue", "Garden furniture", "Swings for children", "Private parking", "Play area"]
+      }
     },
     "forWhom": {
       "heading": "Who is the cabin suitable for?",
@@ -153,6 +161,180 @@
       "description": "If you have additional questions or want to book directly, we are just a phone call away",
       "bookingForm": "Booking form",
       "callNow": "Call now"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about the cabin, facilities and bookings",
+    "stillHaveQuestions": {
+      "heading": "Still Have Questions?",
+      "description": "Didn't find the answer you were looking for? Contact us directly and we'll be happy to help!",
+      "contactUs": "Contact Us",
+      "sendEmail": "Send Email"
+    },
+    "usefulLinks": {
+      "heading": "Useful Links",
+      "aboutCabin": {
+        "title": "About the Cabin",
+        "description": "Amenities, facilities and room layout"
+      },
+      "ratesPolicies": {
+        "title": "Rates & Policies",
+        "description": "Prices, discounts and cancellation policies"
+      },
+      "bookings": {
+        "title": "Bookings",
+        "description": "Online booking form"
+      }
+    },
+    "questions": {
+      "q1": {
+        "question": "What is the maximum capacity of the cabin?",
+        "answer": "The cabin can accommodate up to 8 people. We have 3 bedrooms with beds for 6 people + a sofa bed in the living room for exceptional cases."
+      },
+      "q2": {
+        "question": "What is the check-in and check-out policy?",
+        "answer": "Check-in: {checkIn}. Check-out: {checkOut}. For late check-in or extended check-out, please contact us in advance - we will try to accommodate your requests based on availability."
+      },
+      "q3": {
+        "question": "Are pets allowed?",
+        "answer": "No, unfortunately we do not accept pets. This measure is taken for the comfort of all guests, including those with allergies."
+      },
+      "q4": {
+        "question": "Is parking available?",
+        "answer": "Yes, we have free private parking for up to 3 cars in the cabin yard. The parking is paved and lit at night."
+      },
+      "q5": {
+        "question": "Are the hot tub and sauna included in the price?",
+        "answer": "Yes, both the hot tub and Finnish sauna are included in the accommodation price. Firewood for heating the hot tub is also included. We will show you how to use them at check-in."
+      },
+      "q6": {
+        "question": "Is WiFi available?",
+        "answer": "Yes, we offer free high-speed WiFi throughout the cabin. The speed is sufficient for streaming, video conferencing and remote work."
+      },
+      "q7": {
+        "question": "How is access to the cabin in winter?",
+        "answer": "The road to the cabin is accessible year-round. In winter, in case of heavy snowfall, we recommend having winter tires. The last kilometer is on a forest road, but it is regularly maintained."
+      },
+      "q8": {
+        "question": "Is the kitchen fully equipped?",
+        "answer": "Yes, the kitchen is fully equipped with stove, oven, refrigerator, dishwasher, coffee maker, kettle, cooking utensils and cutlery. You only need to bring food."
+      },
+      "q9": {
+        "question": "What tourist attractions are nearby?",
+        "categories": {
+          "nature": "Nature & Landscapes",
+          "trails": "Mountain Trails",
+          "cultural": "Cultural & Historical Sites (in Avrig)",
+          "activities": "Recreational Activities",
+          "modern": "Modern Attractions / Parks"
+        },
+        "attractions": {
+          "avrigValley": "Avrig Valley – tourist area stretching along the Avrig River, with cabins, guesthouses and peaceful mountain landscapes",
+          "poianaNea": "Poiana Neamțului – end point of the valley and starting place for mountain trails to Bârcaciu, Suru, Lake Avrig",
+          "lakeAvrig": "Lake Avrig (2011 m alt.) – spectacular glacial lake, one of the most beautiful in the Făgăraș Mountains",
+          "trail1": "Avrig → Izvorul Florii → Suru → Lake Avrig → Negoiu → Bâlea",
+          "trail2": "Poiana Neamțului → Bârcaciu Cabin → Lake Avrig → Suru",
+          "trail3": "Trails to peaks: Negoiu (2535m), Suru (2281m), Budislavu (2345m), Ciortea (2426m), Scara (2213m)",
+          "brukenthal": "Brukenthal Palace – baroque palace with park, alleys and historical areas",
+          "museum": "Avrig Museum – collections of folk art, glassware, Gheorghe Lazăr exhibitions",
+          "memorial": "\"Gheorghe Lazăr\" Memorial House",
+          "evangelical": "Evangelical Church (1265–1295) – the oldest monument in Avrig",
+          "orthodox": "Orthodox Church (1762) – valuable paintings by masters Ionașcu and Pană",
+          "carta": "Cârța Cistercian Monastery – ruined medieval Gothic ensemble, very well known (19th century)",
+          "calendar": "The Calendar Story – theme park with 12 houses inspired by the traditional calendar",
+          "clay": "Clay Castle – Fairy Valley – one of the most photographed destinations in Romania",
+          "hiking": "Hiking on marked trails",
+          "bikes": "Electric bike tours",
+          "horse": "Horse riding sessions",
+          "pools": "Outdoor swimming pools",
+          "brambura": "Brambura Park & Upside Down House – family attraction",
+          "panoramic": "Panoramic Park & Viking Village – theme park",
+          "deer": "Poiana Neamțului – Deer Farm"
+        }
+      },
+      "q10": {
+        "question": "Do I need to bring bed linen and towels?",
+        "answer": "No, bed linen and towels are included in the price and are provided for each guest. If you need extra towels for the hot tub/sauna, please let us know."
+      },
+      "q11": {
+        "question": "Are there shops or restaurants nearby?",
+        "answer": "The nearest restaurant, Popasul Montan, is 3 minutes away by car or 5 min to Ghiocelul restaurant. In {city} (7.5 km) you will find supermarkets, stores and butcher shops. We recommend stocking up before arriving at the cabin."
+      },
+      "q12": {
+        "question": "Is there phone signal?",
+        "answer": "Yes, there is signal for major networks (Orange, Vodafone, Telekom). Signal strength may vary depending on the operator. WiFi is available as an alternative for communication."
+      }
+    }
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "Discover the beauty of our cabin",
+    "authenticity": {
+      "title": "100% Authentic Photos",
+      "description": "All the photos you see are real, taken at our cabin. No exaggerated filters or tricks - what you see is exactly what you'll find when you get here!"
+    },
+    "cta": {
+      "heading": "Ready to experience this in person?",
+      "description": "Book your stay now and create your own unforgettable memories",
+      "checkAvailability": "Check availability",
+      "contactUs": "Contact Us"
+    }
+  },
+  "bookings": {
+    "title": "Book the Cabin",
+    "subtitle": "Fill out the form and we will contact you as soon as possible",
+    "form": {
+      "fullName": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "guests": "Number of guests",
+      "message": "Message (optional)",
+      "messagePlaceholder": "Tell us more about your stay...",
+      "submit": "Send Request",
+      "submitting": "Sending..."
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email",
+      "phoneRequired": "Phone is required",
+      "phoneInvalid": "Invalid phone number",
+      "checkInRequired": "Check-in is required",
+      "checkOutRequired": "Check-out is required",
+      "guestsRequired": "Number of guests is required",
+      "guestsInvalid": "Invalid number of guests (1-8)"
+    },
+    "success": {
+      "title": "Request Sent Successfully!",
+      "message": "Thank you! We have received your booking request and will contact you as soon as possible.",
+      "backHome": "Back to Home Page"
+    },
+    "error": {
+      "title": "Oops! Something went wrong",
+      "message": "Please try again or contact us directly by phone.",
+      "tryAgain": "Try Again"
+    },
+    "sidebar": {
+      "nextSteps": {
+        "title": "Next Steps",
+        "step1": "We check availability for your chosen dates",
+        "step2": "We contact you by phone or email within 24h",
+        "step3": "We confirm the booking and stay details"
+      },
+      "directContact": {
+        "title": "Direct Contact",
+        "description": "Prefer to speak with us directly?"
+      },
+      "policies": {
+        "title": "Important Policies",
+        "checkIn": "Check-in: {checkInTime}",
+        "checkOut": "Check-out: {checkOutTime}",
+        "minStay": "Minimum stay: {minNights} nights",
+        "cancellation": "Flexible cancellation policy"
+      }
     }
   },
   "footer": {

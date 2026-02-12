@@ -1,32 +1,40 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
 import { JsonLd, generateBreadcrumbSchema, generateWebPageSchema } from '@/lib/seo/schema';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGroup, faUsers, faHeart, faGift, faCheck } from '@fortawesome/free-solid-svg-icons';
 
-export const metadata: Metadata = generatePageMetadata({
-  title: 'About the Cabin - Amenities, Facilities and Story',
-  description: `Discover ${siteConfig.name}: premium amenities, complete facilities, generous spaces and a unique story. Cabin for 8 people with hot tub, sauna and fireplace.`,
-  path: '/cabana',
-});
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'cabin' });
+  
+  return generatePageMetadata({
+    title: t('title'),
+    description: t('subtitle'),
+    path: '/cabana',
+  });
+}
 
 export const revalidate = 604800; // 1 week
 
-export default function CabanaPage() {
+export default async function CabanaPage({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'cabin' });
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
+  
   const breadcrumbs = [
-    { name: 'Home', path: '/' },
-    { name: 'Cabin', path: '/cabana' },
+    { name: tCommon('home'), path: '/' },
+    { name: tCommon('cabin'), path: '/cabana' },
   ];
 
   const amenities = [
-    { category: 'Relaxation', items: ['Hot tub', 'Finnish sauna', 'Stone fireplace', 'Terrace with view'] },
-    { category: 'Kitchen', items: ['Stove', 'Oven', 'Refrigerator', 'Dishwasher', 'Complete utensils', 'Coffee maker'] },
-    { category: 'Bedrooms', items: ['3 bedrooms', 'Beds for 8 people', 'Premium linen', 'Spacious wardrobes'] },
-    { category: 'Bathrooms', items: ['2 complete bathrooms', 'Hydromassage shower', 'Underfloor heating', 'Towels included'] },
-    { category: 'Entertainment', items: ['Smart TV', 'High-speed WiFi', 'Audio system', 'Board games'] },
-    { category: 'Outdoor', items: ['Barbecue', 'Garden furniture', 'Swings for children', 'Private parking', 'Play area'] },
+    { category: t('amenities.relaxation'), items: t.raw('amenities.items.relaxation') as string[] },
+    { category: t('amenities.kitchen'), items: t.raw('amenities.items.kitchen') as string[] },
+    { category: t('amenities.bedrooms'), items: t.raw('amenities.items.bedrooms') as string[] },
+    { category: t('amenities.bathrooms'), items: t.raw('amenities.items.bathrooms') as string[] },
+    { category: t('amenities.entertainment'), items: t.raw('amenities.items.entertainment') as string[] },
+    { category: t('amenities.outdoor'), items: t.raw('amenities.items.outdoor') as string[] },
   ];
 
   return (
@@ -55,10 +63,10 @@ export default function CabanaPage() {
         <div className="relative h-full flex items-center">
           <div className="container-custom">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4">
-              About the Cabin
+              {t('title')}
             </h1>
             <p className="text-xl text-white/90 max-w-2xl">
-              An authentic retreat with modern amenities in the heart of nature
+              {t('subtitle')}
             </p>
           </div>
         </div>
@@ -71,11 +79,11 @@ export default function CabanaPage() {
             <ol className="flex items-center space-x-2 text-sm">
               <li>
                 <Link href="/" className="text-text-muted hover:text-accent">
-                  Home
+                  {tCommon('home')}
                 </Link>
               </li>
               <li className="text-text-muted">/</li>
-              <li className="text-text font-medium">Cabin</li>
+              <li className="text-text font-medium">{tCommon('cabin')}</li>
             </ol>
           </nav>
         </div>
@@ -86,25 +94,17 @@ export default function CabanaPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
-              Our Story
+              {t('story.heading')}
             </h2>
             <div className="prose prose-lg max-w-none text-text-light space-y-4">
               <p>
-                <strong>{siteConfig.name}</strong> was built with the idea of offering an
-                authentic experience in nature, without compromising modern comfort. Located in
-                the heart of {siteConfig.contact.region}, our cabin is the result of a passion
-                for traditional Romanian architecture and the desire to create a space
-                where people can reconnect with nature.
+                <strong>{siteConfig.name}</strong> {t('story.paragraph1', { region: siteConfig.contact.region })}
               </p>
               <p>
-                Completely renovated in 2024, the cabin combines traditional elements - solid wood,
-                natural stone, rustic fireplace - with the modern facilities necessary for a
-                comfortable stay: central heating, WiFi, fully equipped kitchen.
+                {t('story.paragraph2')}
               </p>
               <p>
-                We are proud to offer our guests not just a place to stay, but a
-                complete experience: the hot tub under the starry sky, the sauna after a day in the mountains,
-                the peace of the forest and the clean mountain air.
+                {t('story.paragraph3')}
               </p>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function CabanaPage() {
       <section className="section bg-background">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-12 text-center">
-            Amenities & Facilities
+            {t('amenities.heading')}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {amenities.map((section, index) => (
@@ -216,46 +216,43 @@ export default function CabanaPage() {
       <section className="section bg-surface">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-12 text-center">
-            Who is the cabin perfect for?
+            {t('forWhom.heading')}
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="card p-8 text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
                 <FontAwesomeIcon icon={faUserGroup} className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Families with Children</h3>
+              <h3 className="text-xl font-semibold text-primary mb-3">{t('forWhom.families.title')}</h3>
               <p className="text-text-light">
-                Spacious area, safe yard, games for children and complete facilities for
-                the comfort of the whole family.
+                {t('forWhom.families.description')}
               </p>
             </div>
             <div className="card p-8 text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
                 <FontAwesomeIcon icon={faUsers} className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Groups of Friends</h3>
+              <h3 className="text-xl font-semibold text-primary mb-3">{t('forWhom.friends.title')}</h3>
               <p className="text-text-light">
-                Perfect for reunions, relaxing weekends or private parties in nature.
+                {t('forWhom.friends.description')}
               </p>
             </div>
             <div className="card p-8 text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
                 <FontAwesomeIcon icon={faHeart} className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Romantic Couples</h3>
+              <h3 className="text-xl font-semibold text-primary mb-3">{t('forWhom.couples.title')}</h3>
               <p className="text-text-light">
-                Intimacy, peace, hot tub under the stars and spectacular sunsets for
-                unforgettable moments.
+                {t('forWhom.couples.description')}
               </p>
             </div>
             <div className="card p-8 text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
                 <FontAwesomeIcon icon={faGift} className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Special Events</h3>
+              <h3 className="text-xl font-semibold text-primary mb-3">{t('forWhom.events.title')}</h3>
               <p className="text-text-light">
-                Birthdays, marriage proposals, team-building or celebrations in a private and
-                exclusive setting.
+                {t('forWhom.events.description')}
               </p>
             </div>
           </div>
@@ -266,21 +263,20 @@ export default function CabanaPage() {
       <section className="section bg-primary text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            Convinced? Book now!
+            {t('cta.heading')}
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Don't let someone else take your perfect weekend. Check availability and
-            book today.
+            {t('cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/rezervari" className="btn-accent btn-lg">
-              Check Availability
+              {t('cta.checkAvailability')}
             </Link>
             <Link
               href="/galerie"
               className="btn-outline btn-lg border-white text-white hover:bg-white hover:text-primary"
             >
-              See More Photos
+              {t('cta.viewGallery')}
             </Link>
           </div>
         </div>

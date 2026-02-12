@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 interface FormData {
   name: string;
@@ -19,6 +20,9 @@ interface FormErrors {
 }
 
 export default function RezervariFazaPage() {
+  const t = useTranslations('bookings');
+  const tCommon = useTranslations('common');
+  
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -40,54 +44,54 @@ export default function RezervariFazaPage() {
 
     // Name validation
     if (!formData.name.trim()) {
-      newErrors.name = 'Numele este obligatoriu';
+      newErrors.name = t('validation.nameRequired');
     } else if (formData.name.trim().length < 3) {
-      newErrors.name = 'Numele trebuie să conțină cel puțin 3 caractere';
+      newErrors.name = 'Name must contain at least 3 characters';
     }
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
-      newErrors.email = 'Email-ul este obligatoriu';
+      newErrors.email = t('validation.emailRequired');
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = 'Email invalid';
+      newErrors.email = t('validation.emailInvalid');
     }
 
     // Phone validation
     const phoneRegex = /^[\d\s\-\+\(\)]{10,}$/;
     if (!formData.phone.trim()) {
-      newErrors.phone = 'Telefonul este obligatoriu';
+      newErrors.phone = t('validation.phoneRequired');
     } else if (!phoneRegex.test(formData.phone)) {
-      newErrors.phone = 'Număr de telefon invalid';
+      newErrors.phone = t('validation.phoneInvalid');
     }
 
     // Check-in validation
     if (!formData.checkIn) {
-      newErrors.checkIn = 'Data de check-in este obligatorie';
+      newErrors.checkIn = t('validation.checkInRequired');
     } else {
       const checkInDate = new Date(formData.checkIn);
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       if (checkInDate < today) {
-        newErrors.checkIn = 'Data de check-in nu poate fi în trecut';
+        newErrors.checkIn = 'Check-in date cannot be in the past';
       }
     }
 
     // Check-out validation
     if (!formData.checkOut) {
-      newErrors.checkOut = 'Data de check-out este obligatorie';
+      newErrors.checkOut = t('validation.checkOutRequired');
     } else if (formData.checkIn) {
       const checkInDate = new Date(formData.checkIn);
       const checkOutDate = new Date(formData.checkOut);
       if (checkOutDate <= checkInDate) {
-        newErrors.checkOut = 'Data de check-out trebuie să fie după check-in';
+        newErrors.checkOut = 'Check-out date must be after check-in';
       }
     }
 
     // Guests validation
     const guestsNum = parseInt(formData.guests);
     if (guestsNum < 1 || guestsNum > 8) {
-      newErrors.guests = 'Numărul de persoane trebuie să fie între 1 și 8';
+      newErrors.guests = t('validation.guestsInvalid');
     }
 
     setErrors(newErrors);
@@ -166,10 +170,10 @@ export default function RezervariFazaPage() {
       <section className="section bg-primary text-white">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4">
-            Rezervă Cabana
+            {t('title')}
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Completează formularul și îți vom confirma disponibilitatea în 24h
+            {t('subtitle')}
           </p>
         </div>
       </section>
@@ -181,11 +185,11 @@ export default function RezervariFazaPage() {
             <ol className="flex items-center space-x-2 text-sm">
               <li>
                 <Link href="/" className="text-text-muted hover:text-accent">
-                  Acasă
+                  {tCommon('home')}
                 </Link>
               </li>
               <li className="text-text-muted">/</li>
-              <li className="text-text font-medium">Rezervări</li>
+              <li className="text-text font-medium">{tCommon('reservations')}</li>
             </ol>
           </nav>
         </div>
@@ -213,11 +217,10 @@ export default function RezervariFazaPage() {
                 </svg>
                 <div>
                   <h3 className="text-lg font-semibold text-green-800 mb-1">
-                    Cerere Trimisă cu Succes!
+                    {t('success.title')}
                   </h3>
                   <p className="text-green-700">
-                    Mulțumim pentru cererea de rezervare! Vă vom contacta în maximum 24 de ore
-                    pentru a confirma disponibilitatea și a finaliza rezervarea.
+                    {t('success.message')}
                   </p>
                 </div>
               </div>
@@ -244,17 +247,16 @@ export default function RezervariFazaPage() {
                 </svg>
                 <div>
                   <h3 className="text-lg font-semibold text-red-800 mb-1">
-                    Eroare la Trimitere
+                    {t('error.title')}
                   </h3>
                   <p className="text-red-700 mb-2">
-                    A apărut o eroare la trimiterea formularului. Vă rugăm încercați din nou sau
-                    contactați-ne direct.
+                    {t('error.message')}
                   </p>
                   <a
                     href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
                     className="text-red-800 underline hover:text-red-900"
                   >
-                    Trimite email direct
+                    Send email directly
                   </a>
                 </div>
               </div>
@@ -266,7 +268,7 @@ export default function RezervariFazaPage() {
             <div className="lg:col-span-2">
               <div className="card p-6 md:p-8">
                 <h2 className="text-2xl font-serif font-bold text-primary mb-6">
-                  Formular de Rezervare
+                  {t('form.fullName')}
                 </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-6" noValidate>
@@ -285,7 +287,7 @@ export default function RezervariFazaPage() {
                   {/* Name */}
                   <div>
                     <label htmlFor="name" className="label">
-                      Nume complet <span className="text-red-500">*</span>
+                      {t('form.fullName')} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -294,7 +296,7 @@ export default function RezervariFazaPage() {
                       value={formData.name}
                       onChange={handleChange}
                       className={`input ${errors.name ? 'input-error' : ''}`}
-                      placeholder="Ex: Ion Popescu"
+                      placeholder={t('form.fullName')}
                       required
                       aria-required="true"
                       aria-invalid={!!errors.name}
@@ -311,7 +313,7 @@ export default function RezervariFazaPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="email" className="label">
-                        Email <span className="text-red-500">*</span>
+                        {t('form.email')} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="email"
@@ -320,7 +322,7 @@ export default function RezervariFazaPage() {
                         value={formData.email}
                         onChange={handleChange}
                         className={`input ${errors.email ? 'input-error' : ''}`}
-                        placeholder="exemplu@email.com"
+                        placeholder="example@email.com"
                         required
                         aria-required="true"
                         aria-invalid={!!errors.email}
@@ -335,7 +337,7 @@ export default function RezervariFazaPage() {
 
                     <div>
                       <label htmlFor="phone" className="label">
-                        Telefon <span className="text-red-500">*</span>
+                        {t('form.phone')} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="tel"
@@ -362,7 +364,7 @@ export default function RezervariFazaPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="checkIn" className="label">
-                        Check-in <span className="text-red-500">*</span>
+                        {t('form.checkIn')} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="date"
@@ -386,7 +388,7 @@ export default function RezervariFazaPage() {
 
                     <div>
                       <label htmlFor="checkOut" className="label">
-                        Check-out <span className="text-red-500">*</span>
+                        {t('form.checkOut')} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="date"
@@ -412,7 +414,7 @@ export default function RezervariFazaPage() {
                   {/* Guests */}
                   <div>
                     <label htmlFor="guests" className="label">
-                      Număr persoane <span className="text-red-500">*</span>
+                      {t('form.guests')} <span className="text-red-500">*</span>
                     </label>
                     <select
                       id="guests"
@@ -427,7 +429,7 @@ export default function RezervariFazaPage() {
                     >
                       {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
                         <option key={num} value={num}>
-                          {num} {num === 1 ? 'persoană' : 'persoane'}
+                          {num} {num === 1 ? 'guest' : 'guests'}
                         </option>
                       ))}
                     </select>
@@ -441,7 +443,7 @@ export default function RezervariFazaPage() {
                   {/* Preferences */}
                   <div>
                     <label htmlFor="preferences" className="label">
-                      Preferințe / Cerințe speciale (opțional)
+                      {t('form.message')}
                     </label>
                     <textarea
                       id="preferences"
@@ -450,23 +452,23 @@ export default function RezervariFazaPage() {
                       onChange={handleChange}
                       rows={4}
                       className="input resize-none"
-                      placeholder="Ex: aniversare, check-in târziu, nevoi speciale..."
+                      placeholder={t('form.messagePlaceholder')}
                     />
                   </div>
 
                   {/* Terms */}
                   <div className="bg-background p-4 rounded-lg text-sm text-text-muted">
                     <p>
-                      Prin trimiterea acestui formular, sunt de acord cu{' '}
+                      By submitting this form, I agree to the{' '}
                       <Link href="/termeni" className="text-primary hover:text-accent underline">
-                        termenii și condițiile
+                        terms and conditions
                       </Link>{' '}
-                      și{' '}
+                      and{' '}
                       <Link
                         href="/politica-confidentialitate"
                         className="text-primary hover:text-accent underline"
                       >
-                        politica de confidențialitate
+                        privacy policy
                       </Link>
                       .
                     </p>
@@ -481,10 +483,10 @@ export default function RezervariFazaPage() {
                     {isSubmitting ? (
                       <span className="flex items-center justify-center gap-2">
                         <span className="spinner w-5 h-5 border-2" />
-                        Se trimite...
+                        {t('form.submitting')}
                       </span>
                     ) : (
-                      'Trimite cererea de rezervare'
+                      t('form.submit')
                     )}
                   </button>
                 </form>
@@ -494,47 +496,47 @@ export default function RezervariFazaPage() {
             {/* Sidebar Info */}
             <div className="space-y-6">
               <div className="card p-6 bg-primary/5">
-                <h3 className="text-lg font-semibold text-primary mb-4">Pași Următori</h3>
+                <h3 className="text-lg font-semibold text-primary mb-4">{t('sidebar.nextSteps.title')}</h3>
                 <ol className="space-y-3 text-sm text-text-light">
                   <li className="flex gap-3">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold">
                       1
                     </span>
-                    <span>Trimite formularul de rezervare</span>
+                    <span>{t('sidebar.nextSteps.step1')}</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold">
                       2
                     </span>
-                    <span>Verificăm disponibilitatea (max 24h)</span>
+                    <span>{t('sidebar.nextSteps.step2')}</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold">
                       3
                     </span>
-                    <span>Primești confirmarea și detaliile de plată</span>
+                    <span>{t('sidebar.nextSteps.step3')}</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold">
                       4
                     </span>
-                    <span>Plătești avansul de 30%</span>
+                    <span>You pay the 30% deposit</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs font-bold">
                       5
                     </span>
-                    <span>Rezervarea este confirmată! 🎉</span>
+                    <span>Booking is confirmed! 🎉</span>
                   </li>
                 </ol>
               </div>
 
               <div className="card p-6">
                 <h3 className="text-lg font-semibold text-primary mb-4">
-                  Contact Direct
+                  {t('sidebar.directContact.title')}
                 </h3>
                 <p className="text-sm text-text-light mb-4">
-                  Preferi să vorbești cu noi direct? Nu ezita să ne contactezi!
+                  {t('sidebar.directContact.description')}
                 </p>
                 <div className="space-y-3 text-sm">
                   <a
@@ -570,11 +572,10 @@ export default function RezervariFazaPage() {
 
               <div className="card p-6 bg-accent/5">
                 <h3 className="text-lg font-semibold text-primary mb-2">
-                  💡 Sfat Pro
+                  💡 Pro Tip
                 </h3>
                 <p className="text-sm text-text-light">
-                  Rezervă cu minim 30 de zile înainte pentru a beneficia de reducerea Early Bird
-                  de 10%!
+                  Book at least 30 days in advance to benefit from a 10% Early Bird discount!
                 </p>
               </div>
             </div>
