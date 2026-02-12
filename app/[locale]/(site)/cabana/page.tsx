@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGroup, faUsers, faHeart, faGift, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Despre Cabană - Dotări, Facilități și Poveste',
-  description: `Descoperă ${siteConfig.name}: dotări premium, facilități complete, spații generoase și o poveste unică. Cabană pentru 8 persoane cu ciubar, saună și semineu.`,
+  title: 'About the Cabin - Amenities, Facilities and Story',
+  description: `Discover ${siteConfig.name}: premium amenities, complete facilities, generous spaces and a unique story. Cabin for 8 people with hot tub, sauna and fireplace.`,
   path: '/cabana',
 });
 
@@ -16,24 +16,24 @@ export const revalidate = 604800; // 1 week
 
 export default function CabanaPage() {
   const breadcrumbs = [
-    { name: 'Acasă', path: '/' },
-    { name: 'Cabana', path: '/cabana' },
+    { name: 'Home', path: '/' },
+    { name: 'Cabin', path: '/cabana' },
   ];
 
   const amenities = [
-    { category: 'Relaxare', items: ['Ciubar cu apă caldă', 'Saună finlandeză', 'Semineu de piatră', 'Terasă cu privelişte'] },
-    { category: 'Bucătărie', items: ['Aragaz', 'Cuptor', 'Frigider', 'Mașină de spălat vase', 'Ustensile complete', 'Cafetieră'] },
-    { category: 'Dormitoare', items: ['3 dormitoare', 'Paturi pentru 8 persoane', 'Lenjerie premium', 'Dulapuri spațioase'] },
-    { category: 'Băi', items: ['2 băi complete', 'Duș cu hidromasaj', 'Încălzire în pardoseală', 'Prosoape incluse'] },
-    { category: 'Entertainment', items: ['TV Smart', 'WiFi de mare viteză', 'Sistem audio', 'Jocuri de masă'] },
-    { category: 'Exterior', items: ['Grătar', 'Mobilier de grădină', 'Leagăne pentru copii', 'Parcare privată', 'Spațiu joacă'] },
+    { category: 'Relaxation', items: ['Hot tub', 'Finnish sauna', 'Stone fireplace', 'Terrace with view'] },
+    { category: 'Kitchen', items: ['Stove', 'Oven', 'Refrigerator', 'Dishwasher', 'Complete utensils', 'Coffee maker'] },
+    { category: 'Bedrooms', items: ['3 bedrooms', 'Beds for 8 people', 'Premium linen', 'Spacious wardrobes'] },
+    { category: 'Bathrooms', items: ['2 complete bathrooms', 'Hydromassage shower', 'Underfloor heating', 'Towels included'] },
+    { category: 'Entertainment', items: ['Smart TV', 'High-speed WiFi', 'Audio system', 'Board games'] },
+    { category: 'Outdoor', items: ['Barbecue', 'Garden furniture', 'Swings for children', 'Private parking', 'Play area'] },
   ];
 
   return (
     <>
       <JsonLd
         data={generateWebPageSchema(
-          'Despre Cabană - Dotări și Facilități',
+          'About the Cabin - Amenities and Facilities',
           metadata.description as string,
           `${siteConfig.url}/cabana`,
           breadcrumbs
@@ -55,10 +55,10 @@ export default function CabanaPage() {
         <div className="relative h-full flex items-center">
           <div className="container-custom">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4">
-              Despre Cabană
+              About the Cabin
             </h1>
             <p className="text-xl text-white/90 max-w-2xl">
-              Un refugiu autentic cu dotări moderne în inima naturii
+              An authentic retreat with modern amenities in the heart of nature
             </p>
           </div>
         </div>
@@ -71,11 +71,11 @@ export default function CabanaPage() {
             <ol className="flex items-center space-x-2 text-sm">
               <li>
                 <Link href="/" className="text-text-muted hover:text-accent">
-                  Acasă
+                  Home
                 </Link>
               </li>
               <li className="text-text-muted">/</li>
-              <li className="text-text font-medium">Cabana</li>
+              <li className="text-text font-medium">Cabin</li>
             </ol>
           </nav>
         </div>
@@ -86,25 +86,25 @@ export default function CabanaPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
-              Povestea Noastră
+              Our Story
             </h2>
             <div className="prose prose-lg max-w-none text-text-light space-y-4">
               <p>
-                <strong>{siteConfig.name}</strong> a fost construită cu gândul de a oferi o
-                experiență autentică în natură, fără a compromite confortul modern. Amplasată în
-                inima {siteConfig.contact.region}, cabana noastră este rezultatul unei pasiuni
-                pentru arhitectura tradițională românească și a dorinței de a crea un spațiu
-                unde oamenii pot reconecta cu natura.
+                <strong>{siteConfig.name}</strong> was built with the idea of offering an
+                authentic experience in nature, without compromising modern comfort. Located in
+                the heart of {siteConfig.contact.region}, our cabin is the result of a passion
+                for traditional Romanian architecture and the desire to create a space
+                where people can reconnect with nature.
               </p>
               <p>
-                Renovată complet în 2024, cabana îmbină elementele tradiționale - lemn masiv,
-                piatră naturală, șemineu rustic - cu facilitățile moderne necesare unui sejur
-                confortabil: încălzire centrală, WiFi, bucătărie complet utilată.
+                Completely renovated in 2024, the cabin combines traditional elements - solid wood,
+                natural stone, rustic fireplace - with the modern facilities necessary for a
+                comfortable stay: central heating, WiFi, fully equipped kitchen.
               </p>
               <p>
-                Suntem mândri să oferim oaspeților noștri nu doar un loc de cazare, ci o
-                experiență completă: ciubarul sub cerul înstelat, sauna după o zi pe munte,
-                liniștea pădurii și aerul curat al munților.
+                We are proud to offer our guests not just a place to stay, but a
+                complete experience: the hot tub under the starry sky, the sauna after a day in the mountains,
+                the peace of the forest and the clean mountain air.
               </p>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function CabanaPage() {
       <section className="section bg-background">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-12 text-center">
-            Dotări & Facilități
+            Amenities & Facilities
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {amenities.map((section, index) => (
@@ -144,67 +144,67 @@ export default function CabanaPage() {
       <section className="section">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-12 text-center">
-            Plan Camere
+            Room Layout
           </h2>
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="card p-6">
-              <h3 className="text-2xl font-semibold text-primary mb-4">Parter (Ground Floor)</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-4">Ground Floor</h3>
               <ul className="space-y-3 text-text-light">
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Living Principal:</span>
-                  <span>Canapea extensibilă, semineu, TV smart, acces la terasă (35m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">Main Living:</span>
+                  <span>Sofa bed, fireplace, smart TV, terrace access (35m²)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Bucătărie:</span>
-                  <span>Complet utilată, masă pentru 8 persoane, bar (25m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">Kitchen:</span>
+                  <span>Fully equipped, table for 8 people, bar (25m²)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Baie:</span>
-                  <span>Duș, WC, lavabo, încălzire în pardoseală (6m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">Bathroom:</span>
+                  <span>Shower, WC, sink, underfloor heating (6m²)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Cameră 1:</span>
-                  <span>Pat matrimonial, dulap, acces direct la grădină (18m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">Bedroom 1:</span>
+                  <span>Double bed, wardrobe, direct garden access (18m²)</span>
                 </li>
               </ul>
             </div>
 
             <div className="card p-6">
-              <h3 className="text-2xl font-semibold text-primary mb-4">Etaj (First Floor)</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-4">First Floor</h3>
               <ul className="space-y-3 text-text-light">
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Cameră 2:</span>
-                  <span>Pat matrimonial, birou, balcon cu privelişte (20m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">Bedroom 2:</span>
+                  <span>Double bed, desk, balcony with view (20m²)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Cameră 3:</span>
-                  <span>2 paturi suprapuse, spațiu joacă copii (16m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">Bedroom 3:</span>
+                  <span>2 bunk beds, children's play area (16m²)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Baie:</span>
-                  <span>Cadă, WC, lavabo, mașină de spălat (7m²)</span>
+                  <span className="font-semibold text-accent min-w-[140px]">Bathroom:</span>
+                  <span>Bathtub, WC, sink, washing machine (7m²)</span>
                 </li>
               </ul>
             </div>
 
             <div className="card p-6 bg-primary/5">
-              <h3 className="text-2xl font-semibold text-primary mb-4">Exterior</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-4">Outdoor</h3>
               <ul className="space-y-3 text-text-light">
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Ciubar:</span>
-                  <span>Încălzit pe lemne, capacitate 6 persoane</span>
+                  <span className="font-semibold text-accent min-w-[140px]">Hot Tub:</span>
+                  <span>Wood-heated, capacity 6 people</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Saună:</span>
-                  <span>Finlandeză, capacitate 4 persoane, vestiare</span>
+                  <span className="font-semibold text-accent min-w-[140px]">Sauna:</span>
+                  <span>Finnish, capacity 4 people, changing rooms</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Grătar:</span>
-                  <span>Zonă acoperită, masă exterior, scaune</span>
+                  <span className="font-semibold text-accent min-w-[140px]">Barbecue:</span>
+                  <span>Covered area, outdoor table, chairs</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-semibold text-accent min-w-[140px]">Grădină:</span>
-                  <span>500m², leagăne, căsuță pentru copii, parcare 3 mașini</span>
+                  <span className="font-semibold text-accent min-w-[140px]">Garden:</span>
+                  <span>500m², swings, children's playhouse, parking for 3 cars</span>
                 </li>
               </ul>
             </div>
@@ -216,46 +216,46 @@ export default function CabanaPage() {
       <section className="section bg-surface">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-12 text-center">
-            Pentru cine este potrivită cabana?
+            Who is the cabin perfect for?
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="card p-8 text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
                 <FontAwesomeIcon icon={faUserGroup} className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Familii cu Copii</h3>
+              <h3 className="text-xl font-semibold text-primary mb-3">Families with Children</h3>
               <p className="text-text-light">
-                Spațiu amplu, curte sigură, jocuri pentru copii și facilități complete pentru
-                confortul întregii familii.
+                Spacious area, safe yard, games for children and complete facilities for
+                the comfort of the whole family.
               </p>
             </div>
             <div className="card p-8 text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
                 <FontAwesomeIcon icon={faUsers} className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Grupuri de Prieteni</h3>
+              <h3 className="text-xl font-semibold text-primary mb-3">Groups of Friends</h3>
               <p className="text-text-light">
-                Perfectă pentru reuniuni, weekend-uri relaxante sau petreceri private în natură.
+                Perfect for reunions, relaxing weekends or private parties in nature.
               </p>
             </div>
             <div className="card p-8 text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
                 <FontAwesomeIcon icon={faHeart} className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Cupluri Romantice</h3>
+              <h3 className="text-xl font-semibold text-primary mb-3">Romantic Couples</h3>
               <p className="text-text-light">
-                Intimitate, liniște, ciubar sub stele și apusuri spectaculoase pentru momente de
-                neuitat.
+                Intimacy, peace, hot tub under the stars and spectacular sunsets for
+                unforgettable moments.
               </p>
             </div>
             <div className="card p-8 text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 mb-4 text-primary">
                 <FontAwesomeIcon icon={faGift} className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">Evenimente Speciale</h3>
+              <h3 className="text-xl font-semibold text-primary mb-3">Special Events</h3>
               <p className="text-text-light">
-                Aniversări, cereri în căsătorie, team-building sau sărbători în cadru privat și
-                exclusivist.
+                Birthdays, marriage proposals, team-building or celebrations in a private and
+                exclusive setting.
               </p>
             </div>
           </div>
@@ -266,21 +266,21 @@ export default function CabanaPage() {
       <section className="section bg-primary text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            Convins? Rezervă acum!
+            Convinced? Book now!
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Nu lăsa pe altcineva să îți ia weekendul perfect. Verifică disponibilitatea și
-            rezervă astăzi.
+            Don't let someone else take your perfect weekend. Check availability and
+            book today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/rezervari" className="btn-accent btn-lg">
-              Verifică disponibilitatea
+              Check Availability
             </Link>
             <Link
               href="/galerie"
               className="btn-outline btn-lg border-white text-white hover:bg-white hover:text-primary"
             >
-              Vezi mai multe poze
+              See More Photos
             </Link>
           </div>
         </div>

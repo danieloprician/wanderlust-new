@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { siteConfig } from '@/lib/seo/config';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const navigation = [
   { name: 'Acasă', href: '/' },
@@ -76,7 +77,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex lg:items-center lg:space-x-8">
+            <div className="hidden lg:flex lg:items-center lg:space-x-6">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -91,6 +92,7 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+              <LanguageSwitcher />
               <Link href="/rezervari" className="btn-accent btn-sm">
                 Rezervă acum
               </Link>
@@ -144,6 +146,9 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+              <div className="px-4 py-3">
+                <LanguageSwitcher />
+              </div>
               <Link href="/rezervari" className="btn-accent w-full mt-4">
                 Rezervă acum
               </Link>

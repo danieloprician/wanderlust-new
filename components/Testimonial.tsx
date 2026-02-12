@@ -9,28 +9,36 @@ interface Testimonial {
 
 const defaultTestimonials: Testimonial[] = [
   {
-    name: 'Maria și Andrei P.',
-    location: 'București',
+    name: 'Andrei',
+    location: 'Romania',
     rating: 5,
-    date: 'Ianuarie 2026',
+    date: 'April 2025',
     comment:
-      'O experiență absolut magică! Cabana este exact ca în poze, chiar mai frumoasă. Ciubarul sub stele a fost punctul culminant al sejurului nostru. Recomandăm cu încredere!',
+      'Beautiful location with mountain views. Far from the city, so peaceful and with a beautiful yard that the kids and dog used extensively. Large common area with perfectly equipped kitchen. We cooked several meals in the kitchen and felt at home, the espresso machine is fantastic, better than what we have at home. I would love to visit in summer to enjoy the outdoor cooking facilities. Overall wonderful and excellent value for money!',
   },
   {
-    name: 'Familie Ionescu',
-    location: 'Cluj-Napoca',
+    name: 'Tal',
+    location: 'Israel',
     rating: 5,
-    date: 'Decembrie 2025',
+    date: 'August 2024',
     comment:
-      'Am petrecut Revelionul aici cu familia și a fost perfect! Copiii s-au jucat în zăpadă, iar noi ne-am relaxat la saună. Gazda foarte primitoare, curățenie impecabilă.',
+      'The cabin is wonderful inside, recently furnished, and the owner provided us with many small treats! The gazebo is well equipped for whatever we wanted. The yard was amazing, both for children and with fruit trees. We had a wonderful time on our vacation here.',
   },
   {
     name: 'Elena M.',
     location: 'Timișoara',
     rating: 5,
-    date: 'Noiembrie 2025',
+    date: 'November 2025',
     comment:
-      'Liniște, natură, confort... toate la superlativ! Bucătăria este foarte bine echipată, am putut găti tot ce ne-am dorit. Vom reveni cu siguranță!',
+      'Peace, nature, comfort... all in superlatives! The kitchen is very well equipped, we could cook everything we wanted. We will definitely return!',
+  },
+  {
+    name: 'Tomaescu',
+    location: 'Romania',
+    rating: 5,
+    date: 'December 2025',
+    comment:
+      'Secluded location, very quiet, generous outdoor space. You have all the necessary facilities. Very kind owners. We hope to return in the warm season too.',
   },
 ];
 
@@ -41,7 +49,7 @@ interface TestimonialProps {
 export default function TestimonialSection({ testimonials = defaultTestimonials }: TestimonialProps) {
   const renderStars = (rating: number) => {
     return (
-      <div className="flex gap-1" role="img" aria-label={`${rating} din 5 stele`}>
+      <div className="flex gap-1" role="img" aria-label={`${rating} out of 5 stars`}>
         {[...Array(5)].map((_, i) => (
           <svg
             key={i}
@@ -61,10 +69,10 @@ export default function TestimonialSection({ testimonials = defaultTestimonials 
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
-            Ce spun oaspeții noștri
+            What Our Guests Say
           </h2>
           <p className="text-lg text-text-light max-w-2xl mx-auto">
-            Feedback real de la persoane care au ales să petreacă timpul aici
+            Real feedback from people who chose to spend time here
           </p>
         </div>
 
@@ -102,7 +110,7 @@ export default function TestimonialSection({ testimonials = defaultTestimonials 
             <div>{renderStars(5)}</div>
           </div>
           <p className="text-text-muted">
-            Bazat pe {testimonials.length}+ recenzii verificate
+            Based on {testimonials.length}+ verified reviews
           </p>
         </div>
       </div>

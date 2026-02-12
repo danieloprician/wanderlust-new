@@ -1,15 +1,25 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Map from '@/components/Map';
+import dynamic from 'next/dynamic';
 import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
 import { JsonLd, generateBreadcrumbSchema, generatePlaceSchema } from '@/lib/seo/schema';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot, faCar, faBus, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { faAirbnb, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
+// Dynamically import Map component with SSR disabled
+const Map = dynamic(() => import('@/components/Map'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-[400px] rounded-lg bg-surface flex items-center justify-center">
+      <div className="animate-pulse text-text-muted">Loading map...</div>
+    </div>
+  ),
+});
+
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Contact - Adresă, Telefon, Program și Hartă',
-  description: `Contact ${siteConfig.name}. Telefon: ${siteConfig.contact.phone}. Email: ${siteConfig.contact.email}. Adresă: ${siteConfig.contact.address}, ${siteConfig.contact.city}.`,
+  title: 'Contact - Address, Phone, Schedule and Map',
+  description: `Contact ${siteConfig.name}. Phone: ${siteConfig.contact.phone}. Email: ${siteConfig.contact.email}. Address: ${siteConfig.contact.address}, ${siteConfig.contact.city}.`,
   path: '/contact',
 });
 
@@ -17,7 +27,7 @@ export const revalidate = 604800; // 1 week
 
 export default function ContactPage() {
   const breadcrumbs = [
-    { name: 'Acasă', path: '/' },
+    { name: 'Home', path: '/' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -30,9 +40,9 @@ export default function ContactPage() {
       <section className="section bg-primary text-white">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4">
-            Contactează-ne</h1>
+            Contact Us</h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Suntem aici să răspundem la toate întrebările tale
+            We're here to answer all your questions
           </p>
         </div>
       </section>
@@ -44,7 +54,7 @@ export default function ContactPage() {
             <ol className="flex items-center space-x-2 text-sm">
               <li>
                 <Link href="/" className="text-text-muted hover:text-accent">
-                  Acasă
+                  Home
                 </Link>
               </li>
               <li className="text-text-muted">/</li>
@@ -63,14 +73,14 @@ export default function ContactPage() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4 mx-auto">
                 <FontAwesomeIcon icon={faPhone} className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Telefon</h3>
+              <h3 className="text-xl font-semibold text-primary mb-2">Phone</h3>
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 className="text-lg text-text hover:text-accent transition-colors font-medium"
               >
                 {siteConfig.contact.phone}
               </a>
-              <p className="text-sm text-text-muted mt-2">Luni - Duminică, 9:00 - 21:00</p>
+              <p className="text-sm text-text-muted mt-2">Monday - Sunday, 9:00 AM - 9:00 PM</p>
             </div>
 
             {/* Email */}
@@ -85,7 +95,7 @@ export default function ContactPage() {
               >
                 {siteConfig.contact.email}
               </a>
-              <p className="text-sm text-text-muted mt-2">Răspundem în max 24h</p>
+              <p className="text-sm text-text-muted mt-2">We respond within 24 hours</p>
             </div>
 
             {/* Address */}
@@ -93,7 +103,7 @@ export default function ContactPage() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4 mx-auto">
                 <FontAwesomeIcon icon={faLocationDot} className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Adresă</h3>
+              <h3 className="text-xl font-semibold text-primary mb-2">Address</h3>
               <address className="not-italic text-text-light">
                 {siteConfig.contact.address}
                 <br />
@@ -111,10 +121,10 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
-              Locația Pe Hartă
+              Location on Map
             </h2>
             <p className="text-lg text-text-light max-w-2xl mx-auto">
-              Coordonate GPS: {siteConfig.geo.lat}, {siteConfig.geo.lng}
+              GPS Coordinates: {siteConfig.geo.lat}, {siteConfig.geo.lng}
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
@@ -133,27 +143,27 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-8 text-center">
-              Cum Ajungi La Cabană
+              How to Get to the Cabin
             </h2>
             <div className="space-y-6">
               <div className="card p-6">
                 <h3 className="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
                   <FontAwesomeIcon icon={faCar} className="w-6 h-6" />
-                  Cu Mașina
+                  By Car
                 </h3>
                 <div className="space-y-3 text-text-light">
                   <p>
-                    <strong>Din București (aprox. 170 km, 3 ore):</strong>
+                    <strong>From Bucharest (approx. 170 km, 3 hours):</strong>
                   </p>
                   <ul className="list-disc list-inside space-y-1 ml-4">
-                    <li>Autostrada A1 până la ieșirea Brașov</li>
-                    <li>DN73A spre Fundata/Bran</li>
-                    <li>Urmați indicațiile GPS către cabană</li>
-                    <li>Ultima porțiune: drum forestier 3km (accesibil orice anotimp)</li>
+                    <li>A1 Highway to Brașov exit</li>
+                    <li>DN73A towards Fundata/Bran</li>
+                    <li>Follow GPS directions to the cabin</li>
+                    <li>Last section: 3km forest road (accessible year-round)</li>
                   </ul>
                   <p className="text-sm bg-primary/5 p-3 rounded-lg mt-4">
-                    <strong>Important:</strong> Drumul este accesibil cu orice tip de vehicul.
-                    Iarna recomandăm cauciucuri de iarnă/lanțuri în caz de ninsoare abundentă.
+                    <strong>Important:</strong> The road is accessible with any type of vehicle.
+                    In winter, we recommend winter tires/chains in case of heavy snowfall.
                   </p>
                 </div>
               </div>
@@ -161,18 +171,18 @@ export default function ContactPage() {
               <div className="card p-6">
                 <h3 className="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
                   <FontAwesomeIcon icon={faBus} className="w-6 h-6" />
-                  Cu Transportul în Comun
+                  By Public Transport
                 </h3>
                 <div className="space-y-2 text-text-light">
                   <p>
-                    <strong>Tren:</strong> Până la gara Brașov, apoi taxi/transfer (15 km,
+                    <strong>Train:</strong> To Brașov station, then taxi/transfer (15 km,
                     ~20 min)
                   </p>
                   <p>
-                    <strong>Autobuz:</strong> Curse regulate București - Brașov, stație în centru
+                    <strong>Bus:</strong> Regular routes Bucharest - Brașov, stop in the city center
                   </p>
                   <p className="text-sm text-text-muted mt-3">
-                    * Putem organiza transfer de la gară/autogară la cerere (cost suplimentar)
+                    * We can arrange transfer from the train/bus station upon request (additional cost)
                   </p>
                 </div>
               </div>
@@ -186,10 +196,10 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-8">
-              Urmărește-ne pe social media
+              Follow us on social media
             </h2>
             <p className="text-lg text-text-light mb-8">
-              Descoperă cele mai recente update-uri, oferte speciale și poze frumoase din zonă
+              Discover the latest updates, special offers and beautiful photos from the area
             </p>
             <div className="flex justify-center gap-6 flex-wrap">
               {siteConfig.social.facebook && (
@@ -245,21 +255,21 @@ export default function ContactPage() {
       <section className="section bg-primary text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            Hai să planificăm sejurul tău!
+            Let's plan your stay!
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Dacă ai întrebări suplimentare sau vrei să rezervi direct, suntem la un telefon
-            distanță
+            If you have additional questions or want to book directly, we're just a phone call
+            away
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/rezervari" className="btn-accent btn-lg">
-              Formular de rezervare
+              Booking Form
             </Link>
             <a
               href={`tel:${siteConfig.contact.phone}`}
               className="btn-outline btn-lg border-white text-white hover:bg-white hover:text-primary"
             >
-              Sună acum
+              Call Now
             </a>
           </div>
         </div>

@@ -1,0 +1,171 @@
+{
+  "common": {
+    "home": "Home",
+    "cabin": "Cabin",
+    "gallery": "Gallery",
+    "rates": "Rates",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "reservations": "Reservations",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "bookNow": "Book now",
+    "learnMore": "Learn more",
+    "seeMore": "See more",
+    "readMore": "Read more",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address"
+  },
+  "nav": {
+    "home": "Home",
+    "cabin": "Cabin",
+    "gallery": "Gallery",
+    "rates": "Rates",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "bookNow": "Book"
+  },
+  "hero": {
+    "title": "Your perfect refuge in the heart of nature",
+    "subtitle": "Discover peace and comfort in the Wanderlust world",
+    "checkAvailability": "Check availability",
+    "virtualTour": "360° Virtual Tour"
+  },
+  "home": {
+    "cta": {
+      "heading": "Ready to create unforgettable memories?",
+      "description": "Book now and enjoy a unique mountain experience",
+      "bookNow": "Book now",
+      "seeRates": "See rates"
+    },
+    "gallery": {
+      "heading": "Photo Gallery",
+      "description": "Discover the beauty of our cabin through images",
+      "viewAll": "View full gallery"
+    },
+    "seo": {
+      "heading": "Cabin for Rent in {region}",
+      "paragraph1": "{siteName} is located in the heart of {region}, an area renowned for its natural beauty and absolute tranquility. Perfect for mountain weekends, family vacations or special events, our cabin offers an authentic experience away from urban hustle.",
+      "paragraph2": "Nearby you will find numerous mountain trails, ski slopes, spectacular waterfalls and famous tourist attractions. The ideal location for nature lovers, photography and adventure.",
+      "paragraph3": "Premium amenities include hot tub, Finnish sauna, rustic fireplace, fully equipped kitchen and free WiFi. Accommodation for up to 8 people, perfect for groups of friends or extended families."
+    },
+    "map": {
+      "heading": "Cabin Location",
+      "cta": "Complete contact information"
+    }
+  },
+  "usp": {
+    "heading": "Why choose our cabin?",
+    "description": "We offer a complete experience for a perfect escape from routine",
+    "hotTub": {
+      "title": "Hot Tub",
+      "description": "Total relaxation under the starry sky in a traditional wood-heated hot tub"
+    },
+    "firepit": {
+      "title": "Fireplace & Fire Pit",
+      "description": "For memorable evenings around the fire, with firewood and indoor fireplace for extra comfort"
+    },
+    "nature": {
+      "title": "100% Nature",
+      "description": "Located in a quiet area, surrounded by forest with spectacular views"
+    },
+    "family": {
+      "title": "Perfect for Families",
+      "description": "Spacious accommodation for 8 people, landscaped yard and activities for children"
+    },
+    "wifi": {
+      "title": "WiFi",
+      "description": "If you choose to work from the cabin, we have strong WiFi to connect with the outside world without any problems"
+    }
+  },
+  "cabin": {
+    "title": "About the Cabin",
+    "subtitle": "An authentic refuge with modern amenities in the heart of nature",
+    "story": {
+      "heading": "Our Story",
+      "paragraph1": "was built with the idea of offering an authentic experience in nature, without compromising modern comfort. Located in the heart of {region}, our cabin is the result of a passion for traditional Romanian architecture and the desire to create a space where people can reconnect with nature.",
+      "paragraph2": "Completely renovated in 2024, the cabin combines traditional elements - solid wood, natural stone, rustic fireplace - with the modern facilities necessary for a comfortable stay: central heating, WiFi, fully equipped kitchen.",
+      "paragraph3": "We are proud to offer our guests not just a place to stay, but a complete experience: the hot tub under the starry sky, the sauna after a day in the mountains, the silence of the forest and the fresh mountain air."
+    },
+    "amenities": {
+      "heading": "Amenities & Facilities",
+      "relaxation": "Relaxation",
+      "kitchen": "Kitchen",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "entertainment": "Entertainment",
+      "outdoor": "Outdoor"
+    },
+    "forWhom": {
+      "heading": "Who is the cabin suitable for?",
+      "families": {
+        "title": "Families with Children",
+        "description": "Spacious area, safe yard, games for children and complete facilities for the comfort of the whole family."
+      },
+      "friends": {
+        "title": "Groups of Friends",
+        "description": "Perfect for reunions, relaxing weekends or private parties in nature."
+      },
+      "couples": {
+        "title": "Romantic Couples",
+        "description": "Intimacy, quiet, hot tub under the stars and spectacular sunsets for unforgettable moments."
+      },
+      "events": {
+        "title": "Special Events",
+        "description": "Birthdays, marriage proposals, team-building or celebrations in private and exclusive setting."
+      }
+    },
+    "cta": {
+      "heading": "Convinced? Book Now!",
+      "description": "Don't let someone else take your perfect weekend. Check availability and book today.",
+      "checkAvailability": "Check availability",
+      "viewGallery": "See more photos"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are here to answer all your questions",
+    "phone": "Phone",
+    "phoneSchedule": "Monday - Sunday, 9:00 AM - 9:00 PM",
+    "email": "Email",
+    "emailResponse": "We respond within 24h",
+    "address": "Address",
+    "mapHeading": "Location on Map",
+    "directionsHeading": "How to Get to the Cabin",
+    "byCar": {
+      "title": "By Car",
+      "fromBucharest": "From Bucharest (approx. 170 km, 3 hours):",
+      "important": "Important: The road is accessible with any type of vehicle. In winter we recommend winter tires/chains in case of heavy snow."
+    },
+    "byPublicTransport": {
+      "title": "By Public Transport",
+      "train": "Train: To Brașov station, then taxi/transfer (15 km, ~20 min)",
+      "bus": "Bus: Regular routes Bucharest - Brașov, stop in the center",
+      "note": "* We can arrange transfer from station/bus terminal on request (extra cost)"
+    },
+    "social": {
+      "heading": "Follow us on social media",
+      "description": "Discover the latest updates, special offers and beautiful photos from the area"
+    },
+    "cta": {
+      "heading": "Let's plan your stay!",
+      "description": "If you have additional questions or want to book directly, we are just a phone call away",
+      "bookingForm": "Booking form",
+      "callNow": "Call now"
+    }
+  },
+  "footer": {
+    "description": "Authentic cabin in the heart of Făgăraș Mountains. Perfect accommodation for families, couples or groups of friends seeking peace, adventure and reconnection with nature.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "followUs": "Follow Us",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe for exclusive offers",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe"
+    },
+    "copyright": "All rights reserved."
+  }
+}

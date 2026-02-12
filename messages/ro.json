@@ -1,0 +1,171 @@
+{
+  "common": {
+    "home": "Acasă",
+    "cabin": "Cabana",
+    "gallery": "Galerie",
+    "rates": "Tarife",
+    "faq": "Întrebări frecvente",
+    "contact": "Contact",
+    "reservations": "Rezervări",
+    "privacy": "Politica de Confidențialitate",
+    "terms": "Termeni și Condiții",
+    "bookNow": "Rezervă acum",
+    "learnMore": "Află mai mult",
+    "seeMore": "Vezi mai multe",
+    "readMore": "Citește mai mult",
+    "phone": "Telefon",
+    "email": "Email",
+    "address": "Adresă"
+  },
+  "nav": {
+    "home": "Acasă",
+    "cabin": "Cabana",
+    "gallery": "Galerie",
+    "rates": "Tarife",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "bookNow": "Rezervă"
+  },
+  "hero": {
+    "title": "Refugiul tău perfect în inima naturii",
+    "subtitle": "Descoperă liniștea și confortul în lumea Wanderlust",
+    "checkAvailability": "Verfică disponibilitatea",
+    "virtualTour": "Tur virtual 360°"
+  },
+  "home": {
+    "cta": {
+      "heading": "Gata să creezi amintiri de neuitat?",
+      "description": "Rezervă acum și bucură-te de o experiență unică la munte",
+      "bookNow": "Rezervă acum",
+      "seeRates": "Vezi tarifele"
+    },
+    "gallery": {
+      "heading": "Galerie Foto",
+      "description": "Descoperă frumusețea cabanei noastre prin imagini",
+      "viewAll": "Vezi toată galeria"
+    },
+    "seo": {
+      "heading": "Cabană de Închiriat în {region}",
+      "paragraph1": "{siteName} este amplasată în inima {region}, o zonă renumită pentru frumusețea naturală și liniștea absolută. Perfectă pentru weekend-uri la munte, vacanțe în familie sau evenimente speciale, cabana noastră oferă o experiență autentică departe de agitația urbană.",
+      "paragraph2": "În apropiere găsiți numeroase trasee montane, pârtii de schi, cascade spectaculoase și obiective turistice renumite. Locația ideală pentru iubitorii de natură, fotografie și aventură.",
+      "paragraph3": "Dotările premium includ ciubar cu apă caldă, saună finlandeză, semineu rustic, bucătărie complet utilată și WiFi gratuit. Cazare pentru până la 8 persoane, perfectă pentru grupuri de prieteni sau familii extinse."
+    },
+    "map": {
+      "heading": "Locația Cabanei",
+      "cta": "Informații contact complete"
+    }
+  },
+  "usp": {
+    "heading": "De ce să alegi cabana noastră?",
+    "description": "Oferim o experiență completă pentru o evadare perfectă din rutină",
+    "hotTub": {
+      "title": "Ciubar cu apă caldă",
+      "description": "Relaxare totală sub cerul înstelat, în ciubarul tradițional cu apă încălzită pe lemne"
+    },
+    "firepit": {
+      "title": "Semineu & Fire Pit",
+      "description": "Pentru seri memorabile în jurul focului, cu lemne de foc și șemineu interior pentru un plus de confort"
+    },
+    "nature": {
+      "title": "Natură 100%",
+      "description": "Amplasată într-o zonă liniștită, înconjurată de pădure și cu privelişte spectaculoasă"
+    },
+    "family": {
+      "title": "Perfect pentru Familii",
+      "description": "Spațiu generos pentru 8 persoane, curte amenajată și activități pentru copii"
+    },
+    "wifi": {
+      "title": "WiFi",
+      "description": "Daca alegi sa lucrezi de la cabana, avem WiFi puternic pentru a te conecta cu lumea exterioară fără probleme"
+    }
+  },
+  "cabin": {
+    "title": "Despre Cabană",
+    "subtitle": "Un refugiu autentic cu dotări moderne în inima naturii",
+    "story": {
+      "heading": "Povestea Noastră",
+      "paragraph1": "a fost construită cu gândul de a oferi o experiență autentică în natură, fără a compromite confortul modern. Amplasată în inima {region}, cabana noastră este rezultatul unei pasiuni pentru arhitectura tradițională românească și a dorinței de a crea un spațiu unde oamenii pot reconecta cu natura.",
+      "paragraph2": "Renovată complet în 2024, cabana îmbină elementele tradiționale - lemn masiv, piatră naturală, șemineu rustic - cu facilitățile moderne necesare unui sejur confortabil: încălzire centrală, WiFi, bucătărie complet utilată.",
+      "paragraph3": "Suntem mândri să oferim oaspeților noștri nu doar un loc de cazare, ci o experiență completă: ciubarul sub cerul înstelat, sauna după o zi pe munte, liniștea pădurii și aerul curat al munților."
+    },
+    "amenities": {
+      "heading": "Dotări & Facilități",
+      "relaxation": "Relaxare",
+      "kitchen": "Bucătărie",
+      "bedrooms": "Dormitoare",
+      "bathrooms": "Băi",
+      "entertainment": "Entertainment",
+      "outdoor": "Exterior"
+    },
+    "forWhom": {
+      "heading": "Pentru cine este potrivită cabana?",
+      "families": {
+        "title": "Familii cu Copii",
+        "description": "Spațiu amplu, curte sigură, jocuri pentru copii și facilități complete pentru confortul întregii familii."
+      },
+      "friends": {
+        "title": "Grupuri de Prieteni",
+        "description": "Perfectă pentru reuniuni, weekend-uri relaxante sau petreceri private în natură."
+      },
+      "couples": {
+        "title": "Cupluri Romantice",
+        "description": "Intimitate, liniște, ciubar sub stele și apusuri spectaculoase pentru momente de neuitat."
+      },
+      "events": {
+        "title": "Evenimente Speciale",
+        "description": "Aniversări, cereri în căsătorie, team-building sau sărbători în cadru privat și exclusivist."
+      }
+    },
+    "cta": {
+      "heading": "Convins? Rezervă Acum!",
+      "description": "Nu lăsa pe altcineva să îți ia weekendul perfect. Verifică disponibilitatea și rezervă astăzi.",
+      "checkAvailability": "Verifică disponibilitatea",
+      "viewGallery": "Vezi mai multe poze"
+    }
+  },
+  "contact": {
+    "title": "Contactează-ne",
+    "subtitle": "Suntem aici să răspundem la toate întrebările tale",
+    "phone": "Telefon",
+    "phoneSchedule": "Luni - Duminică, 9:00 - 21:00",
+    "email": "Email",
+    "emailResponse": "Răspundem în max 24h",
+    "address": "Adresă",
+    "mapHeading": "Locația Pe Hartă",
+    "directionsHeading": "Cum Ajungi La Cabană",
+    "byCar": {
+      "title": "Cu Mașina",
+      "fromBucharest": "Din București (aprox. 170 km, 3 ore):",
+      "important": "Important: Drumul este accesibil cu orice tip de vehicul. Iarna recomandăm cauciucuri de iarnă/lanțuri în caz de ninsoare abundentă."
+    },
+    "byPublicTransport": {
+      "title": "Cu Transportul în Comun",
+      "train": "Tren: Până la gara Brașov, apoi taxi/transfer (15 km, ~20 min)",
+      "bus": "Autobuz: Curse regulate București - Brașov, stație în centru",
+      "note": "* Putem organiza transfer de la gară/autogară la cerere (cost suplimentar)"
+    },
+    "social": {
+      "heading": "Urmărește-ne pe social media",
+      "description": "Descoperă cele mai recente update-uri, oferte speciale și poze frumoase din zonă"
+    },
+    "cta": {
+      "heading": "Hai să planificăm sejurul tău!",
+      "description": "Dacă ai întrebări suplimentare sau vrei să rezervi direct, suntem la un telefon distanță",
+      "bookingForm": "Formular de rezervare",
+      "callNow": "Sună acum"
+    }
+  },
+  "footer": {
+    "description": "Cabană autentică în inima Munților Făgăraș. Cazare perfectă pentru familii, cupluri sau grupuri de prieteni care caută liniște, aventură și reconectare cu natura.",
+    "quickLinks": "Link-uri Rapide",
+    "legal": "Legal",
+    "followUs": "Urmărește-ne",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Abonează-te pentru oferte exclusive",
+      "placeholder": "Adresa ta de email",
+      "subscribe": "Abonează-te"
+    },
+    "copyright": "Toate drepturile rezervate."
+  }
+}

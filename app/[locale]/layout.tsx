@@ -1,26 +1,14 @@
 import type { Metadata } from 'next';
-// import { Inter, Merriweather } from 'next/font/google';
-import './globals.css';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import '../globals.css';
 import { siteConfig } from '@/lib/seo/config';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import { routing } from '@/i18n/routing';
 
 // Prevent Font Awesome from auto-adding CSS since we did it manually above
 config.autoAddCss = false;
-
-// Temporarily disabled Google Fonts due to certificate issues
-// Use system fonts fallback defined in CSS
-// const inter = Inter({
-//   subsets: ['latin'],
-//   variable: '--font-sans',
-//   display: 'swap',
-// });
-
-// const merriweather = Merriweather({
-//   subsets: ['latin'],
-//   weight: ['300', '400', '700', '900'],
-//   variable: '--font-serif',
-//   display: 'swap',
-// });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -85,15 +73,30 @@ export const metadata: Metadata = {
 
   verification: {
     google: 'GOOGLE_VERIFICATION_CODE_HERE',
-    // yandex: 'YANDEX_VERIFICATION_CODE_HERE',
   },
 };
 
-// Root layout - redirects to locale-specific layouts
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
-  return children;
+  // Validate locale
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
+  return (
+    <html lang={locale}>
+      <body className="antialiased">
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
 }

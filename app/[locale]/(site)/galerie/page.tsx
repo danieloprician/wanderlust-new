@@ -5,8 +5,8 @@ import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
 import { JsonLd, generateBreadcrumbSchema } from '@/lib/seo/schema';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Galerie Foto - Imagini Cabană, Interior, Exterior',
-  description: `Galerie foto completă ${siteConfig.name}. Vezi imagini cu interiorul, exteriorul, ciubarul, sauna, peisajele din zonă și facilitățile cabanei.`,
+  title: 'Photo Gallery - Cabin Images, Interior, Exterior',
+  description: `Complete photo gallery of ${siteConfig.name}. See images of the interior, exterior, hot tub, sauna, area landscapes and cabin facilities.`,
   path: '/galerie',
 });
 
@@ -14,8 +14,8 @@ export const revalidate = 604800; // 1 week
 
 export default function GaleriePage() {
   const breadcrumbs = [
-    { name: 'Acasă', path: '/' },
-    { name: 'Galerie', path: '/galerie' },
+    { name: 'Home', path: '/' },
+    { name: 'Gallery', path: '/galerie' },
   ];
 
   return (
@@ -26,10 +26,10 @@ export default function GaleriePage() {
       <section className="section bg-primary text-white">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4">
-            Galerie Foto
+            Photo Gallery
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Descoperă frumusețea și confortul cabanei noastre prin imagini
+            Discover the beauty and comfort of our cabin through images
           </p>
         </div>
       </section>
@@ -41,11 +41,11 @@ export default function GaleriePage() {
             <ol className="flex items-center space-x-2 text-sm">
               <li>
                 <Link href="/" className="text-text-muted hover:text-accent">
-                  Acasă
+                  Home
                 </Link>
               </li>
               <li className="text-text-muted">/</li>
-              <li className="text-text font-medium">Galerie</li>
+              <li className="text-text font-medium">Gallery</li>
             </ol>
           </nav>
         </div>
@@ -63,24 +63,23 @@ export default function GaleriePage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary mb-4">
-              Toate imaginile sunt reale
+              All images are authentic
             </h2>
             <p className="text-text-light mb-6">
-              Fotografiile prezentate în galerie sunt 100% autentice și reflectă realitatea
-              cabanei și a zonei înconjurătoare. Nu folosim filtre sau editări excesive - ceea
-              ce vezi este exact ceea ce vei găsi când vei ajunge aici.
+              The photographs shown in the gallery are 100% authentic and reflect the reality
+              of the cabin and surrounding area. We don't use filters or excessive editing - what
+              you see is exactly what you'll find when you arrive here.
             </p>
             <p className="text-text-light mb-8">
-              Dacă ai întrebări despre orice aspect al cabanei sau dorești mai multe detalii,
-              nu ezita să ne contactezi. Suntem bucuroși să îți oferim orice informații
-              suplimentare!
+              If you have questions about any aspect of the cabin or want more details,
+              don't hesitate to contact us. We're happy to provide any additional information!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/rezervari" className="btn-accent">
-                Rezervă acum
+                Book Now
               </Link>
               <Link href="/contact" className="btn-outline">
-                Contactează-ne
+                Contact Us
               </Link>
             </div>
           </div>

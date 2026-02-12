@@ -12,8 +12,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Întrebări Frecvente (FAQ) - Tot Ce Trebuie Să Știi',
-  description: `Răspunsuri la întrebările frecvente despre ${siteConfig.name}: politici de rezervare, facilități, check-in/out, animale de companie, anulări și multe altele.`,
+  title: 'Frequently Asked Questions (FAQ) - Everything You Need to Know',
+  description: `Answers to frequently asked questions about ${siteConfig.name}: booking policies, facilities, check-in/out, pets, cancellations and much more.`,
   path: '/faq',
 });
 
@@ -21,43 +21,43 @@ export const revalidate = 604800; // 1 week
 
 const faqs = [
   {
-    question: 'Care este capacitatea maximă a cabanei?',
+    question: 'What is the maximum capacity of the cabin?',
     answer:
-      'Cabana poate găzdui până la 8 persoane. Avem 3 dormitoare cu paturi pentru 6 persoane + o canapea extensibilă în living pentru cazuri excepționale.',
+      'The cabin can accommodate up to 8 people. We have 3 bedrooms with beds for 6 people + a sofa bed in the living room for exceptional cases.',
   },
   {
-    question: 'Care este politica de check-in și check-out?',
-    answer: `Check-in: ${siteConfig.booking.checkInTime}. Check-out: ${siteConfig.booking.checkOutTime}. Pentru check-in târziu sau check-out prelungit, vă rugăm să ne contactați în avans - vom încerca să vă acomodăm cererile în funcție de disponibilitate.`,
+    question: 'What is the check-in and check-out policy?',
+    answer: `Check-in: ${siteConfig.booking.checkInTime}. Check-out: ${siteConfig.booking.checkOutTime}. For late check-in or extended check-out, please contact us in advance - we will try to accommodate your requests based on availability.`,
   },
   {
-    question: 'Sunt acceptate animale de companie?',
+    question: 'Are pets allowed?',
     answer:
-      'Nu, din păcate nu acceptăm animale de companie. Această măsură este luată pentru confortul tuturor oaspeților, inclusiv a celor cu alergii.',
+      'No, unfortunately we do not accept pets. This measure is taken for the comfort of all guests, including those with allergies.',
   },
   {
-    question: 'Există parcare disponibilă?',
+    question: 'Is parking available?',
     answer:
-      'Da, avem parcare privată gratuită pentru până la 3 mașini, în curtea cabanei. Parcarea este pavată și iluminată noaptea.',
+      'Yes, we have free private parking for up to 3 cars in the cabin yard. The parking is paved and lit at night.',
   },
   {
-    question: 'Ciubarul și sauna sunt incluse în preț?',
+    question: 'Are the hot tub and sauna included in the price?',
     answer:
-      'Da, atât ciubarul cu apă caldă cât și sauna finlandeză sunt incluse în prețul cazării. Lemnele pentru încălzirea ciubarului sunt de asemenea incluse. Îți vom arăta cum să le folosești la check-in.',
+      'Yes, both the hot tub and Finnish sauna are included in the accommodation price. Firewood for heating the hot tub is also included. We will show you how to use them at check-in.',
   },
   {
-    question: 'Este disponibil WiFi?',
+    question: 'Is WiFi available?',
     answer:
-      'Da, oferim WiFi gratuit de mare viteză în toată cabana. Viteza este suficientă pentru streaming, videoconferințe și muncă remote.',
+      'Yes, we offer free high-speed WiFi throughout the cabin. The speed is sufficient for streaming, video conferencing and remote work.',
   },
   {
-    question: 'Cum este accesul la cabană iarna?',
+    question: 'How is access to the cabin in winter?',
     answer:
-      'Drumul către cabană este accesibil tot anul. Iarna, în caz de ninsoare abundentă, recomandăm să aveți cauciucuri de iarnă. Ultimul kilometru este pe drum forestier, dar acesta este întreținut regulat.',
+      'The road to the cabin is accessible year-round. In winter, in case of heavy snowfall, we recommend having winter tires. The last kilometer is on a forest road, but it is regularly maintained.',
   },
   {
-    question: 'Bucătăria este echipată complet?',
+    question: 'Is the kitchen fully equipped?',
     answer:
-      'Da, bucătăria este complet utilată cu aragaz, cuptor, frigider, mașină de spălat vase, cafetieră, fierbător, ustensile de gătit și tacâmuri. Nu trebuie să aduci decât alimentele.',
+      'Yes, the kitchen is fully equipped with stove, oven, refrigerator, dishwasher, coffee maker, kettle, cooking utensils and cutlery. You only need to bring food.',
   },  
   {
     question: 'Ce atracții turistice sunt în apropiere?',
@@ -65,87 +65,87 @@ const faqs = [
       <div className="space-y-4">
         <div>
           <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-            <span><FontAwesomeIcon icon={faMountain} className="text-primary" /></span> Natură & Peisaje
+            <span><FontAwesomeIcon icon={faMountain} className="text-primary" /></span> Nature & Landscapes
           </h4>
           <ul className="space-y-1 ml-6 list-disc">
-            <li><strong>Valea Avrigului</strong> – zonă turistică ce se întinde de-a lungul râului Avrig, cu cabane, pensiuni și peisaje montane liniștite</li>
-            <li><strong>Poiana Neamțului</strong> – punct final al văii și loc de plecare pe trasee montane spre Bârcaciu, Suru, Lacul Avrig</li>
-            <li><strong>Lacul Avrig</strong> (2011 m alt.) – lac glaciar spectaculos, unul dintre cele mai frumoase din Munții Făgăraș</li>
+            <li><strong>Avrig Valley</strong> – tourist area stretching along the Avrig River, with cabins, guesthouses and peaceful mountain landscapes</li>
+            <li><strong>Poiana Neamțului</strong> – end point of the valley and starting place for mountain trails to Bârcaciu, Suru, Lake Avrig</li>
+            <li><strong>Lake Avrig</strong> (2011 m alt.) – spectacular glacial lake, one of the most beautiful in the Făgăraș Mountains</li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-            <span><FontAwesomeIcon icon={faPersonHiking} className="text-primary" /></span> Trasee Montane
+            <span><FontAwesomeIcon icon={faPersonHiking} className="text-primary" /></span> Mountain Trails
           </h4>
           <ul className="space-y-1 ml-6 list-disc">
-            <li>Avrig → Izvorul Florii → Suru → Lacul Avrig → Negoiu → Bâlea</li>
-            <li>Poiana Neamțului → Cabana Bârcaciu → Lacul Avrig → Suru</li>
-            <li>Trasee spre vârfuri: Negoiu (2535m), Suru (2281m), Budislavu (2345m), Ciortea (2426m), Scara (2213m)</li>
+            <li>Avrig → Izvorul Florii → Suru → Lake Avrig → Negoiu → Bâlea</li>
+            <li>Poiana Neamțului → Bârcaciu Cabin → Lake Avrig → Suru</li>
+            <li>Trails to peaks: Negoiu (2535m), Suru (2281m), Budislavu (2345m), Ciortea (2426m), Scara (2213m)</li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-            <span><FontAwesomeIcon icon={faLandmark} className="text-primary" /></span> Obiective Culturale & Istorice (în Avrig)
+            <span><FontAwesomeIcon icon={faLandmark} className="text-primary" /></span> Cultural & Historical Sites (in Avrig)
           </h4>
           <ul className="space-y-1 ml-6 list-disc">
-            <li><strong>Palatul Brukenthal</strong> – palat baroc cu parc, alei și zone istorice</li>
-            <li><strong>Muzeul Avrig</strong> – colecții de artă populară, sticlărie, expoziții Gheorghe Lazăr</li>
-            <li><strong>Casa memorială „Gheorghe Lazăr"</strong></li>
-            <li><strong>Biserica Evanghelică</strong> (1265–1295) – cel mai vechi monument din Avrig</li>
-            <li><strong>Biserica Ortodoxă</strong> (1762) – picturi valoroase realizate de meșterii Ionașcu și Pană</li>
-            <li><strong>Mănăstirea Cisterciană Cârța</strong> – ansamblu gotic medieval în ruină, foarte cunoscut. (sec. XIX)</li>
-            <li><strong>Povestea Calendarului</strong> – parc tematic cu 12 căsuțe inspirate din calendarul tradițional</li>
-            <li><strong>Castelul de Lut – Valea Zânelor</strong> – una dintre cele mai fotografiate destinații din România</li>
+            <li><strong>Brukenthal Palace</strong> – baroque palace with park, alleys and historical areas</li>
+            <li><strong>Avrig Museum</strong> – collections of folk art, glassware, Gheorghe Lazăr exhibitions</li>
+            <li><strong>"Gheorghe Lazăr" Memorial House</strong></li>
+            <li><strong>Evangelical Church</strong> (1265–1295) – the oldest monument in Avrig</li>
+            <li><strong>Orthodox Church</strong> (1762) – valuable paintings by masters Ionașcu and Pană</li>
+            <li><strong>Cârța Cistercian Monastery</strong> – ruined medieval Gothic ensemble, very well known (19th century)</li>
+            <li><strong>The Calendar Story</strong> – theme park with 12 houses inspired by the traditional calendar</li>
+            <li><strong>Clay Castle – Fairy Valley</strong> – one of the most photographed destinations in Romania</li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-            <span><FontAwesomeIcon icon={faHorse} className="text-primary" /></span> Activități Recreative
+            <span><FontAwesomeIcon icon={faHorse} className="text-primary" /></span> Recreational Activities
           </h4>
           <ul className="space-y-1 ml-6 list-disc">
-            <li>Drumeții pe trasee marcate</li>
-            <li>Ture cu biciclete electrice</li>
-            <li>Ședințe de echitație</li>
-            <li>Piscine în aer liber</li>
+            <li>Hiking on marked trails</li>
+            <li>Electric bike tours</li>
+            <li>Horse riding sessions</li>
+            <li>Outdoor swimming pools</li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
-            <span><FontAwesomeIcon icon={faChildren} className="text-primary" /></span> Atracții Moderne / Parcuri
+            <span><FontAwesomeIcon icon={faChildren} className="text-primary" /></span> Modern Attractions / Parks
           </h4>
           <ul className="space-y-1 ml-6 list-disc">
-            <li><strong>Brambura Park & Casa Întoarsă</strong> – atracție pentru familii</li>
-            <li><strong>Panoramic Park & Viking Village</strong> – parc tematic</li>
-            <li><strong>Poiana Neamțului – Ferma de Cerbi</strong></li>
+            <li><strong>Brambura Park & Upside Down House</strong> – family attraction</li>
+            <li><strong>Panoramic Park & Viking Village</strong> – theme park</li>
+            <li><strong>Poiana Neamțului – Deer Farm</strong></li>
           </ul>
         </div>
       </div>
     ) as any,
   },
   {
-    question: 'Trebuie să aduc lenjerie de pat și prosoape?',
+    question: 'Do I need to bring bed linen and towels?',
     answer:
-      'Nu, lenjeriile de pat și prosoapele sunt incluse în preț și sunt puse la dispoziție pentru fiecare oaspete. Dacă ai nevoie de prosoape suplimentare pentru ciubar/saună, te rugăm să ne anunți.',
+      'No, bed linen and towels are included in the price and are provided for each guest. If you need extra towels for the hot tub/sauna, please let us know.',
   },
   {
-    question: 'Există magazine sau restaurante în apropiere?',
+    question: 'Are there shops or restaurants nearby?',
     answer:
-       `Cel mai apropiat restaurant, Popasul Montan este la 3 minute cu mașina sau la 5 min restaurantul Ghiocelul. În ${siteConfig.contact.city} (7.5 km) găsiți supermarketuri, magazine și carmangerii. Recomandăm să vă aprovizionați înainte de a ajunge la cabană.`,
+       `The nearest restaurant, Popasul Montan, is 3 minutes away by car or 5 min to Ghiocelul restaurant. In ${siteConfig.contact.city} (7.5 km) you will find supermarkets, stores and butcher shops. We recommend stocking up before arriving at the cabin.`,
   },
   {
-    question: 'Există semnal telefonic?',
+    question: 'Is there phone signal?',
     answer:
-      'Da, există semnal pentru principalele rețele (Orange, Vodafone, Telekom). Intensitatea semnalului poate varia în funcție de operator. WiFi-ul este disponibil ca alternativă pentru comunicare.',
+      'Yes, there is signal for major networks (Orange, Vodafone, Telekom). Signal strength may vary depending on the operator. WiFi is available as an alternative for communication.',
   },
 ];
 
 export default function FAQPage() {
   const breadcrumbs = [
-    { name: 'Acasă', path: '/' },
+    { name: 'Home', path: '/' },
     { name: 'FAQ', path: '/faq' },
   ];
 
@@ -158,10 +158,10 @@ export default function FAQPage() {
       <section className="section bg-primary text-white">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4">
-            Întrebări Frecvente
+            Frequently Asked Questions
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Tot ce trebuie să știi despre cabană, facilități și rezervări
+            Everything you need to know about the cabin, facilities and bookings
           </p>
         </div>
       </section>
@@ -173,7 +173,7 @@ export default function FAQPage() {
             <ol className="flex items-center space-x-2 text-sm">
               <li>
                 <Link href="/" className="text-text-muted hover:text-accent">
-                  Acasă
+                  Home
                 </Link>
               </li>
               <li className="text-text-muted">/</li>
@@ -232,21 +232,21 @@ export default function FAQPage() {
               </svg>
             </div>
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary mb-4">
-              Încă Mai Ai Întrebări?
+              Still Have Questions?
             </h2>
             <p className="text-text-light mb-8">
-              Nu ai găsit răspunsul pe care îl căutai? Contactează-ne direct și vom fi bucuroși să
-              te ajutăm!
+              Didn't find the answer you were looking for? Contact us directly and we'll be happy to
+              help!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
-                Contactează-ne
+                Contact Us
               </Link>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
                 className="btn-outline"
               >
-                Trimite email
+                Send Email
               </a>
             </div>
           </div>
@@ -258,28 +258,28 @@ export default function FAQPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary mb-8 text-center">
-              Link-uri Utile
+              Useful Links
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <Link href="/cabana" className="card-hover p-6 text-center">
                 <div className="text-4xl mb-3">🏠</div>
-                <h3 className="text-lg font-semibold text-primary mb-2">Despre Cabană</h3>
+                <h3 className="text-lg font-semibold text-primary mb-2">About the Cabin</h3>
                 <p className="text-sm text-text-muted">
-                  Dotări, facilități și plan camere
+                  Amenities, facilities and room layout
                 </p>
               </Link>
               <Link href="/tarife" className="card-hover p-6 text-center">
                 <div className="text-4xl mb-3">💰</div>
-                <h3 className="text-lg font-semibold text-primary mb-2">Tarife & Politici</h3>
+                <h3 className="text-lg font-semibold text-primary mb-2">Rates & Policies</h3>
                 <p className="text-sm text-text-muted">
-                  Prețuri, reduceri și politici de anulare
+                  Prices, discounts and cancellation policies
                 </p>
               </Link>
               <Link href="/rezervari" className="card-hover p-6 text-center">
                 <div className="text-4xl mb-3">📅</div>
-                <h3 className="text-lg font-semibold text-primary mb-2">Rezervări</h3>
+                <h3 className="text-lg font-semibold text-primary mb-2">Bookings</h3>
                 <p className="text-sm text-text-muted">
-                  Formular de rezervare online
+                  Online booking form
                 </p>
               </Link>
             </div>
