@@ -95,9 +95,21 @@ export default function Header() {
                 </Link>
               ))}
               <LanguageSwitcher />
-              <Link href="/rezervari" className="btn-accent btn-sm">
+              <a
+                href={siteConfig.social.booking}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-accent btn-sm flex items-center gap-2"
+              >
+                <Image
+                  src="/images/booking.svg"
+                  alt="Booking"
+                  width={18}
+                  height={18}
+                  className="w-[18px] h-[18px]"
+                />
                 {t('bookNow')}
-              </Link>
+              </a>
             </div>
 
             {/* Mobile menu button */}
@@ -151,9 +163,21 @@ export default function Header() {
               <div className="px-4 py-3">
                 <LanguageSwitcher />
               </div>
-              <Link href="/rezervari" className="btn-accent w-full mt-4">
+              <a
+                href={siteConfig.social.booking}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-accent w-full mt-4 flex items-center justify-center gap-2"
+              >
+                <Image
+                  src="/images/booking.svg"
+                  alt="Booking"
+                  width={30}
+                  height={30}
+                  className="w-7 h-7"
+                />
                 {t('bookNow')}
-              </Link>
+              </a>
             </div>
           </div>
         )}

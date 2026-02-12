@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 interface HeroCabanaProps {
   title?: string;
@@ -11,13 +14,20 @@ interface HeroCabanaProps {
 }
 
 export default function HeroCabana({
-  title = 'Refugiul tău perfect în inima naturii',
-  subtitle = 'Descoperă liniștea și confortul în lumea Wanderlust',
+  title,
+  subtitle,
   showCTA = true,
   imageUrl = '/images/cabana-exterior-vara.webp',
   imageAlt = 'Cabană de închiriat în Sibiu - exterior vara',
   height = 'full',
 }: HeroCabanaProps) {
+  const t = useTranslations('common');
+  const tHero = useTranslations('hero');
+  
+  // Use translations for default values if props are not provided
+  const displayTitle = title || tHero('title');
+  const displaySubtitle = subtitle || tHero('subtitle');
+  
   const heightClasses = {
     small: 'h-[400px] md:h-[500px]',
     medium: 'h-[500px] md:h-[600px] lg:h-[700px]',
@@ -47,19 +57,26 @@ export default function HeroCabana({
         <div className="container-custom">
           <div className="max-w-3xl animate-slide-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white mb-4 md:mb-6 text-balance">
-              {title}
+              {displayTitle}
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 md:mb-10 max-w-2xl text-balance">
-              {subtitle}
+              {displaySubtitle}
             </p>
 
             {showCTA && (
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/rezervari" className="btn-accent btn-lg">
-                  Rezervă acum
+                <Link href="/rezervari" className="btn-accent btn-lg flex items-center justify-center gap-2">
+                  <Image
+                    src="/images/booking.svg"
+                    alt="Booking"
+                    width={20}
+                    height={20}
+                    className="w-5 h-5"
+                  />
+                  {t('bookNow')}
                 </Link>
                 <Link href="/cabana" className="btn-outline btn-lg border-white text-white hover:bg-white hover:text-primary">
-                  Descoperă cabana
+                  {t('discoverCabin')}
                 </Link>
               </div>
             )}

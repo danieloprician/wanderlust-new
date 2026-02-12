@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import RateTable from '@/components/RateTable';
 import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
 import { JsonLd, generateBreadcrumbSchema } from '@/lib/seo/schema';
@@ -229,7 +230,14 @@ export default function TarifePage() {
             maximum 24 de ore.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/rezervari" className="btn-accent btn-lg">
+            <Link href="/rezervari" className="btn-accent btn-lg flex items-center justify-center gap-2">
+              <Image
+                src="/images/booking.svg"
+                alt="Booking"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
               Rezervă acum
             </Link>
             <Link

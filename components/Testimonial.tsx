@@ -23,15 +23,7 @@ const defaultTestimonials: Testimonial[] = [
     date: 'August 2024',
     comment:
       'The cabin is wonderful inside, recently furnished, and the owner provided us with many small treats! The gazebo is well equipped for whatever we wanted. The yard was amazing, both for children and with fruit trees. We had a wonderful time on our vacation here.',
-  },
-  {
-    name: 'Elena M.',
-    location: 'Timișoara',
-    rating: 5,
-    date: 'November 2025',
-    comment:
-      'Peace, nature, comfort... all in superlatives! The kitchen is very well equipped, we could cook everything we wanted. We will definitely return!',
-  },
+  },  
   {
     name: 'Tomaescu',
     location: 'Romania',

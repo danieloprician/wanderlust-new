@@ -10,6 +10,10 @@
     "privacy": "Politica de Confidențialitate",
     "terms": "Termeni și Condiții",
     "bookNow": "Rezervă acum",
+    "bookingPlatforms": "Rezervare",
+    "bookOnBooking": "Booking.com",
+    "bookOnAirbnb": "Airbnb",
+    "discoverCabin": "Descoperă cabana",
     "learnMore": "Află mai mult",
     "seeMore": "Vezi mai multe",
     "readMore": "Citește mai mult",
@@ -115,6 +119,10 @@
     "wifi": {
       "title": "WiFi",
       "description": "Daca alegi sa lucrezi de la cabana, avem WiFi puternic pentru a te conecta cu lumea exterioară fără probleme"
+    },
+    "grill": {
+      "title": "Zonă de grătar",
+      "description": "Spațiu acoperit pentru grătar cu masă exterioară și scaune, perfect pentru mese în aer liber și seri la grătar cu familia sau prietenii"
     }
   },
   "cabin": {
@@ -230,11 +238,20 @@
     "emailResponse": "Răspundem în max 24h",
     "address": "Adresă",
     "mapHeading": "Locația Pe Hartă",
-    "directionsHeading": "Cum Ajungi La Cabană",
+    "gpsCoordinates": "Coordonate GPS:",
+    "directionsHeading": "Cum ajungi la cabană",
     "byCar": {
       "title": "Cu Mașina",
-      "fromBucharest": "Din București (aprox. 170 km, 3 ore):",
-      "important": "Important: Drumul este accesibil cu orice tip de vehicul. Iarna recomandăm cauciucuri de iarnă/lanțuri în caz de ninsoare abundentă."
+      "fromBucharest": "Din Sibiu:",
+      "steps": [       
+        "Mergi 28 km pe DN1/E68 spre Brașov (≈30 min).",
+        "Traversezi Avrigul, ții drumul principal și urmezi indicatoarele spre Valea Avrigului / Poiana Neamțului.",
+        "Urcare pe Valea Avrigului",
+        "Intri pe strada Fatanii și continui ~6–7 km pe drum asfaltat + forestier."        
+      ],
+      "notes": "* Ultimii 500m este pe drum forestier, dar este întreținut regulat și accesibil cu mașini normale.",
+      "important": "Important:",
+      "importantNote": "Drumul este accesibil cu orice tip de vehicul. Iarna recomandăm cauciucuri de iarnă/lanțuri în caz de ninsoare abundentă."
     },
     "byPublicTransport": {
       "title": "Cu Transportul în Comun",
@@ -249,7 +266,7 @@
     "cta": {
       "heading": "Hai să planificăm sejurul tău!",
       "description": "Dacă ai întrebări suplimentare sau vrei să rezervi direct, suntem la un telefon distanță",
-      "bookingForm": "Formular de rezervare",
+      "bookingForm": "Rezervă acum ",
       "callNow": "Sună acum"
     }
   },

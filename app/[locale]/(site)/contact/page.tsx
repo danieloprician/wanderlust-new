@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
 import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
@@ -133,7 +134,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
               {t('mapHeading')}
             </h2>
             <p className="text-lg text-text-light max-w-2xl mx-auto">
-              GPS Coordinates: {siteConfig.geo.lat}, {siteConfig.geo.lng}
+              {t('gpsCoordinates')} {siteConfig.geo.lat}, {siteConfig.geo.lng}
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
@@ -158,43 +159,22 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
               <div className="card p-6">
                 <h3 className="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
                   <FontAwesomeIcon icon={faCar} className="w-6 h-6" />
-                  By Car
+                  {t('byCar.title')}
                 </h3>
                 <div className="space-y-3 text-text-light">
                   <p>
-                    <strong>From Bucharest (approx. 170 km, 3 hours):</strong>
+                    <strong>{t('byCar.fromBucharest')}</strong>
                   </p>
                   <ul className="list-disc list-inside space-y-1 ml-4">
-                    <li>A1 Highway to Brașov exit</li>
-                    <li>DN73A towards Fundata/Bran</li>
-                    <li>Follow GPS directions to the cabin</li>
-                    <li>Last section: 3km forest road (accessible year-round)</li>
+                    {(t.raw('byCar.steps') as string[]).map((step: string, index: number) => (
+                      <li key={index}>{step}</li>
+                    ))}
                   </ul>
                   <p className="text-sm bg-primary/5 p-3 rounded-lg mt-4">
-                    <strong>Important:</strong> The road is accessible with any type of vehicle.
-                    In winter, we recommend winter tires/chains in case of heavy snowfall.
+                    <strong>{t('byCar.important')}</strong> {t('byCar.importantNote')}
                   </p>
                 </div>
-              </div>
-
-              <div className="card p-6">
-                <h3 className="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
-                  <FontAwesomeIcon icon={faBus} className="w-6 h-6" />
-                  By Public Transport
-                </h3>
-                <div className="space-y-2 text-text-light">
-                  <p>
-                    <strong>Train:</strong> To Brașov station, then taxi/transfer (15 km,
-                    ~20 min)
-                  </p>
-                  <p>
-                    <strong>Bus:</strong> Regular routes Bucharest - Brașov, stop in the city center
-                  </p>
-                  <p className="text-sm text-text-muted mt-3">
-                    * We can arrange transfer from the train/bus station upon request (additional cost)
-                  </p>
-                </div>
-              </div>
+              </div>             
             </div>
           </div>
         </div>
@@ -205,10 +185,10 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-8">
-              Follow us on social media
+              {t('social.heading')}
             </h2>
             <p className="text-lg text-text-light mb-8">
-              Discover the latest updates, special offers and beautiful photos from the area
+              {t('social.description')}
             </p>
             <div className="flex justify-center gap-6 flex-wrap">
               {siteConfig.social.facebook && (
@@ -232,18 +212,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                 >
                   <FontAwesomeIcon icon={faInstagram} className="w-7 h-7" />
                 </a>
-              )}
-              {siteConfig.social.booking && (
-                <a
-                  href={siteConfig.social.booking}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Booking.com"
-                  className="inline-flex items-center justify-center w-14 h-14 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all hover:scale-110"
-                >
-                  <FontAwesomeIcon icon={faCalendarDays} className="w-7 h-7" />
-                </a>
-              )}
+              )}              
               {siteConfig.social.airbnb && (
                 <a
                   href={siteConfig.social.airbnb}
@@ -264,21 +233,32 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
       <section className="section bg-primary text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            Let's plan your stay!
+            {t('cta.heading')}
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            If you have additional questions or want to book directly, we're just a phone call
-            away
+            {t('cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/rezervari" className="btn-accent btn-lg">
-              Booking Form
-            </Link>
+            <a
+              href={siteConfig.social.booking}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-accent btn-lg flex items-center justify-center gap-2"
+            >
+              <Image
+                src="/images/booking.svg"
+                alt="Booking"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
+              {t('cta.bookingForm')}
+            </a>
             <a
               href={`tel:${siteConfig.contact.phone}`}
               className="btn-outline btn-lg border-white text-white hover:bg-white hover:text-primary"
             >
-              Call Now
+              {t('cta.callNow')}
             </a>
           </div>
         </div>

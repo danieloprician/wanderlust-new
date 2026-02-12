@@ -15,13 +15,10 @@ export default async function Footer({ locale }: FooterProps) {
     explorare: [
       { name: t('explore.cabin'), href: '/cabana' },
       { name: t('explore.gallery'), href: '/galerie' },
-      { name: t('explore.rates'), href: '/tarife' },
-      { name: t('explore.reservations'), href: '/rezervari' },
     ],
     informatii: [
       { name: t('info.contact'), href: '/contact' },
       { name: t('info.faq'), href: '/faq' },
-      { name: t('info.terms'), href: '/termeni' },
       { name: t('info.privacy'), href: '/politica-confidentialitate' },
     ],
   };
@@ -59,7 +56,7 @@ export default async function Footer({ locale }: FooterProps) {
                   <strong>{t('phone')}</strong>{' '}
                   <a
                     href={`tel:${siteConfig.contact.phone}`}
-                    className="hover:text-accent transition-colors"
+                    className="text-white hover:text-accent transition-colors"
                   >
                     {siteConfig.contact.phone}
                   </a>
@@ -68,7 +65,7 @@ export default async function Footer({ locale }: FooterProps) {
                   <strong>{t('email')}</strong>{' '}
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
-                    className="hover:text-accent transition-colors"
+                    className="text-white hover:text-accent transition-colors"
                   >
                     {siteConfig.contact.email}
                   </a>

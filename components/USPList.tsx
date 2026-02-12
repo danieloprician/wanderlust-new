@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBath, faFire, faMountain, faUsers, faWifi } from "@fortawesome/free-solid-svg-icons";
+import { faBath, faFire, faHotTubPerson, faMountain, faUsers, faWifi, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { getTranslations } from 'next-intl/server';
 
@@ -19,7 +19,7 @@ export default async function USPList({ locale, columns = 3 }: USPListProps) {
   
   const usps: USP[] = [
     {
-      icon: faBath,
+      icon: faHotTubPerson,
       title: t('hotTub.title'),
       description: t('hotTub.description'),
     },
@@ -42,6 +42,11 @@ export default async function USPList({ locale, columns = 3 }: USPListProps) {
       icon: faWifi,
       title: t('wifi.title'),
       description: t('wifi.description'),
+    },
+    {
+      icon: faUtensils,
+      title: t('grill.title'),
+      description: t('grill.description'),
     },
   ];
   const gridCols = {

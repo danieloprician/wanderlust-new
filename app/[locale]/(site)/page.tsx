@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import HeroCabana from '@/components/HeroCabana';
 import USPList from '@/components/USPList';
@@ -57,17 +58,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             {tHome('cta.description')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/rezervari" className="btn-accent btn-lg">
-              {tHome('cta.bookNow')}
-            </Link>
-            <Link
-              href="/tarife"
-              className="btn-outline btn-lg border-white text-white hover:bg-white hover:text-primary"
-            >
-              {tHome('cta.seeRates')}
-            </Link>
-          </div>
+          
         </div>
       </section>
 

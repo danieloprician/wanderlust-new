@@ -1,7 +1,7 @@
 {
   "common": {
     "home": "Home",
-    "cabin": "Cabin",
+    "cabin": "Cottage",
     "gallery": "Gallery",
     "rates": "Rates",
     "faq": "FAQ",
@@ -10,6 +10,10 @@
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
     "bookNow": "Book now",
+    "bookingPlatforms": "Book now",
+    "bookOnBooking": "Booking.com",
+    "bookOnAirbnb": "Airbnb",
+    "discoverCabin": "Discover the cottage",
     "learnMore": "Learn more",
     "seeMore": "See more",
     "readMore": "Read more",
@@ -18,13 +22,13 @@
     "address": "Address"
   },
   "footer": {
-    "description": "Cabin for rent in {region}, {country}. Unique experience in nature, with premium amenities for your comfort.",
+    "description": "Cottage for rent in {region}, {country}. Unique experience in nature, with premium amenities for your comfort.",
     "address": "Address:",
     "phone": "Phone:",
     "email": "Email:",
     "explore": {
       "heading": "Explore",
-      "cabin": "Cabin",
+      "cabin": "Cottage",
       "gallery": "Gallery",
       "rates": "Rates",
       "reservations": "Reservations"
@@ -53,7 +57,7 @@
   },
   "nav": {
     "home": "Home",
-    "cabin": "Cabin",
+    "cabin": "Cottage",
     "gallery": "Gallery",
     "rates": "Rates",
     "faq": "FAQ",
@@ -68,8 +72,8 @@
   },
   "home": {
     "metadata": {
-      "title": "{siteName} - Cabin for Rent in {region}",
-      "description": "Discover {siteName}, the perfect cabin for mountain vacations in {region}. Hot tub, sauna, fireplace and authentic nature. Book now!"
+      "title": "{siteName} - Cottage for Rent in {region}",
+      "description": "Discover {siteName}, the perfect cottage for mountain vacations in {region}. Hot tub, sauna, fireplace and authentic nature. Book now!"
     },
     "cta": {
       "heading": "Ready to create unforgettable memories?",
@@ -79,22 +83,22 @@
     },
     "gallery": {
       "heading": "Photo Gallery",
-      "description": "Discover the beauty of our cabin through images",
+      "description": "Discover the beauty of our cottage through images",
       "viewAll": "View full gallery"
     },
     "seo": {
-      "heading": "Cabin for Rent in {region}",
-      "paragraph1": "{siteName} is located in the heart of {region}, an area renowned for its natural beauty and absolute tranquility. Perfect for mountain weekends, family vacations or special events, our cabin offers an authentic experience away from urban hustle.",
+      "heading": "Cottage for Rent in {region}",
+      "paragraph1": "{siteName} is located in the heart of {region}, an area renowned for its natural beauty and absolute tranquility. Perfect for mountain weekends, family vacations or special events, our cottage offers an authentic experience away from urban hustle.",
       "paragraph2": "Nearby you will find numerous mountain trails, ski slopes, spectacular waterfalls and famous tourist attractions. The ideal location for nature lovers, photography and adventure.",
       "paragraph3": "Premium amenities include hot tub, Finnish sauna, rustic fireplace, fully equipped kitchen and free WiFi. Accommodation for up to 8 people, perfect for groups of friends or extended families."
     },
     "map": {
-      "heading": "Cabin Location",
+      "heading": "Cottage Location",
       "cta": "Complete contact information"
     }
   },
   "usp": {
-    "heading": "Why choose our cabin?",
+    "heading": "Why choose our cottage?",
     "description": "We offer a complete experience for a perfect escape from routine",
     "hotTub": {
       "title": "Hot Tub",
@@ -114,16 +118,20 @@
     },
     "wifi": {
       "title": "WiFi",
-      "description": "If you choose to work from the cabin, we have strong WiFi to connect with the outside world without any problems"
+      "description": "If you choose to work from the cottage, we have strong WiFi to connect with the outside world without any problems"
+    },
+    "grill": {
+      "title": "BBQ Area",
+      "description": "Covered BBQ area with outdoor table and chairs, perfect for outdoor dining and barbecue evenings with family or friends"
     }
   },
   "cabin": {
-    "title": "About the Cabin",
+    "title": "About the Cottage",
     "subtitle": "An authentic refuge with modern amenities in the heart of nature",
     "story": {
       "heading": "Our Story",
-      "paragraph1": "was built with the idea of offering an authentic experience in nature, without compromising modern comfort. Located in the heart of {region}, our cabin is the result of a passion for traditional Romanian architecture and the desire to create a space where people can reconnect with nature.",
-      "paragraph2": "Completely renovated in 2024, the cabin combines traditional elements - solid wood, natural stone, rustic fireplace - with the modern facilities necessary for a comfortable stay: central heating, WiFi, fully equipped kitchen.",
+      "paragraph1": "was built with the idea of offering an authentic experience in nature, without compromising modern comfort. Located in the heart of {region}, our cottage is the result of a passion for traditional Romanian architecture and the desire to create a space where people can reconnect with nature.",
+      "paragraph2": "Completely renovated in 2024, the cottage combines traditional elements - solid wood, natural stone, rustic fireplace - with the modern facilities necessary for a comfortable stay: central heating, WiFi, fully equipped kitchen.",
       "paragraph3": "We are proud to offer our guests not just a place to stay, but a complete experience: the hot tub under the starry sky, the sauna after a day in the mountains, the silence of the forest and the fresh mountain air."
     },
     "amenities": {
@@ -144,7 +152,7 @@
       }
     },
     "forWhom": {
-      "heading": "Who is the cabin suitable for?",
+      "heading": "Who is the cottage suitable for?",
       "families": {
         "title": "Families with Children",
         "description": "Spacious area, safe yard, games for children and complete facilities for the comfort of the whole family."
@@ -230,11 +238,19 @@
     "emailResponse": "We respond within 24h",
     "address": "Address",
     "mapHeading": "Location on Map",
-    "directionsHeading": "How to Get to the Cabin",
+    "gpsCoordinates": "GPS Coordinates:",
+    "directionsHeading": "How to get to the cottage",
     "byCar": {
       "title": "By Car",
       "fromBucharest": "From Bucharest (approx. 170 km, 3 hours):",
-      "important": "Important: The road is accessible with any type of vehicle. In winter we recommend winter tires/chains in case of heavy snow."
+      "steps": [
+        "A1 Highway to Brașov exit",
+        "DN73A towards Fundata/Bran",
+        "Follow GPS directions to the cottage",
+        "Last section: 3km forest road (accessible year-round)"
+      ],
+      "important": "Important:",
+      "importantNote": "The road is accessible with any type of vehicle. In winter, we recommend winter tires/chains in case of heavy snowfall."
     },
     "byPublicTransport": {
       "title": "By Public Transport",
@@ -249,13 +265,13 @@
     "cta": {
       "heading": "Let's plan your stay!",
       "description": "If you have additional questions or want to book directly, we are just a phone call away",
-      "bookingForm": "Booking form",
+      "bookingForm": "Book now",
       "callNow": "Call now"
     }
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about the cabin, facilities and bookings",
+    "subtitle": "Everything you need to know about the cottage, facilities and bookings",
     "stillHaveQuestions": {
       "heading": "Still Have Questions?",
       "description": "Didn't find the answer you were looking for? Contact us directly and we'll be happy to help!",
@@ -264,8 +280,8 @@
     },
     "usefulLinks": {
       "heading": "Useful Links",
-      "aboutCabin": {
-        "title": "About the Cabin",
+      "aboutCottage": {
+        "title": "About the Cottage",
         "description": "Amenities, facilities and room layout"
       },
       "ratesPolicies": {
@@ -279,8 +295,8 @@
     },
     "questions": {
       "q1": {
-        "question": "What is the maximum capacity of the cabin?",
-        "answer": "The cabin can accommodate up to 8 people. We have 3 bedrooms with beds for 6 people + a sofa bed in the living room for exceptional cases."
+        "question": "What is the maximum capacity of the cottage?",
+        "answer": "The cottage can accommodate up to 8 people. We have 3 bedrooms with beds for 6 people + a sofa bed in the living room for exceptional cases."
       },
       "q2": {
         "question": "What is the check-in and check-out policy?",
@@ -292,7 +308,7 @@
       },
       "q4": {
         "question": "Is parking available?",
-        "answer": "Yes, we have free private parking for up to 3 cars in the cabin yard. The parking is paved and lit at night."
+        "answer": "Yes, we have free private parking for up to 3 cars in the cottage yard. The parking is paved and lit at night."
       },
       "q5": {
         "question": "Are the hot tub and sauna included in the price?",
@@ -300,11 +316,11 @@
       },
       "q6": {
         "question": "Is WiFi available?",
-        "answer": "Yes, we offer free high-speed WiFi throughout the cabin. The speed is sufficient for streaming, video conferencing and remote work."
+        "answer": "Yes, we offer free high-speed WiFi throughout the cottage. The speed is sufficient for streaming, video conferencing and remote work."
       },
       "q7": {
-        "question": "How is access to the cabin in winter?",
-        "answer": "The road to the cabin is accessible year-round. In winter, in case of heavy snowfall, we recommend having winter tires. The last kilometer is on a forest road, but it is regularly maintained."
+        "question": "How is access to the cottage in winter?",
+        "answer": "The road to the cottage is accessible year-round. In winter, in case of heavy snowfall, we recommend having winter tires. The last kilometer is on a forest road, but it is regularly maintained."
       },
       "q8": {
         "question": "Is the kitchen fully equipped?",
@@ -349,7 +365,7 @@
       },
       "q11": {
         "question": "Are there shops or restaurants nearby?",
-        "answer": "The nearest restaurant, Popasul Montan, is 3 minutes away by car or 5 min to Ghiocelul restaurant. In {city} (7.5 km) you will find supermarkets, stores and butcher shops. We recommend stocking up before arriving at the cabin."
+        "answer": "The nearest restaurant, Popasul Montan, is 3 minutes away by car or 5 min to Ghiocelul restaurant. In {city} (7.5 km) you will find supermarkets, stores and butcher shops. We recommend stocking up before arriving at the cottage."
       },
       "q12": {
         "question": "Is there phone signal?",
@@ -359,10 +375,10 @@
   },
   "gallery": {
     "title": "Photo Gallery",
-    "subtitle": "Discover the beauty of our cabin",
+    "subtitle": "Discover the beauty of our cottage",
     "authenticity": {
       "title": "100% Authentic Photos",
-      "description": "All the photos you see are real, taken at our cabin. No exaggerated filters or tricks - what you see is exactly what you'll find when you get here!"
+      "description": "All the photos you see are real, taken at our cottage. No exaggerated filters or tricks - what you see is exactly what you'll find when you get here!"
     },
     "cta": {
       "heading": "Ready to experience this in person?",
@@ -372,7 +388,7 @@
     }
   },
   "bookings": {
-    "title": "Book the Cabin",
+    "title": "Book the Cottage",
     "subtitle": "Fill out the form and we will contact you as soon as possible",
     "form": {
       "fullName": "Full name",
