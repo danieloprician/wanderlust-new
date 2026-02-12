@@ -15,7 +15,7 @@ const faqs = [
   {
     question: 'Care este capacitatea maximă a cabanei?',
     answer:
-      'Cabana poate găzdui până la 8 persoane. Avem 3 dormitoare cu paturi pentru 8 persoane + o canapea extensibilă în living pentru cazuri excepționale.',
+      'Cabana poate găzdui până la 8 persoane. Avem 3 dormitoare cu paturi pentru 6 persoane + o canapea extensibilă în living pentru cazuri excepționale.',
   },
   {
     question: 'Care este politica de check-in și check-out?',
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: 'Există parcare disponibilă?',
     answer:
-      'Da, avem parcare privată gratuită pentru până la 3 mașini, direct lângă cabană. Parcarea este pavată și iluminată noaptea.',
+      'Da, avem parcare privată gratuită pentru până la 3 mașini, în curtea cabanei. Parcarea este pavată și iluminată noaptea.',
   },
   {
     question: 'Ciubarul și sauna sunt incluse în preț?',
@@ -44,12 +44,12 @@ const faqs = [
   {
     question: 'Cum este accesul la cabană iarna?',
     answer:
-      'Drumul către cabană este accesibil tot anul. Iarna, în caz de ninsoare abundentă, recomandăm să aveți cauciucuri de iarnă sau lanțuri. Ultimii 3 km sunt pe drum forestier, dar acesta este întreținut regulat.',
+      'Drumul către cabană este accesibil tot anul. Iarna, în caz de ninsoare abundentă, recomandăm să aveți cauciucuri de iarnă. Ultimul kilometru este pe drum forestier, dar acesta este întreținut regulat.',
   },
   {
     question: 'Bucătăria este echipată complet?',
     answer:
-      'Da, bucătăria este complet utilată cu aragaz, cuptor, frigider, mașină de spălat vase, cafetieră, fierbător, ustensile de gătit și tacâmuri pentru 8 persoane. Nu trebuie să aduci decât alimentele.',
+      'Da, bucătăria este complet utilată cu aragaz, cuptor, frigider, mașină de spălat vase, cafetieră, fierbător, ustensile de gătit și tacâmuri. Nu trebuie să aduci decât alimentele.',
   },
   {
     question: 'Care este politica de anulare?',
@@ -58,8 +58,70 @@ const faqs = [
   },
   {
     question: 'Ce atracții turistice sunt în apropiere?',
-    answer:
-      'În zonă găsiți numeroase trasee montane, pârtii de schi (iarna), cascade spectaculoase, mănăstiri și sate tradiționale. La check-in vă oferim o hartă cu recomandările noastre de obiective turistice.',
+    answer: (
+      <div className="space-y-4">
+        <div>
+          <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
+            <span>🏞️</span> Natură & Peisaje
+          </h4>
+          <ul className="space-y-1 ml-6 list-disc">
+            <li><strong>Valea Avrigului</strong> – zonă turistică ce se întinde de-a lungul râului Avrig, cu cabane, pensiuni și peisaje montane liniștite</li>
+            <li><strong>Poiana Neamțului</strong> – punct final al văii și loc de plecare pe trasee montane spre Bârcaciu, Suru, Lacul Avrig</li>
+            <li><strong>Lacul Avrig</strong> (2011 m alt.) – lac glaciar spectaculos, unul dintre cele mai frumoase din Munții Făgăraș</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
+            <span>🥾</span> Trasee Montane
+          </h4>
+          <ul className="space-y-1 ml-6 list-disc">
+            <li>Avrig → Izvorul Florii → Suru → Lacul Avrig → Negoiu → Bâlea</li>
+            <li>Poiana Neamțului → Cabana Bârcaciu → Lacul Avrig → Suru</li>
+            <li>Trasee spre vârfuri: Negoiu (2535m), Suru (2281m), Budislavu (2345m), Ciortea (2426m), Scara (2213m)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
+            <span>🏛️</span> Obiective Culturale & Istorice (în Avrig)
+          </h4>
+          <ul className="space-y-1 ml-6 list-disc">
+            <li><strong>Palatul Brukenthal</strong> – palat baroc cu parc, alei și zone istorice</li>
+            <li><strong>Muzeul Avrig</strong> – colecții de artă populară, sticlărie, expoziții Gheorghe Lazăr</li>
+            <li><strong>Casa memorială „Gheorghe Lazăr"</strong></li>
+            <li><strong>Biserica Evanghelică</strong> (1265–1295) – cel mai vechi monument din Avrig</li>
+            <li><strong>Biserica Ortodoxă</strong> (1762) – picturi valoroase realizate de meșterii Ionașcu și Pană</li>
+            <li><strong>Mănăstirea Cisterciană Cârța</strong> – ansamblu gotic medieval în ruină, foarte cunoscut. (sec. XIX)</li>
+            <li><strong>Povestea Calendarului</strong> – parc tematic cu 12 căsuțe inspirate din calendarul tradițional</li>
+            <li><strong>Castelul de Lut – Valea Zânelor – una dintre cele mai fotografiate destinații din România</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
+            <span>🐎</span> Activități Recreative
+          </h4>
+          <ul className="space-y-1 ml-6 list-disc">
+            <li>Drumeții pe trasee marcate</li>
+            <li>Ture cu biciclete electrice</li>
+            <li>Ședințe de echitație</li>
+            <li>Piscine în aer liber</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
+            <span>🎠</span> Atracții Moderne / Parcuri
+          </h4>
+          <ul className="space-y-1 ml-6 list-disc">
+            <li><strong>Brambura Park & Casa Întoarsă</strong> – atracție pentru familii</li>
+            <li><strong>Panoramic Park & Viking Village</strong> – parc tematic</li>
+            <li><strong>Poiana Neamțului – Ferma de Cerbi</strong></li>
+          </ul>
+        </div>
+      </div>
+    ) as any,
   },
   {
     question: 'Trebuie să aduc lenjerie de pat și prosoape?',

@@ -13,35 +13,65 @@ export interface GalleryImage {
 
 const defaultImages: GalleryImage[] = [
   {
-    src: 'https://placehold.co/800x600/2C5F4D/FFFFFF/webp?text=Cabana+Exterior+Vara',
-    alt: 'Cabană de închiriat - vedere exterioară vara',
+    src: '/images/gallery/wanderlust-cottage-vedere-panoramica-primavara.webp',
+    alt: 'Cabană de închiriat - vedere panoramică primăvara',
     category: 'exterior',
   },
   {
-    src: 'https://placehold.co/800x600/8B6F47/FFFFFF/webp?text=Living+Interior',
+    src: '/images/gallery/wanderlust-cottage-living.webp',
     alt: 'Living cabană - interior cochet și confortabil',
     category: 'interior',
   },
   {
-    src: 'https://placehold.co/800x600/C17856/FFFFFF/webp?text=Ciubar+Seara',
-    alt: 'Ciubar cu apă caldă seara - relaxare totală',
+    src: '/images/gallery/wanderlust-cottage-exterior-cu-tereasa.webp',
+    alt: 'Cabana Wanderlust Cottage cu terasă - relaxare în aer liber',
     category: 'exterior',
   },
   {
-    src: 'https://placehold.co/800x600/8B6F47/FFFFFF/webp?text=Bucatarie',
+    src: '/images/gallery/wanderlust-cottage-vedere-panoramica.webp',
+    alt: 'Bucătărie complet utilată cabană',
+    category: 'exterior',
+  },
+  {
+    src: '/images/gallery/wanderlust-cottage-camera.webp',
+    alt: 'Cameră cabană - interior cochet și confortabil',
+    category: 'interior',
+  },
+  {
+    src: '/images/gallery/wanderlust-cottage-iarna.webp',
+    alt: 'Cabana Wanderlust Cottage iarna - peisaj de poveste',
+    category: 'exterior',
+  },
+  {
+    src: '/images/gallery/wanderlust-cottage-bucataria.webp',
     alt: 'Bucătărie complet utilată cabană',
     category: 'interior',
   },
   {
-    src: 'https://placehold.co/800x600/2C5F4D/FFFFFF/webp?text=Semineu+Iarna',
-    alt: 'Semineu rustic iarna - atmosferă caldă',
+    src: '/images/gallery/wanderlust-cottage-bath.webp',
+    alt: 'Cameră cabană - interior cochet și confortabil',
     category: 'interior',
   },
   {
-    src: 'https://placehold.co/800x600/C17856/FFFFFF/webp?text=Terasa+Priveliste',
-    alt: 'Terasă cu privelişte la munte',
-    category: 'exterior',
+    src: '/images/gallery/wanderlust-cottage-camera-2.webp',
+    alt: 'Cameră cabană - interior cochet și confortabil',
+    category: 'interior',
   },
+  {
+    src: '/images/gallery/wanderlust-cottage-camera-3.webp',
+    alt: 'Cameră cabană - interior cochet și confortabil',
+    category: 'interior',
+  },
+  {
+    src: '/images/gallery/brambura-park.webp',
+    alt: 'Brambura Park - casa intoarsa si activități pentru copii',
+    category: 'activitati',
+  },
+  {
+    src: '/images/gallery/ferma-de-cerbi-poiana-neamtului.webp',
+    alt: 'Ferma de cerbi Poiana Neamțului - activități în natură',
+    category: 'activitati',
+  }
 ];
 
 interface GalleryProps {

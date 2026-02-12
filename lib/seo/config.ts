@@ -39,8 +39,8 @@ export const siteConfig = {
 
   // Booking
   booking: {
-    checkInTime: '{{CHECKIN_TIME}}',
-    checkOutTime: '{{CHECKOUT_TIME}}',
+    checkInTime: '15:00',
+    checkOutTime: '11:00',
     minNights: 2,
     maxGuests: 6,
   },
