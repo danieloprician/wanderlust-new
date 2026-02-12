@@ -94,7 +94,7 @@ const faqs = [
             <li><strong>Biserica Ortodoxă</strong> (1762) – picturi valoroase realizate de meșterii Ionașcu și Pană</li>
             <li><strong>Mănăstirea Cisterciană Cârța</strong> – ansamblu gotic medieval în ruină, foarte cunoscut. (sec. XIX)</li>
             <li><strong>Povestea Calendarului</strong> – parc tematic cu 12 căsuțe inspirate din calendarul tradițional</li>
-            <li><strong>Castelul de Lut – Valea Zânelor – una dintre cele mai fotografiate destinații din România</li>
+            <li><strong>Castelul de Lut – Valea Zânelor</strong> – una dintre cele mai fotografiate destinații din România</li>
           </ul>
         </div>
 
