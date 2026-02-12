@@ -17,6 +17,7 @@
     "learnMore": "Learn more",
     "seeMore": "See more",
     "readMore": "Read more",
+    "showLess": "Show less",
     "phone": "Phone",
     "email": "Email",
     "address": "Address"
@@ -45,6 +46,14 @@
     },
     "copyright": "All rights reserved.",
     "tagline": "Developed with ❤️ for unique experiences in nature"
+  },
+  "testimonials": {
+    "title": "What Our Guests Say",
+    "description": "Real feedback from people who chose to spend time here",
+    "readMore": "Read more",
+    "showLess": "Show less",
+    "rating": "{rating} out of 5 stars",
+    "basedOn": "Based on {count}+ verified reviews"
   },
   "cookieConsent": {
     "title": "Cookies & Privacy",
@@ -440,6 +449,45 @@
         "checkOut": "Check-out: {checkOutTime}",
         "minStay": "Minimum stay: {minNights} nights",
         "cancellation": "Flexible cancellation policy"
+      }
+    },
+    "rates": {
+      "tableHeaders": {
+        "period": "Period",
+        "weekend": "Weekend",
+        "weekendSubtitle": "(Friday - Sunday)",
+        "week": "Weekdays",
+        "weekSubtitle": "(Monday - Thursday)"
+      },
+      "popularBadge": "Popular",
+      "seasons": {
+        "low": "Low Season (November - March, excluding holidays)",
+        "medium": "Medium Season (April - May, September - October)",
+        "high": "High Season (June - August)",
+        "holidays": "Holidays (Christmas, New Year's, Easter)"
+      },
+      "bookingPolicy": {
+        "title": "Booking Policy",
+        "minStay": "Minimum stay: 2 nights (3 nights on long weekends and holidays)",
+        "checkInOut": "Check-in: after 3:00 PM | Check-out: before 11:00 AM",
+        "deposit": "Security deposit: 500 RON (refundable at checkout)",
+        "maxCapacity": "Maximum capacity: 8 people"
+      },
+      "cancellationPolicy": {
+        "title": "Cancellation Policy",
+        "days30Plus": "Cancellation 30+ days before: 100% refund",
+        "days15to29": "Cancellation 15-29 days before: 50% refund",
+        "days14Less": "Cancellation less than 14 days: no refund",
+        "forceMajeure": "In case of force majeure, policy can be renegotiated"
+      },
+      "included": {
+        "title": "What's Included in the Price",
+        "wifi": "Unlimited WiFi",
+        "parking": "Free parking",
+        "hotTubSauna": "Hot Tub + Sauna",
+        "firewood": "Firewood",
+        "bedLinen": "Bed linen",
+        "towels": "Towels"
       }
     }
 

@@ -1,5 +1,10 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+
 interface RateRow {
-  period: string;
+  periodKey?: string; // Translation key for period
+  period: string; // Fallback text if no translation
   weekendRate: string;
   weekRate: string;
   highlight?: boolean;
@@ -7,24 +12,28 @@ interface RateRow {
 
 const defaultRates: RateRow[] = [
   {
+    periodKey: 'seasons.low',
     period: 'Sezon Scăzut (Noiembrie - Martie, exclusiv sărbători)',
     weekendRate: '450 RON',
     weekRate: '400 RON/noapte',
     highlight: false,
   },
   {
+    periodKey: 'seasons.medium',
     period: 'Sezon Mediu (Aprilie - Mai, Septembrie - Octombrie)',
     weekendRate: '550 RON',
     weekRate: '500 RON/noapte',
     highlight: false,
   },
   {
+    periodKey: 'seasons.high',
     period: 'Sezon Înalt (Iunie - August)',
     weekendRate: '650 RON',
     weekRate: '600 RON/noapte',
     highlight: true,
   },
   {
+    periodKey: 'seasons.holidays',
     period: 'Sărbători (Crăciun, Revelion, Paște)',
     weekendRate: '800 RON',
     weekRate: '750 RON/noapte',
@@ -37,6 +46,8 @@ interface RateTableProps {
 }
 
 export default function RateTable({ rates = defaultRates }: RateTableProps) {
+  const t = useTranslations('rates');
+
   return (
     <div className="space-y-8">
       {/* Table */}
@@ -44,12 +55,12 @@ export default function RateTable({ rates = defaultRates }: RateTableProps) {
         <table className="w-full border-collapse bg-surface rounded-xl overflow-hidden shadow-md">
           <thead>
             <tr className="bg-primary text-white">
-              <th className="px-6 py-4 text-left font-semibold">Perioadă</th>
+              <th className="px-6 py-4 text-left font-semibold">{t('tableHeaders.period')}</th>
               <th className="px-6 py-4 text-left font-semibold">
-                Weekend<span className="block text-sm font-normal opacity-90">(Vineri - Duminică)</span>
+                {t('tableHeaders.weekend')}<span className="block text-sm font-normal opacity-90">{t('tableHeaders.weekendSubtitle')}</span>
               </th>
               <th className="px-6 py-4 text-left font-semibold">
-                Săptămână<span className="block text-sm font-normal opacity-90">(Luni - Joi)</span>
+                {t('tableHeaders.week')}<span className="block text-sm font-normal opacity-90">{t('tableHeaders.weekSubtitle')}</span>
               </th>
             </tr>
           </thead>
@@ -64,10 +75,10 @@ export default function RateTable({ rates = defaultRates }: RateTableProps) {
                 }`}
               >
                 <td className="px-6 py-4 font-medium text-text">
-                  {rate.period}
+                  {rate.periodKey ? t(rate.periodKey) : rate.period}
                   {rate.highlight && (
                     <span className="ml-2 inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-accent text-white">
-                      Popular
+                      {t('popularBadge')}
                     </span>
                   )}
                 </td>
@@ -91,24 +102,24 @@ export default function RateTable({ rates = defaultRates }: RateTableProps) {
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            Politică de Rezervare
+            {t('bookingPolicy.title')}
           </h3>
           <ul className="space-y-2 text-text-light">
             <li className="flex items-start gap-2">
               <span className="text-accent mt-1">•</span>
-              <span>Sejur minim: 2 nopți (3 nopți în weekend-uri lungi și sărbători)</span>
+              <span>{t('bookingPolicy.minStay')}</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent mt-1">•</span>
-              <span>Check-in: după ora 15:00 | Check-out: până la ora 11:00</span>
+              <span>{t('bookingPolicy.checkInOut')}</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent mt-1">•</span>
-              <span>Depozit de garanție: 500 RON (returnabil la plecare)</span>
+              <span>{t('bookingPolicy.deposit')}</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent mt-1">•</span>
-              <span>Capacitate maximă: 8 persoane</span>
+              <span>{t('bookingPolicy.maxCapacity')}</span>
             </li>
           </ul>
         </div>
@@ -123,24 +134,24 @@ export default function RateTable({ rates = defaultRates }: RateTableProps) {
                 d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            Politică de Anulare
+            {t('cancellationPolicy.title')}
           </h3>
           <ul className="space-y-2 text-text-light">
             <li className="flex items-start gap-2">
               <span className="text-accent mt-1">•</span>
-              <span>Anulare cu 30+ zile înainte: rambursare 100%</span>
+              <span>{t('cancellationPolicy.days30Plus')}</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent mt-1">•</span>
-              <span>Anulare cu 15-29 zile înainte: rambursare 50%</span>
+              <span>{t('cancellationPolicy.days15to29')}</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent mt-1">•</span>
-              <span>Anulare cu mai puțin de 14 zile: fără rambursare</span>
+              <span>{t('cancellationPolicy.days14Less')}</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent mt-1">•</span>
-              <span>În caz de forță majoră, politica poate fi renegociată</span>
+              <span>{t('cancellationPolicy.forceMajeure')}</span>
             </li>
           </ul>
         </div>
@@ -148,7 +159,7 @@ export default function RateTable({ rates = defaultRates }: RateTableProps) {
 
       {/* Included */}
       <div className="card p-6 bg-primary/5">
-        <h3 className="text-xl font-semibold text-primary mb-4">Ce Este Inclus în Preț</h3>
+        <h3 className="text-xl font-semibold text-primary mb-4">{t('included.title')}</h3>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-text-light">
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
@@ -158,7 +169,7 @@ export default function RateTable({ rates = defaultRates }: RateTableProps) {
                 clipRule="evenodd"
               />
             </svg>
-            <span>WiFi nelimitat</span>
+            <span>{t('included.wifi')}</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
@@ -168,7 +179,7 @@ export default function RateTable({ rates = defaultRates }: RateTableProps) {
                 clipRule="evenodd"
               />
             </svg>
-            <span>Parcare gratuită</span>
+            <span>{t('included.parking')}</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
@@ -178,7 +189,7 @@ export default function RateTable({ rates = defaultRates }: RateTableProps) {
                 clipRule="evenodd"
               />
             </svg>
-            <span>Ciubar + Saună</span>
+            <span>{t('included.hotTubSauna')}</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
@@ -188,7 +199,7 @@ export default function RateTable({ rates = defaultRates }: RateTableProps) {
                 clipRule="evenodd"
               />
             </svg>
-            <span>Lemne pentru foc</span>
+            <span>{t('included.firewood')}</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
@@ -198,7 +209,7 @@ export default function RateTable({ rates = defaultRates }: RateTableProps) {
                 clipRule="evenodd"
               />
             </svg>
-            <span>Lenjerie de pat</span>
+            <span>{t('included.bedLinen')}</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
@@ -208,7 +219,7 @@ export default function RateTable({ rates = defaultRates }: RateTableProps) {
                 clipRule="evenodd"
               />
             </svg>
-            <span>Prosoape</span>
+            <span>{t('included.towels')}</span>
           </div>
         </div>
       </div>

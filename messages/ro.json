@@ -17,6 +17,7 @@
     "learnMore": "Află mai mult",
     "seeMore": "Vezi mai multe",
     "readMore": "Citește mai mult",
+    "showLess": "Arată mai puțin",
     "phone": "Telefon",
     "email": "Email",
     "address": "Adresă"
@@ -45,6 +46,14 @@
     },
     "copyright": "Toate drepturile rezervate.",
     "tagline": "Dezvoltat cu ❤️ pentru experiențe unice în natură"
+  },
+  "testimonials": {
+    "title": "Ce Spun Oaspeții Noștri",
+    "description": "Feedback real de la oameni care au ales să petrească timp aici",
+    "readMore": "Citește mai mult",
+    "showLess": "Arată mai puțin",
+    "rating": "{rating} din 5 stele",
+    "basedOn": "Pe baza a {count}+ recenzii verificate"
   },
   "cookieConsent": {
     "title": "Cookie-uri și Confidențialitate",
@@ -441,6 +450,45 @@
         "checkOut": "Check-out: {checkOutTime}",
         "minStay": "Sejur minim: {minNights} nopți",
         "cancellation": "Politică de anulare flexibilă"
+      }
+    },
+    "rates": {
+      "tableHeaders": {
+        "period": "Perioadă",
+        "weekend": "Weekend",
+        "weekendSubtitle": "(Vineri - Duminică)",
+        "week": "Săptămână",
+        "weekSubtitle": "(Luni - Joi)"
+      },
+      "popularBadge": "Popular",
+      "seasons": {
+        "low": "Sezon Scăzut (Noiembrie - Martie, exclusiv sărbători)",
+        "medium": "Sezon Mediu (Aprilie - Mai, Septembrie - Octombrie)",
+        "high": "Sezon Înalt (Iunie - August)",
+        "holidays": "Sărbători (Crăciun, Revelion, Paște)"
+      },
+      "bookingPolicy": {
+        "title": "Politică de Rezervare",
+        "minStay": "Sejur minim: 2 nopți (3 nopți în weekend-uri lungi și sărbători)",
+        "checkInOut": "Check-in: după ora 15:00 | Check-out: până la ora 11:00",
+        "deposit": "Depozit de garanție: 500 RON (returnabil la plecare)",
+        "maxCapacity": "Capacitate maximă: 8 persoane"
+      },
+      "cancellationPolicy": {
+        "title": "Politică de Anulare",
+        "days30Plus": "Anulare cu 30+ zile înainte: rambursare 100%",
+        "days15to29": "Anulare cu 15-29 zile înainte: rambursare 50%",
+        "days14Less": "Anulare cu mai puțin de 14 zile: fără rambursare",
+        "forceMajeure": "În caz de forță majoră, politica poate fi renegociată"
+      },
+      "included": {
+        "title": "Ce Este Inclus în Preț",
+        "wifi": "WiFi nelimitat",
+        "parking": "Parcare gratuită",
+        "hotTubSauna": "Ciubar + Saună",
+        "firewood": "Lemne pentru foc",
+        "bedLinen": "Lenjerie de pat",
+        "towels": "Prosoape"
       }
     }
   }

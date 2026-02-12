@@ -1,3 +1,9 @@
+'use client';
+
+import { useState } from 'react';
+import { useTranslations } from 'next-intl';
+import 'flag-icons/css/flag-icons.min.css';
+
 interface Testimonial {
   name: string;
   location: string;
@@ -39,9 +45,30 @@ interface TestimonialProps {
 }
 
 export default function TestimonialSection({ testimonials = defaultTestimonials }: TestimonialProps) {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const t = useTranslations('testimonials');
+
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
+  const getCountryFlag = (location: string) => {
+    const flagCodes: { [key: string]: string } = {
+      'Romania': 'ro',
+      'Israel': 'il',
+      'USA': 'us',
+      'UK': 'gb',
+      'Germany': 'de',
+      'France': 'fr',
+      'Italy': 'it',
+      'Spain': 'es',
+    };
+    return flagCodes[location] || 'xx';
+  };
+
   const renderStars = (rating: number) => {
     return (
-      <div className="flex gap-1" role="img" aria-label={`${rating} out of 5 stars`}>
+      <div className="flex gap-1" role="img" aria-label={t('rating', { rating })}>
         {[...Array(5)].map((_, i) => (
           <svg
             key={i}
@@ -61,35 +88,62 @@ export default function TestimonialSection({ testimonials = defaultTestimonials 
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
-            What Our Guests Say
+            {t('title')}
           </h2>
           <p className="text-lg text-text-light max-w-2xl mx-auto">
-            Real feedback from people who chose to spend time here
+            {t('description')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="card p-6 animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
+            <div key={index} className="card p-6 animate-slide-up flex flex-col h-full" style={{ animationDelay: `${index * 100}ms` }}>
+              {/* Author info - moved to top */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="relative w-14 h-14 flex-shrink-0">
+                  {/* Colored ring */}
+                  <div className="absolute inset-0 rounded-full bg-primary opacity-20"></div>
+                  <div className="absolute inset-0.5 rounded-full bg-primary p-0.5">
+                    {/* Inner white circle with initial */}
+                    <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                      <span className="text-xl font-bold text-primary">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="min-w-0">
+                  <p className="font-semibold text-text">{testimonial.name}</p>
+                  <p className="text-sm text-text-muted flex items-center gap-1.5">
+                    <span className={`fi fi-${getCountryFlag(testimonial.location)} text-base rounded-sm`}></span>
+                    {testimonial.location}
+                  </p>
+                </div>
+              </div>
+
               {/* Rating */}
               <div className="mb-4">{renderStars(testimonial.rating)}</div>
 
               {/* Comment */}
-              <p className="text-text-light mb-6 leading-relaxed italic">
-                "{testimonial.comment}"
-              </p>
+              <div className="flex-grow mb-4">
+                <p className={`text-text-light leading-relaxed italic ${
+                  expandedIndex === index ? '' : 'line-clamp-4'
+                }`}>
+                  "{testimonial.comment}"
+                </p>
+                {testimonial.comment.length > 150 && (
+                  <button
+                    onClick={() => toggleExpand(index)}
+                    className="text-accent hover:text-accent/80 text-sm mt-2 font-medium transition-colors"
+                  >
+                    {expandedIndex === index ? t('showLess') : t('readMore')}
+                  </button>
+                )}
+              </div>
 
-              {/* Author info */}
-              <div className="flex items-center gap-3 pt-4 border-t border-border">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold text-lg">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <p className="font-semibold text-text">{testimonial.name}</p>
-                  <p className="text-sm text-text-muted">
-                    {testimonial.location} • {testimonial.date}
-                  </p>
-                </div>
+              {/* Date - moved to bottom */}
+              <div className="pt-4 border-t border-border">
+                <p className="text-sm text-text-muted text-center">{testimonial.date}</p>
               </div>
             </div>
           ))}
@@ -102,7 +156,7 @@ export default function TestimonialSection({ testimonials = defaultTestimonials 
             <div>{renderStars(5)}</div>
           </div>
           <p className="text-text-muted">
-            Based on {testimonials.length}+ verified reviews
+            {t('basedOn', { count: testimonials.length })}
           </p>
         </div>
       </div>
