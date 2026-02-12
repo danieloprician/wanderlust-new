@@ -42,6 +42,15 @@
     "copyright": "Toate drepturile rezervate.",
     "tagline": "Dezvoltat cu ❤️ pentru experiențe unice în natură"
   },
+  "cookieConsent": {
+    "title": "Cookie-uri și Confidențialitate",
+    "description": "Folosim cookie-uri pentru a îmbunătăți experiența ta și pentru a analiza traficul pe site.",
+    "details": "Cookie-urile de marketing ne ajută să înțelegem cum interacționezi cu site-ul nostru. Poți alege să accepți doar cookie-urile necesare sau toate cookie-urile.",
+    "privacyPolicy": "Politica de confidențialitate",
+    "acceptAll": "Acceptă toate",
+    "necessary": "Doar necesare",
+    "manageSettings": "Gestionează preferțele"
+  },
   "nav": {
     "home": "Acasă",
     "cabin": "Cabana",

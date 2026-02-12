@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { siteConfig } from '@/lib/seo/config';
 import { getTranslations } from 'next-intl/server';
+import CookieSettingsButton from './CookieSettingsButton';
 
 interface FooterProps {
   locale: string;
@@ -106,6 +107,9 @@ export default async function Footer({ locale }: FooterProps) {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <CookieSettingsButton />
+                </li>
               </ul>
 
               {/* Social Media */}

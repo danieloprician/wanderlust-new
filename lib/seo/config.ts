@@ -37,6 +37,18 @@ export const siteConfig = {
     airbnb: process.env.NEXT_PUBLIC_AIRBNB_URL || 'https://www.airbnb.com.ro/rooms/1155126808745549348?check_in=2026-03-27&check_out=2026-03-29&search_mode=regular_search&source_impression_id=p3_1770921510_P3ljcZi6vYLtzHRs&previous_page_section_name=1000&federated_search_id=a8f3b413-d0cd-44b1-b73b-ad6607be9a6c',
   },
 
+  // Analytics & Tracking
+  analytics: {
+    // Google Analytics 4
+    googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || '',
+    // Google Tag Manager
+    googleTagManagerId: process.env.NEXT_PUBLIC_GTM_ID || '',
+    // Meta Pixel (Facebook)
+    metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID || '',
+    // TikTok Pixel
+    tiktokPixelId: process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID || '',
+  },
+
   // Booking
   booking: {
     checkInTime: '15:00',
@@ -69,19 +81,50 @@ export const siteConfig = {
 
   // SEO Keywords
   keywords: [
+    // Romanian
     'cabana de inchiriat {{REGION}}',
     'cazare la munte {{REGION}}',
     'cabana cu ciubar {{CITY}}',
     'cabana cu sauna',
     'weekend la munte',
-    'cazare familie montagna',
-    'cabana evenimente',
+    'cazare familie montagna',    
     'inchiriere cabana',
+    // English
+    'cabin rental {{REGION}}',
+    'mountain accommodation {{REGION}}',
+    'cabin with hot tub {{CITY}}',
+    'mountain weekend getaway',
+    'family cabin rental',
+    'Romania mountain cabin',
+    'Transylvania cabin',
+    'cottage rental {{REGION}}',
+    'nature retreat Romania',
+    'cabana de inchiriat Transilvania',
   ],
 
-  // Open Graph
+  // Open Graph & Social Sharing
   ogImage: '/images/og-image.jpg',
-  twitterHandle: '@{{TWITTER_HANDLE}}',
+  ogImageAlt: 'Wanderlust Cottage - Cabană autentică în munții {{REGION}}',
+  ogType: 'website',
+  
+  // Additional OG Images for different platforms
+  images: {
+    og: '/images/og-image.jpg', // 1200x630 for Facebook/LinkedIn
+    twitter: '/images/twitter-card.jpg', // 1200x600 for Twitter
+    square: '/images/og-square.jpg', // 1:1 for WhatsApp/Instagram
+  },
+  
+  // Social Media
+  twitterHandle: '@wanderlust_cottage',
+  twitterCard: 'summary_large_image',
+  
+  // App Icons & Favicons
+  icons: {
+    favicon: '/favicon.ico',
+    appleTouchIcon: '/apple-touch-icon.png',
+    icon32: '/favicon-32x32.png',
+    icon16: '/favicon-16x16.png',
+  },
 };
 
 /**
@@ -101,7 +144,8 @@ export function generatePageMetadata({
   noIndex?: boolean;
 }) {
   const url = `${siteConfig.url}${path}`;
-  const ogImage = image || siteConfig.ogImage;
+  const ogImage = image || siteConfig.images.og;
+  const imageAlt = siteConfig.ogImageAlt.replace('{{REGION}}', siteConfig.contact.region);
 
   return {
     title,
@@ -117,11 +161,18 @@ export function generatePageMetadata({
 
     alternates: {
       canonical: url,
+      languages: {
+        'ro-RO': `${siteConfig.url}/ro${path}`,
+        'en-US': `${siteConfig.url}/en${path}`,
+      },
     },
 
+    icons: siteConfig.icons,
+
     openGraph: {
-      type: 'website',
+      type: siteConfig.ogType as 'website',
       locale: siteConfig.locale,
+      alternateLocale: [siteConfig.alternateLocale],
       url,
       title,
       description,
@@ -131,17 +182,24 @@ export function generatePageMetadata({
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: imageAlt,
+        },
+        {
+          url: siteConfig.images.square,
+          width: 800,
+          height: 800,
+          alt: imageAlt,
         },
       ],
     },
 
     twitter: {
-      card: 'summary_large_image',
+      card: siteConfig.twitterCard as 'summary_large_image',
       title,
       description,
-      images: [ogImage],
+      images: [siteConfig.images.twitter],
       creator: siteConfig.twitterHandle,
+      site: siteConfig.twitterHandle,
     },
 
     other: {

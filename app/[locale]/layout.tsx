@@ -6,6 +6,8 @@ import '../globals.css';
 import { siteConfig } from '@/lib/seo/config';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import { routing } from '@/i18n/routing';
+import Analytics from '@/components/Analytics';
+import CookieConsent from '@/components/CookieConsent';
 
 // Prevent Font Awesome from auto-adding CSS since we did it manually above
 config.autoAddCss = false;
@@ -93,8 +95,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className="antialiased">
+        <Analytics />
         <NextIntlClientProvider messages={messages}>
           {children}
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>
