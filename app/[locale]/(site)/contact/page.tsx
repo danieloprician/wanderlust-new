@@ -8,6 +8,7 @@ import { JsonLd, generateBreadcrumbSchema, generatePlaceSchema } from '@/lib/seo
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot, faCar, faBus, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { faAirbnb, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import BookNowButton from '@/components/BookNowButton';
 
 // Dynamically import Map component with SSR disabled
 const Map = dynamic(() => import('@/components/Map'), {
@@ -239,21 +240,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
             {t('cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={siteConfig.social.booking}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-accent btn-lg flex items-center justify-center gap-2"
-            >
-              <Image
-                src="/images/booking.svg"
-                alt="Booking"
-                width={20}
-                height={20}
-                className="w-5 h-5"
-              />
-              {t('cta.bookingForm')}
-            </a>
+            <BookNowButton size="lg" />
             <a
               href={`tel:${siteConfig.contact.phone}`}
               className="btn-outline btn-lg border-white text-white hover:bg-white hover:text-primary"

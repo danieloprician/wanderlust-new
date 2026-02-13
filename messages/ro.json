@@ -48,12 +48,56 @@
     "tagline": "Dezvoltat cu ❤️ pentru experiențe unice în natură"
   },
   "testimonials": {
-    "title": "Ce Spun Oaspeții Noștri",
+    "title": "Ce spun oaspeții noștri",
     "description": "Feedback real de la oameni care au ales să petrească timp aici",
     "readMore": "Citește mai mult",
     "showLess": "Arată mai puțin",
     "rating": "{rating} din 5 stele",
-    "basedOn": "Pe baza a {count}+ recenzii verificate"
+    "basedOn": "Pe baza a {count}+ recenzii verificate",
+    "items": [
+      {
+        "name": "Andrei",
+        "location": "Romania",
+        "rating": 5,
+        "date": "Aprilie 2025",
+        "comment": "Locație frumoasă cu vederi la munte. Departe de oraș, atât de liniștită și cu o curte frumoasă pe care copiii și câinele au folosit-o extensiv. Spațiu comun generos cu bucătărie perfect echipată. Am gătit mai multe mese în bucătărie și ne-am simțit ca acasă, espressorul este fantastic, mai bun decât cel pe care îl avem acasă. Aș dori să vizitez vara pentru a mă bucura de facilitățile de gătit în aer liber. În general minunat și raport calitate-preț excelent!"
+      },
+      {
+        "name": "Tal",
+        "location": "Israel",
+        "rating": 5,
+        "date": "August 2024",
+        "comment": "Cabana este minunată înăuntru, mobilată recent, iar proprietarul ne-a oferit multe gustări! Foisorul este bine echipat pentru orice ne-am dorit. Curtea a fost uimitoare, atât pentru copii, cât și cu pomi fructiferi. Ne-am petrecut timpul minunat în vacanța noastră aici."
+      },
+      {
+        "name": "Tomaescu",
+        "location": "Romania",
+        "rating": 5,
+        "date": "Decembrie 2025",
+        "comment": "Locație izolată, foarte liniștită, spațiu exterior generos. Aveți toate facilitățile necesare. Proprietari foarte amabili. Sperăm să revenim și în sezonul cald."
+      },
+      {
+        "name": "Lorand",
+        "location": "Germany",
+        "rating": 5,
+        "date": "Decembrie 2024",
+        "comment": "Locația casei și zona de grătar. Casa și de asemenea zona de grătar sunt bine echipate."
+      },
+      {
+        "name": "Adriana",
+        "location": "Romania",
+        "rating": 5,
+        "date": "Aprilie 2024",
+        "comment": "Priveliștea este absolut uimitoare. Curtea este un loc unde copiii și adulții se pot bucura, juca sau pur și simplu asculta liniștit natura."
+      },
+      {
+        "name": "Daniel",
+        "location": "Israel",
+        "rating": 4.5,
+        "date": "Septembrie 2024",
+        "comment": "Casa a fost foarte curată, dotată cu aer condiționat bun și tot ce era necesar pentru gătit. În jurul casei erau fructe pe copaci și un loc de joacă pentru copiii noștri. Ne-am bucurat cu adevărat și o recomandăm. Gazda a fost de asemenea foarte serviabilă. Arieșul este de asemenea foarte aproape de locurile unde am vrut să mergem. A lipsit o tigaie, dar nu e atât de critic."
+      }
+    ]
   },
   "cookieConsent": {
     "title": "Cookie-uri și Confidențialitate",

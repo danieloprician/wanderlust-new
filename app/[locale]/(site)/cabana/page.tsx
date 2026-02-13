@@ -6,6 +6,7 @@ import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
 import { JsonLd, generateBreadcrumbSchema, generateWebPageSchema } from '@/lib/seo/schema';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGroup, faUsers, faHeart, faGift, faCheck } from '@fortawesome/free-solid-svg-icons';
+import BookNowButton from '@/components/BookNowButton';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'cabin' });
@@ -270,9 +271,7 @@ export default async function CabanaPage({ params: { locale } }: { params: { loc
             {t('cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/rezervari" className="btn-accent btn-lg">
-              {t('cta.checkAvailability')}
-            </Link>
+            <BookNowButton size="lg" />
             <Link
               href="/galerie"
               className="btn-outline btn-lg border-white text-white hover:bg-white hover:text-primary"

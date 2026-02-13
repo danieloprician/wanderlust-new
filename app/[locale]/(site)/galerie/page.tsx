@@ -76,10 +76,7 @@ export default async function GaleriePage({ params: { locale } }: { params: { lo
             <p className="text-text-light mb-8">
               {t('authenticity.description')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/rezervari" className="btn-accent">
-                {t('cta.checkAvailability')}
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">             
               <Link href="/contact" className="btn-outline">
                 {t('cta.contactUs')}
               </Link>

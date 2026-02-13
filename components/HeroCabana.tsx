@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import BookNowButton from './BookNowButton';
 
 interface HeroCabanaProps {
   title?: string;
@@ -65,16 +66,7 @@ export default function HeroCabana({
 
             {showCTA && (
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/rezervari" className="btn-accent btn-lg flex items-center justify-center gap-2">
-                  <Image
-                    src="/images/booking.svg"
-                    alt="Booking"
-                    width={20}
-                    height={20}
-                    className="w-5 h-5"
-                  />
-                  {t('bookNow')}
-                </Link>
+                <BookNowButton size="lg" />
                 <Link href="/cabana" className="btn-outline btn-lg border-white text-white hover:bg-white hover:text-primary">
                   {t('discoverCabin')}
                 </Link>

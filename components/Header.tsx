@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { siteConfig } from '@/lib/seo/config';
 import LanguageSwitcher from './LanguageSwitcher';
+import BookNowButton from './BookNowButton';
 
 export default function Header() {
   const t = useTranslations('common');
@@ -95,21 +96,7 @@ export default function Header() {
                 </Link>
               ))}
               <LanguageSwitcher />
-              <a
-                href={siteConfig.social.booking}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-accent btn-sm flex items-center gap-2"
-              >
-                <Image
-                  src="/images/booking.svg"
-                  alt="Booking"
-                  width={18}
-                  height={18}
-                  className="w-[18px] h-[18px]"
-                />
-                {t('bookNow')}
-              </a>
+              <BookNowButton size="sm" />
             </div>
 
             {/* Mobile menu button */}
@@ -163,21 +150,9 @@ export default function Header() {
               <div className="px-4 py-3">
                 <LanguageSwitcher />
               </div>
-              <a
-                href={siteConfig.social.booking}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-accent w-full mt-4 flex items-center justify-center gap-2"
-              >
-                <Image
-                  src="/images/booking.svg"
-                  alt="Booking"
-                  width={30}
-                  height={30}
-                  className="w-7 h-7"
-                />
-                {t('bookNow')}
-              </a>
+              <div className="mt-4">
+                <BookNowButton size="lg" fullWidth />
+              </div>
             </div>
           </div>
         )}

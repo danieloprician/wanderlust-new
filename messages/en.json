@@ -48,12 +48,56 @@
     "tagline": "Developed with ❤️ for unique experiences in nature"
   },
   "testimonials": {
-    "title": "What Our Guests Say",
+    "title": "What our guests say",
     "description": "Real feedback from people who chose to spend time here",
     "readMore": "Read more",
     "showLess": "Show less",
     "rating": "{rating} out of 5 stars",
-    "basedOn": "Based on {count}+ verified reviews"
+    "basedOn": "Based on {count}+ verified reviews",
+    "items": [
+      {
+        "name": "Andrei",
+        "location": "Romania",
+        "rating": 5,
+        "date": "April 2025",
+        "comment": "Beautiful location with mountain views. Far from the city, so peaceful and with a beautiful yard that the kids and dog used extensively. Large common area with perfectly equipped kitchen. We cooked several meals in the kitchen and felt at home, the espresso machine is fantastic, better than what we have at home. I would love to visit in summer to enjoy the outdoor cooking facilities. Overall wonderful and excellent value for money!"
+      },
+      {
+        "name": "Tal",
+        "location": "Israel",
+        "rating": 5,
+        "date": "August 2024",
+        "comment": "The cottage is wonderful inside, recently furnished, and the owner provided us with many small treats! The gazebo is well equipped for whatever we wanted. The yard was amazing, both for children and with fruit trees. We had a wonderful time on our vacation here."
+      },
+      {
+        "name": "Tomaescu",
+        "location": "Romania",
+        "rating": 5,
+        "date": "December 2025",
+        "comment": "Secluded location, very quiet, generous outdoor space. You have all the necessary facilities. Very kind owners. We hope to return in the warm season too."
+      },
+      {
+        "name": "Lorand",
+        "location": "Germany",
+        "rating": 5,
+        "date": "December 2024",
+        "comment": "The location of the House and the Barbecue area. The house and also the Barbecue area are well equipped."
+      },
+      {
+        "name": "Adriana",
+        "location": "Romania",
+        "rating": 5,
+        "date": "April 2024",
+        "comment": "The view is absolutely amazing. The yard a place for children and adults to enjoy, play or just listen peacefully to nature."
+      },
+      {
+        "name": "Daniel",
+        "location": "Israel",
+        "rating": 4,
+        "date": "September 2024",
+        "comment": "The house was very clean, equipped with a good A/C and everything needed to cook. Around the house there were fruits on the trees and a playground for our children. We really enjoyed and recommend it. The hostess was very helpful as well. Arvig is also very close to the places we wanted to go to. A pan was missing, but that's not that critical."
+      }
+    ]
   },
   "cookieConsent": {
     "title": "Cookies & Privacy",
@@ -135,10 +179,10 @@
     }
   },
   "cabin": {
-    "title": "About the Cottage",
+    "title": "About the cottage",
     "subtitle": "An authentic refuge with modern amenities in the heart of nature",
     "story": {
-      "heading": "Our Story",
+      "heading": "Our story",
       "paragraph1": "was built with the idea of offering an authentic experience in nature, without compromising modern comfort. Located in the heart of {region}, our cottage is the result of a passion for traditional Romanian architecture and the desire to create a space where people can reconnect with nature.",
       "paragraph2": "Completely renovated in 2024, the cottage combines traditional elements - solid wood, natural stone, rustic fireplace - with the modern facilities necessary for a comfortable stay: central heating, WiFi, fully equipped kitchen.",
       "paragraph3": "We are proud to offer our guests not just a place to stay, but a complete experience: the hot tub under the starry sky, the sauna after a day in the mountains, the silence of the forest and the fresh mountain air."
