@@ -57,21 +57,6 @@ const defaultImages: GalleryImage[] = [
     alt: 'Cameră cabană - interior cochet și confortabil',
     category: 'interior',
   },
-  {
-    src: '/images/gallery/wanderlust-cottage-camera-3.webp',
-    alt: 'Cameră cabană - interior cochet și confortabil',
-    category: 'interior',
-  },
-  {
-    src: '/images/gallery/brambura-park.webp',
-    alt: 'Brambura Park - casa intoarsa si activități pentru copii',
-    category: 'activitati',
-  },
-  {
-    src: '/images/gallery/ferma-de-cerbi-poiana-neamtului.webp',
-    alt: 'Ferma de cerbi Poiana Neamțului - activități în natură',
-    category: 'activitati',
-  }
 ];
 
 interface GalleryProps {

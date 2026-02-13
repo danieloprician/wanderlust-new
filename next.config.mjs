@@ -66,6 +66,18 @@ const nextConfig = {
   async rewrites() {
     return [];
   },
+
+  // Suppress next-intl webpack warning
+  webpack: (config, { isServer }) => {
+    config.ignoreWarnings = [
+      ...(config.ignoreWarnings || []),
+      {
+        module: /node_modules\/next-intl/,
+        message: /Parsing of .*next-intl.*for build dependencies failed/,
+      },
+    ];
+    return config;
+  },
 };
 
 export default withNextIntl(nextConfig);
