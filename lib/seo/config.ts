@@ -32,7 +32,7 @@ export const siteConfig = {
   social: {
     facebook: process.env.NEXT_PUBLIC_FB_URL || 'https://www.facebook.com/profile.php?id=61557338263006',
     instagram: process.env.NEXT_PUBLIC_IG_URL || 'https://www.instagram.com/wanderlust_cottage_avrig',
-    tiktok: process.env.NEXT_PUBLIC_TIKTOK_URL || 'https://www.tiktok.com/@yourprofile',
+    tiktok: process.env.NEXT_PUBLIC_TIKTOK_URL || 'https://teams.microsoft.com/l/message/19:5975604e-8d14-4bcf-839a-60c13e453a3e_861f15d7-3654-4ab5-a342-e426b6859621@unq.gbl.spaces/1770965464091?context=%7B%22contextType%22%3A%22chat%22%7D',
     booking: process.env.NEXT_PUBLIC_BOOKING_URL || 'https://www.booking.com/hotel/ro/wanderlust-cottage-avrig.ro.html?aid=304142&label=gen173nr-10CAsowAFCDHlvdXJwcm9wZXJ0eUgzWARowAGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AtWstMwGwAIB0gIkZmYwMWNmZGYtYWMxMC00ODJmLWE5MzUtYWY2M2Q3YjM0YjFm2AIB4AIB&sid=afa784f0db7942dedc0ab2a4663f0e41&dest_id=11986837&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1770854004&srpvid=a803a7f6437e005d&type=total&ucfs=1&',
     airbnb: process.env.NEXT_PUBLIC_AIRBNB_URL || 'https://www.airbnb.com.ro/rooms/1155126808745549348?check_in=2026-03-27&check_out=2026-03-29&search_mode=regular_search&source_impression_id=p3_1770921510_P3ljcZi6vYLtzHRs&previous_page_section_name=1000&federated_search_id=a8f3b413-d0cd-44b1-b73b-ad6607be9a6c',
   },
