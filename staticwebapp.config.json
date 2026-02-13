@@ -1,0 +1,16 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/images/*",
+      "/api/*",
+      "*.{css,gif,ico,jpg,jpeg,js,png,svg,webp,woff,woff2,ttf,eot}"
+    ]
+  },
+  "mimeTypes": {
+    ".json": "text/json",
+    ".weba": "audio/webp",
+    ".webp": "image/webp"
+  },
+  "trailingSlash": "auto"
+}
