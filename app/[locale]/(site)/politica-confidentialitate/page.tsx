@@ -1,22 +1,36 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShieldHalved, faCookie, faGear, faChartLine, faSlidersH, faLink, faFileShield, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-export const metadata: Metadata = generatePageMetadata({
-  title: 'Politica de Confidențialitate',
-  description: `Politica de confidențialitate și protecție a datelor personale pentru ${siteConfig.name}.`,
-  path: '/politica-confidentialitate',
-  noIndex: true,
-});
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'privacyPolicy' });
+  
+  return generatePageMetadata({
+    title: t('title'),
+    description: t('description', { siteName: siteConfig.name }),
+    path: '/politica-confidentialitate',
+    noIndex: true,
+  });
+}
 
-export default function PoliticaConfidentialitatePage() {
+export default async function PoliticaConfidentialitatePage({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'privacyPolicy' });
   return (
     <>
-      <section className="section bg-primary text-white">
+      <section className="relative bg-primary text-white py-16 md:py-20">
         <div className="container-custom text-center">
+          <div className="inline-flex items-center justify-center w-20 h-20 mb-6 rounded-full bg-white/10">
+            <FontAwesomeIcon icon={faShieldHalved} className="w-10 h-10" />
+          </div>
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-            Politica de Confidențialitate
+            {t('title')}
           </h1>
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+            {t('subtitle')}
+          </p>
         </div>
       </section>
 
@@ -26,165 +40,215 @@ export default function PoliticaConfidentialitatePage() {
             <ol className="flex items-center space-x-2 text-sm">
               <li>
                 <Link href="/" className="text-text-muted hover:text-accent">
-                  Acasă
+                  {t('breadcrumb.home')}
                 </Link>
               </li>
               <li className="text-text-muted">/</li>
-              <li className="text-text font-medium">Politica de Confidențialitate</li>
+              <li className="text-text font-medium">{t('breadcrumb.current')}</li>
             </ol>
           </nav>
         </div>
       </div>
 
       <section className="section">
-        <div className="container-custom max-w-4xl">
-          <div className="prose prose-lg max-w-none">
-            <p className="text-text-muted"><em>Ultima actualizare: februarie 2026</em></p>
-
-            <h2>1. Introducere</h2>
-            <p>
-              {siteConfig.name} respectă confidențialitatea vizitatorilor și clienților săi.
-              Această politică explică ce date personale colectăm, cum le folosim și cum le protejăm,
-              în conformitate cu GDPR (Regulamentul General privind Protecția Datelor).
+        <div className="container-custom max-w-5xl">
+          {/* Introduction */}
+          <div className="card p-8 mb-8 bg-primary/5 border-l-4 border-primary">
+            <p className="text-sm text-text-muted mb-4">
+              <em>{t('lastUpdated', { date: 'februarie 2026' })}</em>
             </p>
-
-            <h2>2. Ce Date Colectăm</h2>
-            <h3>2.1 Date Furnizate Direct de Dvs.</h3>
-            <p>Când faceți o rezervare sau ne contactați, colectăm:</p>
-            <ul>
-              <li>Nume și prenume</li>
-              <li>Adresă de email</li>
-              <li>Număr de telefon</li>
-              <li>Date despre sejur (check-in, check-out, număr de persoane)</li>
-              <li>Preferințe și cerințe speciale (opțional)</li>
-            </ul>
-
-            <h3>2.2 Date Colectate Automat</h3>
-            <p>Când vizitați site-ul nostru, colectăm automat:</p>
-            <ul>
-              <li>Adresa IP</li>
-              <li>Tipul de browser și device</li>
-              <li>Paginile vizitate și durata vizitei</li>
-              <li>Informații despre cum ați ajuns pe site (referrer)</li>
-            </ul>
-
-            <h2>3. Cum Folosim Datele</h2>
-            <p>Folosim datele dumneavoastră personale pentru:</p>
-            <ul>
-              <li>Procesarea și confirmarea rezervărilor</li>
-              <li>Comunicare cu dumneavoastră (email, telefon, SMS)</li>
-              <li>Îmbunătățirea serviciilor și a experienței pe site</li>
-              <li>Trimiterea de oferte și promoții (doar dacă ați consimțit)</li>
-              <li>Respectarea obligațiilor legale (contabilitate, fiscalitate)</li>
-            </ul>
-
-            <h2>4. Baza Legală a Prelucrării</h2>
-            <p>Prelucrăm datele dumneavoastră pe baza:</p>
-            <ul>
-              <li><strong>Contractului:</strong> Pentru executarea rezervării</li>
-              <li><strong>Consimțământului:</strong> Pentru marketing și newsletter</li>
-              <li><strong>Interesului legitim:</strong> Pentru îmbunătățirea serviciilor</li>
-              <li><strong>Obligației legale:</strong> Pentru conformitate fiscală</li>
-            </ul>
-
-            <h2>5. Partajarea Datelor</h2>
-            <p>
-              Nu vindem datele dumneavoastră către terți. Le partajăm doar cu:
+            <p className="text-lg text-text-light leading-relaxed">
+              {t.rich('introduction.text', {
+                bold: (chunks) => <strong>{chunks}</strong>
+              })}
             </p>
-            <ul>
-              <li><strong>Furnizori de servicii:</strong> Hosting, email, procesare plăți
-                (care respectă GDPR)</li>
-              <li><strong>Autorități:</strong> Când este cerut legal</li>
-            </ul>
+          </div>
 
-            <h2>6. Cookies și Tehnologii Similar</h2>
-            <p>
-              Site-ul folosește cookies pentru:
-            </p>
-            <ul>
-              <li><strong>Cookies esențiale:</strong> Funcționare site (nu pot fi dezactivate)</li>
-              <li><strong>Cookies analitice:</strong> Google Analytics (opțional, cu consimțământ)</li>
-              <li><strong>Cookies marketing:</strong> Facebook Pixel, Google Ads (opțional)</li>
-            </ul>
-            <p>
-              Puteți gestiona preferințele pentru cookies din browser-ul dumneavoastră.
-            </p>
+          {/* What are cookies */}
+          <div className="card p-8 mb-6">
+            <div className="flex items-start gap-4 mb-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                <FontAwesomeIcon icon={faCookie} className="w-6 h-6" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-primary mb-2">{t('sections.cookies.title')}</h2>
+                <p className="text-text-light leading-relaxed">
+                  {t('sections.cookies.content')}
+                </p>
+              </div>
+            </div>
+          </div>
 
-            <h2>7. Securitatea Datelor</h2>
-            <p>
-              Implementăm măsuri tehnice și organizatorice pentru protejarea datelor:
-            </p>
-            <ul>
-              <li>Criptare SSL/TLS pentru transmiterea datelor</li>
-              <li>Acces restricționat la date (doar personal autorizat)</li>
-              <li>Backup-uri regulate și securizate</li>
-              <li>Formare regulată a personalului în GDPR</li>
-            </ul>
+          {/* What cookies we use */}
+          <div className="card p-8 mb-6">
+            <div className="flex items-start gap-4 mb-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                <FontAwesomeIcon icon={faGear} className="w-6 h-6" />
+              </div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-primary mb-2">{t('sections.typesOfCookies.title')}</h2>
+                <p className="text-text-light leading-relaxed mb-4">
+                  {t('sections.typesOfCookies.intro')}
+                </p>
 
-            <h2>8. Perioada de Stocare</h2>
-            <ul>
-              <li><strong>Date de rezervare:</strong> 5 ani (obligații contabile)</li>
-              <li><strong>Marketing/newsletter:</strong> Până la retragerea consimțământului</li>
-              <li><strong>Date analitice:</strong> 14-26 luni (Google Analytics)</li>
-            </ul>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3 p-4 bg-surface rounded-lg">
+                    <span className="text-accent mt-1">•</span>
+                    <div>
+                      <strong className="text-primary">{t('sections.typesOfCookies.types.technical.title')}</strong>
+                      <p className="text-text-muted mt-1">{t('sections.typesOfCookies.types.technical.description')}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-surface rounded-lg">
+                    <span className="text-accent mt-1">•</span>
+                    <div>
+                      <strong className="text-primary">{t('sections.typesOfCookies.types.analytics.title')}</strong> <span className="text-sm text-text-muted">{t('sections.typesOfCookies.types.analytics.optional')}</span>
+                      <p className="text-text-muted mt-1">{t('sections.typesOfCookies.types.analytics.description')}</p>
+                    </div>
+                  </div>
+                </div>
 
-            <h2>9. Drepturile Dumneavoastră (GDPR)</h2>
-            <p>Aveți dreptul de a:</p>
-            <ul>
-              <li><strong>Accesa</strong> datele dumneavoastră personale</li>
-              <li><strong>Rectifica</strong> date inexacte sau incomplete</li>
-              <li><strong>Șterge</strong> datele ("dreptul de a fi uitat")</li>
-              <li><strong>Restricționa</strong> prelucrarea</li>
-              <li><strong>Opune-vă</strong> prelucrării (ex: marketing)</li>
-              <li><strong>Portabilitatea</strong> datelor</li>
-              <li><strong>Retrage consimțământul</strong> în orice moment</li>
-            </ul>
-            <p>
-              Pentru exercitarea acestor drepturi, contactați-ne la{' '}
-              <a href={`mailto:${siteConfig.contact.email}`} className="text-primary hover:text-accent">
-                {siteConfig.contact.email}
-              </a>.
-            </p>
+                <div className="mt-4 p-4 bg-accent/5 border-l-4 border-accent rounded">
+                  <p className="text-text-light">
+                    {t.rich('sections.typesOfCookies.note', {
+                      bold: (chunks) => <strong>{chunks}</strong>
+                    })}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <h2>10. Transferul Datelor în Afara UE</h2>
-            <p>
-              Unii furnizori de servicii (ex: Google Analytics) pot transfera date în afara UE.
-              Ne asigurăm că acești furnizori respectă standardele de protecție adecvate (ex:
-              Privacy Shield, SCC).
-            </p>
+          {/* How we use information */}
+          <div className="card p-8 mb-6">
+            <div className="flex items-start gap-4 mb-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                <FontAwesomeIcon icon={faChartLine} className="w-6 h-6" />
+              </div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-primary mb-2">{t('sections.usage.title')}</h2>
+                <p className="text-text-light leading-relaxed mb-4">
+                  {t('sections.usage.intro')}
+                </p>
 
-            <h2>11. Minori</h2>
-            <p>
-              Site-ul nu este destinat persoanelor sub 18 ani. Nu colectăm cu bună știință date
-              de la minori fără consimțământul părinților.
-            </p>
+                <ul className="space-y-2">
+                  {(t.raw('sections.usage.items') as string[]).map((item: string, index: number) => (
+                    <li key={index} className="flex items-start gap-3 text-text-light">
+                      <span className="text-accent mt-1">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
 
-            <h2>12. Modificări ale Politicii</h2>
-            <p>
-              Ne rezervăm dreptul de a actualiza această politică. Modificările vor fi publicate
-              pe această pagină cu dată actualizării. Vă încurajăm să revedeți periodic această
-              politică.
-            </p>
+          {/* Cookie control */}
+          <div className="card p-8 mb-6">
+            <div className="flex items-start gap-4 mb-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                <FontAwesomeIcon icon={faSlidersH} className="w-6 h-6" />
+              </div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-primary mb-2">4. Cum puteți controla cookie-urile?</h2>
+                <p className="text-text-light leading-relaxed mb-4">
+                  Majoritatea browserelor permit controlul cookie-urilor prin setări precum:
+                </p>
 
-            <h2>13. Contact & Reclamații</h2>
-            <p>
-              Pentru întrebări despre această politică sau exercitarea drepturilor GDPR:
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3 text-text-light">
+                    <span className="text-accent mt-1">•</span>
+                    <span>Blocarea tuturor cookie-urilor</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-text-light">
+                    <span className="text-accent mt-1">•</span>
+                    <span>Ștergerea cookie-urilor existente</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-text-light">
+                    <span className="text-accent mt-1">•</span>
+                    <span>Primirea unei notificări înainte de salvarea unui cookie</span>
+                  </li>
+                </ul>
+
+                <p className="text-text-light mt-4">
+                  Pentru a modifica aceste setări, accesați secțiunea „Setări" sau „Preferințe" a browserului dumneavoastră.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* External links */}
+          <div className="card p-8 mb-6">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                <FontAwesomeIcon icon={faLink} className="w-6 h-6" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-primary mb-2">5. Linkuri către site-uri externe</h2>
+                <p className="text-text-light leading-relaxed">
+                  Site-ul nostru poate conține linkuri către site-uri externe. Nu suntem responsabili pentru conținutul sau
+                  politicile de confidențialitate ale acestor site-uri.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Policy changes */}
+          <div className="card p-8 mb-6">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                <FontAwesomeIcon icon={faFileShield} className="w-6 h-6" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-primary mb-2">6. Modificări ale acestei politici</h2>
+                <p className="text-text-light leading-relaxed">
+                  Ne rezervăm dreptul de a actualiza această Politică de Confidențialitate atunci când este necesar.
+                  Orice modificare va fi publicată pe această pagină.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div className="card p-8 bg-primary text-white">
+            <h2 className="text-2xl font-bold mb-4">7. Contact</h2>
+            <p className="text-white/90 mb-6">
+              Dacă aveți întrebări legate de această politică, ne puteți contacta la:
             </p>
-            <p>
-              <strong>Email:</strong>{' '}
-              <a href={`mailto:${siteConfig.contact.email}`} className="text-primary hover:text-accent">
-                {siteConfig.contact.email}
-              </a><br />
-              <strong>Telefon:</strong>{' '}
-              <a href={`tel:${siteConfig.contact.phone}`} className="text-primary hover:text-accent">
-                {siteConfig.contact.phone}
-              </a>
-            </p>
-            <p>
-              Aveți dreptul să depuneți o plângere la Autoritatea Națională de Supraveghere a
-              Prelucrării Datelor cu Caracter Personal (ANSPDCP) dacă considerați că drepturile
-              dumneavoastră nu sunt respectate.
-            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                  <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-sm text-white/70">Email</p>
+                  <a href={`mailto:${siteConfig.contact.email}`} className="text-white hover:text-accent font-medium">
+                    {siteConfig.contact.email}
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                  <FontAwesomeIcon icon={faPhone} className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-sm text-white/70">Telefon</p>
+                  <a href={`tel:${siteConfig.contact.phone}`} className="text-white hover:text-accent font-medium">
+                    {siteConfig.contact.phone}
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-6 border-t border-white/20">
+              <p className="text-white/90 text-sm">
+                Aveți dreptul să depuneți o plângere la <strong>Autoritatea Națională de Supraveghere a
+                Prelucrării Datelor cu Caracter Personal (ANSPDCP)</strong> dacă considerați că drepturile
+                dumneavoastră nu sunt respectate.
+              </p>
+            </div>
           </div>
         </div>
       </section>

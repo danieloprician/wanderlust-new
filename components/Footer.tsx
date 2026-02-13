@@ -36,9 +36,6 @@ export default async function Footer({ locale }: FooterProps) {
                   {siteConfig.name}
                 </span>
               </Link>
-              <p className="text-white/80 mb-4 leading-relaxed">
-                {siteConfig.tagline}
-              </p>
               <p className="text-sm text-white/70 mb-6">
                 {t('description', { 
                   region: siteConfig.contact.region, 

@@ -535,5 +535,74 @@
       }
     }
 
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "description": "Privacy policy and personal data protection for {siteName}.",
+    "subtitle": "Transparency and protection for your data",
+    "lastUpdated": "Last updated: {date}",
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Privacy Policy"
+    },
+    "introduction": {
+      "text": "Protecting your data is important to us. This Privacy Policy explains what types of information we collect when you use our website and how it is used. Our website collects only cookies and does not collect personal data such as name, email, phone, or other identifying information."
+    },
+    "sections": {
+      "cookies": {
+        "title": "1. What are cookies?",
+        "content": "Cookies are small text files stored on your device when you visit a website. They help improve the browsing experience by allowing the website to remember preferences or anonymous information about your interaction with the pages visited."
+      },
+      "typesOfCookies": {
+        "title": "2. What cookies do we use?",
+        "intro": "Our website uses only cookies necessary for the proper functioning of the platform. These may include:",
+        "types": {
+          "technical": {
+            "title": "Technical / functional cookies",
+            "description": "Necessary for loading and proper functioning of the website."
+          },
+          "analytics": {
+            "title": "Anonymous analytics cookies",
+            "optional": "(optional)",
+            "description": "Used to understand, without identifying users, how the website is used (e.g., pages visited, time spent on site)."
+          }
+        },
+        "note": "The cookies we use do not contain personal data and do not allow user identification."
+      },
+      "usage": {
+        "title": "3. How do we use the collected information?",
+        "intro": "Information collected through cookies is used exclusively for:",
+        "items": [
+          "Improving functionality and website performance",
+          "Optimizing user experience",
+          "Anonymous statistical analysis (where applicable)"
+        ]
+      },
+      "control": {
+        "title": "4. How can you control cookies?",
+        "intro": "Most browsers allow cookie control through settings such as:",
+        "items": [
+          "Blocking all cookies",
+          "Deleting existing cookies",
+          "Receiving a notification before saving a cookie"
+        ],
+        "footer": "To modify these settings, access the \"Settings\" or \"Preferences\" section of your browser."
+      },
+      "externalLinks": {
+        "title": "5. Links to external websites",
+        "content": "Our website may contain links to external websites. We are not responsible for the content or privacy policies of these websites."
+      },
+      "changes": {
+        "title": "6. Changes to this policy",
+        "content": "We reserve the right to update this Privacy Policy when necessary. Any changes will be published on this page."
+      },
+      "contact": {
+        "title": "7. Contact",
+        "intro": "If you have questions regarding this policy, you can contact us at:",
+        "email": "Email",
+        "phone": "Phone",
+        "footer": "You have the right to file a complaint with the National Authority for the Supervision of Personal Data Processing if you believe your rights are not being respected."
+      }
+    }
   }
 }

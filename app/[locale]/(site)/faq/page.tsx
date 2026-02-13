@@ -10,7 +10,8 @@ import {
   faPersonHiking, 
   faLandmark, 
   faHorse,
-  faChildren 
+  faChildren,
+  faCircleQuestion
 } from '@fortawesome/free-solid-svg-icons';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
@@ -158,12 +159,15 @@ export default async function FAQPage({ params: { locale } }: { params: { locale
       <JsonLd data={generateFAQSchema(faqs)} />
 
       {/* Hero */}
-      <section className="section bg-primary text-white">
+      <section className="relative bg-primary text-white py-16 md:py-20">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4">
+          <div className="inline-flex items-center justify-center w-20 h-20 mb-6 rounded-full bg-white/10">
+            <FontAwesomeIcon icon={faCircleQuestion} className="w-10 h-10" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
             {t('title')}
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
         </div>
@@ -193,10 +197,15 @@ export default async function FAQPage({ params: { locale } }: { params: { locale
             {faqs.map((faq, index) => (
               <details
                 key={index}
-                className="card group overflow-hidden"
+                className="card group overflow-hidden transition-all hover:shadow-lg"
               >
                 <summary className="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-primary/5 transition-colors">
-                  <h3 className="text-lg font-semibold text-primary pr-4">{faq.question}</h3>
+                  <div className="flex items-start gap-4 flex-1 pr-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent mt-1">
+                      <span className="text-lg font-bold">{index + 1}</span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-primary">{faq.question}</h3>
+                  </div>
                   <svg
                     className="w-6 h-6 text-accent flex-shrink-0 transition-transform group-open:rotate-180"
                     fill="none"
@@ -211,7 +220,7 @@ export default async function FAQPage({ params: { locale } }: { params: { locale
                     />
                   </svg>
                 </summary>
-                <div className="px-6 pb-6 text-text-light leading-relaxed border-t border-border pt-4">
+                <div className="px-6 pb-6 text-text-light leading-relaxed border-t border-border pt-4 ml-14">
                   {faq.answer}
                 </div>
               </details>
@@ -223,9 +232,9 @@ export default async function FAQPage({ params: { locale } }: { params: { locale
       {/* Still have questions */}
       <section className="section bg-surface">
         <div className="container-custom">
-          <div className="card p-8 md:p-12 text-center max-w-2xl mx-auto">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 text-primary mb-6 mx-auto">
-              <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="card bg-primary text-white p-8 md:p-12 text-center max-w-2xl mx-auto">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-6 mx-auto">
+              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -234,60 +243,26 @@ export default async function FAQPage({ params: { locale } }: { params: { locale
                 />
               </svg>
             </div>
-            <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
               {t('stillHaveQuestions.heading')}
             </h2>
-            <p className="text-text-light mb-8">
+            <p className="text-white/90 mb-8">
               {t('stillHaveQuestions.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary">
+              <Link href="/contact" className="btn-accent">
                 {t('stillHaveQuestions.contactUs')}
               </Link>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="btn-outline"
+                className="btn-outline border-white/30 text-white hover:bg-white/10"
               >
                 {t('stillHaveQuestions.sendEmail')}
               </a>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Quick Links */}
-      <section className="section">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary mb-8 text-center">
-              {t('usefulLinks.heading')}
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/cabana" className="card-hover p-6 text-center">
-                <div className="text-4xl mb-3">🏠</div>
-                <h3 className="text-lg font-semibold text-primary mb-2">{t('usefulLinks.aboutCabin.title')}</h3>
-                <p className="text-sm text-text-muted">
-                  {t('usefulLinks.aboutCabin.description')}
-                </p>
-              </Link>
-              <Link href="/tarife" className="card-hover p-6 text-center">
-                <div className="text-4xl mb-3">💰</div>
-                <h3 className="text-lg font-semibold text-primary mb-2">{t('usefulLinks.ratesPolicies.title')}</h3>
-                <p className="text-sm text-text-muted">
-                  {t('usefulLinks.ratesPolicies.description')}
-                </p>
-              </Link>
-              <Link href="/rezervari" className="card-hover p-6 text-center">
-                <div className="text-4xl mb-3">📅</div>
-                <h3 className="text-lg font-semibold text-primary mb-2">{t('usefulLinks.bookings.title')}</h3>
-                <p className="text-sm text-text-muted">
-                  {t('usefulLinks.bookings.description')}
-                </p>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      </section>      
     </>
   );
 }
