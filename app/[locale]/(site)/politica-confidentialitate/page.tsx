@@ -150,28 +150,22 @@ export default async function PoliticaConfidentialitatePage({ params: { locale }
                 <FontAwesomeIcon icon={faSlidersH} className="w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h2 className="text-2xl font-bold text-primary mb-2">4. Cum puteți controla cookie-urile?</h2>
+                <h2 className="text-2xl font-bold text-primary mb-2">{t('sections.control.title')}</h2>
                 <p className="text-text-light leading-relaxed mb-4">
-                  Majoritatea browserelor permit controlul cookie-urilor prin setări precum:
+                  {t('sections.control.intro')}
                 </p>
 
                 <ul className="space-y-2">
-                  <li className="flex items-start gap-3 text-text-light">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Blocarea tuturor cookie-urilor</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-text-light">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Ștergerea cookie-urilor existente</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-text-light">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Primirea unei notificări înainte de salvarea unui cookie</span>
-                  </li>
+                  {(t.raw('sections.control.items') as string[]).map((item: string, index: number) => (
+                    <li key={index} className="flex items-start gap-3 text-text-light">
+                      <span className="text-accent mt-1">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
 
                 <p className="text-text-light mt-4">
-                  Pentru a modifica aceste setări, accesați secțiunea „Setări" sau „Preferințe" a browserului dumneavoastră.
+                  {t('sections.control.footer')}
                 </p>
               </div>
             </div>
@@ -184,10 +178,9 @@ export default async function PoliticaConfidentialitatePage({ params: { locale }
                 <FontAwesomeIcon icon={faLink} className="w-6 h-6" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-primary mb-2">5. Linkuri către site-uri externe</h2>
+                <h2 className="text-2xl font-bold text-primary mb-2">{t('sections.externalLinks.title')}</h2>
                 <p className="text-text-light leading-relaxed">
-                  Site-ul nostru poate conține linkuri către site-uri externe. Nu suntem responsabili pentru conținutul sau
-                  politicile de confidențialitate ale acestor site-uri.
+                  {t('sections.externalLinks.content')}
                 </p>
               </div>
             </div>
@@ -200,10 +193,9 @@ export default async function PoliticaConfidentialitatePage({ params: { locale }
                 <FontAwesomeIcon icon={faFileShield} className="w-6 h-6" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-primary mb-2">6. Modificări ale acestei politici</h2>
+                <h2 className="text-2xl font-bold text-primary mb-2">{t('sections.changes.title')}</h2>
                 <p className="text-text-light leading-relaxed">
-                  Ne rezervăm dreptul de a actualiza această Politică de Confidențialitate atunci când este necesar.
-                  Orice modificare va fi publicată pe această pagină.
+                  {t('sections.changes.content')}
                 </p>
               </div>
             </div>
@@ -211,9 +203,9 @@ export default async function PoliticaConfidentialitatePage({ params: { locale }
 
           {/* Contact */}
           <div className="card p-8 bg-primary text-white">
-            <h2 className="text-2xl font-bold mb-4">7. Contact</h2>
+            <h2 className="text-2xl font-bold mb-4">{t('sections.contact.title')}</h2>
             <p className="text-white/90 mb-6">
-              Dacă aveți întrebări legate de această politică, ne puteți contacta la:
+              {t('sections.contact.intro')}
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -222,7 +214,7 @@ export default async function PoliticaConfidentialitatePage({ params: { locale }
                   <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-sm text-white/70">Email</p>
+                  <p className="text-sm text-white/70">{t('sections.contact.email')}</p>
                   <a href={`mailto:${siteConfig.contact.email}`} className="text-white hover:text-accent font-medium">
                     {siteConfig.contact.email}
                   </a>
@@ -234,7 +226,7 @@ export default async function PoliticaConfidentialitatePage({ params: { locale }
                   <FontAwesomeIcon icon={faPhone} className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-sm text-white/70">Telefon</p>
+                  <p className="text-sm text-white/70">{t('sections.contact.phone')}</p>
                   <a href={`tel:${siteConfig.contact.phone}`} className="text-white hover:text-accent font-medium">
                     {siteConfig.contact.phone}
                   </a>
@@ -244,9 +236,9 @@ export default async function PoliticaConfidentialitatePage({ params: { locale }
 
             <div className="pt-6 border-t border-white/20">
               <p className="text-white/90 text-sm">
-                Aveți dreptul să depuneți o plângere la <strong>Autoritatea Națională de Supraveghere a
-                Prelucrării Datelor cu Caracter Personal (ANSPDCP)</strong> dacă considerați că drepturile
-                dumneavoastră nu sunt respectate.
+                {t.rich('sections.contact.footer', {
+                  bold: (chunks) => <strong>{chunks}</strong>
+                })}
               </p>
             </div>
           </div>
