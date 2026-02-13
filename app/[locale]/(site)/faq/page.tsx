@@ -14,6 +14,13 @@ import {
   faCircleQuestion
 } from '@fortawesome/free-solid-svg-icons';
 
+export function generateStaticParams() {
+  return [
+    { locale: 'ro' },
+    { locale: 'en' },
+  ];
+}
+
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'faq' });
   

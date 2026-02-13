@@ -8,6 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGroup, faUsers, faHeart, faGift, faCheck } from '@fortawesome/free-solid-svg-icons';
 import BookNowButton from '@/components/BookNowButton';
 
+export function generateStaticParams() {
+  return [
+    { locale: 'ro' },
+    { locale: 'en' },
+  ];
+}
+
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'cabin' });
   

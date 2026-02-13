@@ -5,6 +5,13 @@ import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShieldHalved, faCookie, faGear, faChartLine, faSlidersH, faLink, faFileShield, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
+export function generateStaticParams() {
+  return [
+    { locale: 'ro' },
+    { locale: 'en' },
+  ];
+}
+
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'privacyPolicy' });
   

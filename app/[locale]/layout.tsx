@@ -12,6 +12,13 @@ import CookieConsent from '@/components/CookieConsent';
 // Prevent Font Awesome from auto-adding CSS since we did it manually above
 config.autoAddCss = false;
 
+export function generateStaticParams() {
+  return [
+    { locale: 'ro' },
+    { locale: 'en' },
+  ];
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {

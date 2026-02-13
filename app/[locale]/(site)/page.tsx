@@ -14,6 +14,13 @@ import {
   generateBreadcrumbSchema,
 } from '@/lib/seo/schema';
 
+export function generateStaticParams() {
+  return [
+    { locale: 'ro' },
+    { locale: 'en' },
+  ];
+}
+
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'home' });
   
