@@ -1,6 +1,8 @@
 # Deploy pe Azure Static Web Apps cu GitHub Actions
 
-Ghid complet pentru setup-ul deployment-ului.
+Ghid complet pentru setup-ul deployment-ului pe Azure Static Web Apps (FREE TIER).
+
+⚠️ **Notă**: API routes sunt dezactivate. Dacă ai nevoie de backend, folosește Vercel sau Azure App Service.
 
 ## 1. Setup Azure Static Web Apps
 
@@ -92,24 +94,23 @@ Apoi adaugă secret în GitHub.
 
 ## 6. Troubleshooting
 
-### Build fails cu "API routes not supported"
-- Sigur! Azure Static Web Apps nu suportă serverless functions din Box pentru Next.js (în free tier)
-- Te-ai rugat static export, deci ar trebui OK
-- Dacă ai API routes, trebuie să mișți pe Azure App Service
+### Build fails
+- Verifica logs în Azure Portal: Static Web App → Deployment history
+- Clickeaza pe build-ul failed pt error messages
+- De obicei e problema cu Node version sau dependencies
 
 ### 404 pe rute dinamice
-Adaugă `staticwebapp.config.json` în root dacă ai rute dinamice:
-```json
-{
-  "navigationFallback": {
-    "rewrite": "/404.html"
-  }
-}
-```
+- ✅ Configurarea e deja setată în `staticwebapp.config.json`
+- Rute dinamice (ex: `/[locale]/page.tsx`) sunt handled automat
 
 ### Build timeout
 - Crește timeout în Azure Portal: Static Web App → Configuration
 - Limit implicit e 15 min pentru free tier
+- Verifica `npm ci` nu e prea lent
+
+### Build îl blocheaza pe Azure
+- Local test: `npm run build` - daca merge local, merge pe Azure
+- Verifica dependencies: `npm ci` trebuie sa fie rapid
 
 ## Environment necesar
 
@@ -122,9 +123,20 @@ Adaugă `staticwebapp.config.json` în root dacă ai rute dinamice:
 
 - **Azure Static Web Apps FREE TIER**:
   - Bandwidth: 100 GB/lună
-  - Funcții: 200,000 invocații/lună
+  - Build minutes: 100/lună
   - Gestion SSL: inclus
-  - **Pret**: 0 $ (cu limitări moderate)
+  - Custom domain: inclus
+  - **Pret**: 0 $ 🎉
+
+## Starter Checklist
+
+- [ ] 1. Creat subscription Azure
+- [ ] 2. Creat Static Web App
+- [ ] 3. Conectat GitHub repo
+- [ ] 4. Setat API token în GitHub Secrets
+- [ ] 5. First deployment triggered
+- [ ] 6. Verific site URL
+- [ ] 7. Custom domain (opțional)
 
 ## Contact & Support
 
