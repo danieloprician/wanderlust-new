@@ -77,8 +77,7 @@ export default function Gallery({
   const categories = [
     { id: 'toate', label: 'Toate' },
     { id: 'exterior', label: 'Exterior' },
-    { id: 'interior', label: 'Interior' },
-    { id: 'activitati', label: 'Activități' },
+    { id: 'interior', label: 'Interior' },    
   ];
 
   const filteredImages =
