@@ -4,7 +4,6 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   reactStrictMode: true,
   
   images: {
@@ -36,15 +35,21 @@ const nextConfig = {
     return [];
   },
 
-  // Suppress next-intl webpack warning
+  // Suppress next-intl webpack warnings
   webpack: (config, { isServer }) => {
     config.ignoreWarnings = [
       ...(config.ignoreWarnings || []),
       {
-        module: /node_modules\/next-intl/,
-        message: /Parsing of .*next-intl.*for build dependencies failed/,
+        file: /next-intl/,
+        message: /Parsing of|Build dependencies behind/,
       },
     ];
+    
+    // Suppress webpack cache logging for next-intl
+    if (config.infrastructureLogging) {
+      config.infrastructureLogging.debug = /^(?!.*webpack\.cache\.PackFileCacheStrategy)/;
+    }
+    
     return config;
   },
 };
