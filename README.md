@@ -249,16 +249,17 @@ Caută placeholder-urile `{{CABIN_NAME}}`, `{{REGION}}` etc. și înlocuiește-l
 
 **📘 Pentru ghidul complet de deployment cu pași detaliați, vezi [DEPLOY_STATIC.md](./DEPLOY_STATIC.md)**
 
-Site-ul este configurat pentru **static export** și poate fi deployment pe orice platformă de hosting static.
+Site-ul este un proiect **Next.js cu middleware i18n** și necesită platforme de hosting care suportă **serverless functions** sau **Node.js runtime**.
 
 ### Opțiuni recomandate:
 
 | Platformă | Dificultate | Timp Setup | Documentație |
 |-----------|-------------|------------|--------------|
-| **Vercel** | ⭐ Foarte ușor | 3 min | [DEPLOY_VERCEL.md](./DEPLOY_VERCEL.md) |
-| **GitHub Pages** | ⭐⭐ Ușor | 5 min | [DEPLOY_STATIC.md](./DEPLOY_STATIC.md#-deployment-pe-github-pages) |
+| **Vercel** | ⭐ Foarte ușor | 3 min | [DEPLOY_STATIC.md](./DEPLOY_STATIC.md#-deployment-pe-vercel-recomandat) |
 | **Netlify** | ⭐ Foarte ușor | 3 min | [DEPLOY_STATIC.md](./DEPLOY_STATIC.md#-deployment-pe-netlify) |
 | **Azure Static Web Apps** | ⭐⭐⭐ Mediu | 10 min | [DEPLOY_AZURE.md](./DEPLOY_AZURE.md) |
+
+**Notă:** GitHub Pages și hosting static tradițional NU sunt compatibile cu acest proiect din cauza middleware-ului Next.js.
 
 ### Quick Start - Vercel (Recomandat pentru beginners)
 
@@ -276,10 +277,11 @@ npm install
 # Build pentru producție
 npm run build
 
-# Fișierele statice vor fi în folder-ul `out/`
+# Pornește serverul de producție
+npm start
 ```
 
-Pentru deployment manual sau alte platforme, vezi [DEPLOY_STATIC.md](./DEPLOY_STATIC.md).
+Pentru deployment pas cu pas, vezi [DEPLOYMENT_QUICKSTART.md](./DEPLOYMENT_QUICKSTART.md) sau [DEPLOY_STATIC.md](./DEPLOY_STATIC.md).
 
 ---
 
