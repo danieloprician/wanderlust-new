@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "{siteName} - Oază de relaxare și aventură la poalele Munților Făgăraș",
+    "description": "Descoperă {siteName}, cabana perfectă pentru vacanțe la munte în {region}. Ciubar, saună, semineu și natură autentică. Rezervă acum!"
+  },
+  "cta": {
+    "heading": "Gata să creezi amintiri de neuitat?",
+    "description": "Rezervă acum și bucură-te de o experiență unică la munte",
+    "bookNow": "Rezervă acum",
+    "seeRates": "Vezi tarifele"
+  },
+  "gallery": {
+    "heading": "Galerie Foto",
+    "description": "Descoperă frumusețea cabanei noastre prin imagini",
+    "viewAll": "Vezi toată galeria"
+  },
+  "seo": {
+    "heading": "Oază de relaxare și aventură la poalele Munților Făgăraș",
+    "paragraph1": "{siteName} este amplasată în inima {region}, o zonă renumită pentru frumusețea naturală și liniștea absolută. Perfectă pentru weekend-uri la munte, vacanțe în familie sau evenimente speciale, cabana noastră oferă o experiență autentică departe de agitația urbană.",
+    "paragraph2": "În apropiere găsiți numeroase trasee montane, pârtii de schi, cascade spectaculoase și obiective turistice renumite. Locația ideală pentru iubitorii de natură, fotografie și aventură.",
+    "paragraph3": "Dotările premium includ ciubar cu apă caldă, saună finlandeză, semineu rustic, bucătărie complet utilată și WiFi gratuit. Cazare pentru până la 8 persoane, perfectă pentru grupuri de prieteni sau familii extinse."
+  },
+  "map": {
+    "heading": "Locația Cabanei",
+    "cta": "Informații contact complete"
+  }
+}

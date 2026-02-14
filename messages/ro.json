@@ -430,6 +430,11 @@
   "gallery": {
     "title": "Galerie Foto",
     "subtitle": "Descoperă frumusețea cabanei noastre",
+    "categories": {
+      "all": "Toate",
+      "exterior": "Exterior",
+      "interior": "Interior"
+    },
     "authenticity": {
       "title": "Poze 100% Autentice",
       "description": "Toate pozele pe care le vezi sunt reale, făcute la cabana noastră. Fără filtre exagerate sau trucaje – ce vezi este exact ce vei găsi când ajungi aici!"

@@ -1,0 +1,95 @@
+{
+  "title": "Rezervă Cabana",
+  "subtitle": "Completează formularul și te vom contacta în cel mai scurt timp",
+  "form": {
+    "fullName": "Nume complet",
+    "email": "Email",
+    "phone": "Telefon",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Număr persoane",
+    "message": "Mesaj (opțional)",
+    "messagePlaceholder": "Spune-ne mai multe despre sejurul tău...",
+    "submit": "Trimite Cerere",
+    "submitting": "Se trimite..."
+  },
+  "validation": {
+    "nameRequired": "Numele este obligatoriu",
+    "emailRequired": "Email-ul este obligatoriu",
+    "emailInvalid": "Email invalid",
+    "phoneRequired": "Telefonul este obligatoriu",
+    "phoneInvalid": "Număr de telefon invalid",
+    "checkInRequired": "Check-in obligatoriu",
+    "checkOutRequired": "Check-out obligatoriu",
+    "guestsRequired": "Numărul de persoane este obligatoriu",
+    "guestsInvalid": "Număr invalid de persoane (1-8)"
+  },
+  "success": {
+    "title": "Cerere Trimisă cu Succes!",
+    "message": "Mulțumim! Am primit cererea ta de rezervare și te vom contacta în cel mai scurt timp.",
+    "backHome": "Înapoi la Pagina Principală"
+  },
+  "error": {
+    "title": "Oops! Ceva nu a mers bine",
+    "message": "Te rugăm să încerci din nou sau contactează-ne direct la telefon.",
+    "tryAgain": "Încearcă din nou"
+  },
+  "sidebar": {
+    "nextSteps": {
+      "title": "Pași Următori",
+      "step1": "Verificăm disponibilitatea pentru datele alese",
+      "step2": "Te contactăm telefonic sau pe email în max 24h",
+      "step3": "Confirmăm rezervarea și detaliile sejurului"
+    },
+    "directContact": {
+      "title": "Contact Direct",
+      "description": "Preferi să vorbești direct cu noi?"
+    },
+    "policies": {
+      "title": "Politici Importante",
+      "checkIn": "Check-in: {checkInTime}",
+      "checkOut": "Check-out: {checkOutTime}",
+      "minStay": "Sejur minim: {minNights} nopți",
+      "cancellation": "Politică de anulare flexibilă"
+    }
+  },
+  "rates": {
+    "tableHeaders": {
+      "period": "Perioadă",
+      "weekend": "Weekend",
+      "weekendSubtitle": "(Vineri - Duminică)",
+      "week": "Săptămână",
+      "weekSubtitle": "(Luni - Joi)"
+    },
+    "popularBadge": "Popular",
+    "seasons": {
+      "low": "Sezon Scăzut (Noiembrie - Martie, exclusiv sărbători)",
+      "medium": "Sezon Mediu (Aprilie - Mai, Septembrie - Octombrie)",
+      "high": "Sezon Înalt (Iunie - August)",
+      "holidays": "Sărbători (Crăciun, Revelion, Paște)"
+    },
+    "bookingPolicy": {
+      "title": "Politică de Rezervare",
+      "minStay": "Sejur minim: 2 nopți (3 nopți în weekend-uri lungi și sărbători)",
+      "checkInOut": "Check-in: după ora 15:00 | Check-out: până la ora 11:00",
+      "deposit": "Depozit de garanție: 500 RON (returnabil la plecare)",
+      "maxCapacity": "Capacitate maximă: 8 persoane"
+    },
+    "cancellationPolicy": {
+      "title": "Politică de Anulare",
+      "days30Plus": "Anulare cu 30+ zile înainte: rambursare 100%",
+      "days15to29": "Anulare cu 15-29 zile înainte: rambursare 50%",
+      "days14Less": "Anulare cu mai puțin de 14 zile: fără rambursare",
+      "forceMajeure": "În caz de forță majoră, politica poate fi renegociată"
+    },
+    "included": {
+      "title": "Ce Este Inclus în Preț",
+      "wifi": "WiFi nelimitat",
+      "parking": "Parcare gratuită",
+      "hotTubSauna": "Ciubar + Saună",
+      "firewood": "Lemne pentru foc",
+      "bedLinen": "Lenjerie de pat",
+      "towels": "Prosoape"
+    }
+  }
+}

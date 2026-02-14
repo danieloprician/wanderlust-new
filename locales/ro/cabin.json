@@ -1,0 +1,104 @@
+{
+  "title": "Despre Cabană",
+  "subtitle": "Un refugiu autentic cu dotări moderne în inima naturii",
+  "story": {
+    "heading": "Povestea Noastră",
+    "paragraph1": "a fost construită cu gândul de a oferi o experiență autentică în natură, fără a compromite confortul modern. Amplasată în inima {region}, cabana noastră este rezultatul unei pasiuni pentru arhitectura tradițională românească și a dorinței de a crea un spațiu unde oamenii pot reconecta cu natura.",
+    "paragraph2": "Renovată complet în 2024, cabana îmbină elementele tradiționale - lemn masiv, piatră naturală, șemineu rustic - cu facilitățile moderne necesare unui sejur confortabil: încălzire centrală, WiFi, bucătărie complet utilată.",
+    "paragraph3": "Suntem mândri să oferim oaspeților noștri nu doar un loc de cazare, ci o experiență completă: ciubarul sub cerul înstelat, sauna după o zi pe munte, liniștea pădurii și aerul curat al munților."
+  },
+  "amenities": {
+    "heading": "Dotări & Facilități",
+    "relaxation": "Relaxare",
+    "kitchen": "Bucătărie",
+    "bedrooms": "Dormitoare",
+    "bathrooms": "Băi",
+    "entertainment": "Entertainment",
+    "outdoor": "Exterior",
+    "items": {
+      "relaxation": ["Ciubar", "Saună finlandeză", "Șemineu din piatră", "Terasă cu vedere"],
+      "kitchen": ["Aragaz", "Cuptor", "Frigider", "Mașină de spălat vase", "Ustensile complete", "Cafetieră"],
+      "bedrooms": ["3 dormitoare", "Paturi pentru 8 persoane", "Lenjerie premium", "Dulapuri spațioase"],
+      "bathrooms": ["2 băi complete", "Duș cu hidromasaj", "Încălzire în pardoseală", "Prosoape incluse"],
+      "entertainment": ["Smart TV", "WiFi de mare viteză", "Sistem audio", "Jocuri de societate"],
+      "outdoor": ["Grătar", "Mobilier de grădină", "Leagăne pentru copii", "Parcare privată", "Zonă de joacă"]
+    }
+  },
+  "forWhom": {
+    "heading": "Pentru cine este potrivită cabana?",
+    "families": {
+      "title": "Familii cu Copii",
+      "description": "Spațiu amplu, curte sigură, jocuri pentru copii și facilități complete pentru confortul întregii familii."
+    },
+    "friends": {
+      "title": "Grupuri de Prieteni",
+      "description": "Perfectă pentru reuniuni, weekend-uri relaxante sau petreceri private în natură."
+    },
+    "couples": {
+      "title": "Cupluri Romantice",
+      "description": "Intimitate, liniște, ciubar sub stele și apusuri spectaculoase pentru momente de neuitat."
+    },
+    "events": {
+      "title": "Evenimente Speciale",
+      "description": "Aniversări, cereri în căsătorie, team-building sau sărbători în cadru privat și exclusivist."
+    }
+  },
+  "floorPlan": {
+    "heading": "Planul Camerelor",
+    "groundFloor": "Parter",
+    "firstFloor": "Etaj",
+    "outdoor": "Exterior",
+    "rooms": {
+      "mainLiving": {
+        "label": "Living Principal:",
+        "description": "Canapea extensibilă, șemineu, smart TV, acces terasă (35m²)"
+      },
+      "kitchen": {
+        "label": "Bucătărie:",
+        "description": "Complet utilată, masă pentru 8 persoane, bar (25m²)"
+      },
+      "bathroom1": {
+        "label": "Baie:",
+        "description": "Duș, WC, lavoar, încălzire în pardoseală (6m²)"
+      },
+      "bedroom1": {
+        "label": "Dormitor 1:",
+        "description": "Pat dublu, dulap, acces direct în grădină (18m²)"
+      },
+      "bedroom2": {
+        "label": "Dormitor 2:",
+        "description": "Pat dublu, birou, balcon cu vedere (20m²)"
+      },
+      "bedroom3": {
+        "label": "Dormitor 3:",
+        "description": "2 paturi suprapuse, zonă de joacă copii (16m²)"
+      },
+      "bathroom2": {
+        "label": "Baie:",
+        "description": "Cadă, WC, lavoar, mașină de spălat (7m²)"
+      },
+      "hotTub": {
+        "label": "Ciubar:",
+        "description": "Încălzit pe lemne, capacitate 6 persoane"
+      },
+      "sauna": {
+        "label": "Saună:",
+        "description": "Finlandeză, capacitate 4 persoane, vestiare"
+      },
+      "barbecue": {
+        "label": "Grătar:",
+        "description": "Zonă acoperită, masă exterior, scaune"
+      },
+      "garden": {
+        "label": "Grădină:",
+        "description": "500m², leagăne, căsuță copii, parcare 3 mașini"
+      }
+    }
+  },
+  "cta": {
+    "heading": "Convins? Rezervă Acum!",
+    "description": "Nu lăsa pe altcineva să îți ia weekendul perfect. Verifică disponibilitatea și rezervă astăzi.",
+    "checkAvailability": "Verifică disponibilitatea",
+    "viewGallery": "Vezi mai multe poze"
+  }
+}

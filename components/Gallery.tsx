@@ -6,9 +6,15 @@ import Image from 'next/image';
 export interface GalleryImage {
   src: string;
   alt: string;
-  category?: 'interior' | 'exterior' | 'activitati' | 'toate';
+  category?: 'interior' | 'exterior' | 'toate';
   width?: number;
   height?: number;
+}
+
+interface CategoryLabel {
+  all: string;
+  exterior: string;
+  interior: string;
 }
 
 const defaultImages: GalleryImage[] = [
@@ -63,21 +69,27 @@ interface GalleryProps {
   images?: GalleryImage[];
   showFilters?: boolean;
   columns?: 2 | 3 | 4;
+  categoryLabels?: CategoryLabel;
 }
 
 export default function Gallery({
   images = defaultImages,
   showFilters = true,
   columns = 3,
+  categoryLabels = {
+    all: 'All',
+    exterior: 'Exterior',
+    interior: 'Interior',
+  },
 }: GalleryProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>('toate');
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<number>(0);
 
   const categories = [
-    { id: 'toate', label: 'Toate' },
-    { id: 'exterior', label: 'Exterior' },
-    { id: 'interior', label: 'Interior' },    
+    { id: 'toate', label: categoryLabels.all },
+    { id: 'exterior', label: categoryLabels.exterior },
+    { id: 'interior', label: categoryLabels.interior },
   ];
 
   const filteredImages =
@@ -133,7 +145,7 @@ export default function Gallery({
         )}
 
         {/* Gallery Grid */}
-        <div className={`grid grid-cols-1 ${gridCols[columns]} gap-4`}>
+        <div className={`grid grid-cols-1 ${gridCols[columns as 2 | 3 | 4]} gap-4`}>
           {filteredImages.map((image, index) => (
             <div
               key={index}

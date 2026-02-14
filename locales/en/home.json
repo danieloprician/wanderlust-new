@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "{siteName} - Relaxation & Adventure Oasis at the Făgăraș Mountains",
+    "description": "Discover {siteName}, the perfect cottage for mountain vacations in {region}. Hot tub, sauna, fireplace and authentic nature. Book now!"
+  },
+  "cta": {
+    "heading": "Ready to create unforgettable memories?",
+    "description": "Book now and enjoy a unique mountain experience",
+    "bookNow": "Book now",
+    "seeRates": "See rates"
+  },
+  "gallery": {
+    "heading": "Photo Gallery",
+    "description": "Discover the beauty of our cottage through images",
+    "viewAll": "View full gallery"
+  },
+  "seo": {
+    "heading": "Relaxation & Adventure Oasis at the Făgăraș Mountains",
+    "paragraph1": "{siteName} is located in the heart of {region}, an area renowned for its natural beauty and absolute tranquility. Perfect for mountain weekends, family vacations or special events, our cottage offers an authentic experience away from urban hustle.",
+    "paragraph2": "Nearby you will find numerous mountain trails, ski slopes, spectacular waterfalls and famous tourist attractions. The ideal location for nature lovers, photography and adventure.",
+    "paragraph3": "Premium amenities include hot tub, Finnish sauna, rustic fireplace, fully equipped kitchen and free WiFi. Accommodation for up to 8 people, perfect for groups of friends or extended families."
+  },
+  "map": {
+    "heading": "Cottage Location",
+    "cta": "Complete contact information"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "title": "Întrebări Frecvente",
+  "subtitle": "Tot ce trebuie să știi despre cabană, facilități și rezervări",
+  "stillHaveQuestions": {
+    "heading": "Mai Ai Întrebări?",
+    "description": "Nu ai găsit răspunsul pe care îl căutai? Contactează-ne direct și vom fi bucuroși să te ajutăm!",
+    "contactUs": "Contactează-ne",
+    "sendEmail": "Trimite Email"
+  },
+  "usefulLinks": {
+    "heading": "Link-uri Utile",
+    "aboutCabin": {
+      "title": "Despre Cabană",
+      "description": "Dotări, facilități și planul camerelor"
+    },
+    "ratesPolicies": {
+      "title": "Tarife & Politici",
+      "description": "Prețuri, reduceri și politici de anulare"
+    },
+    "bookings": {
+      "title": "Rezervări",
+      "description": "Formular de rezervare online"
+    }
+  },
+  "questions": {
+    "q1": {
+      "question": "Care este capacitatea maximă a cabanei?",
+      "answer": "Cabana poate găzdui până la 8 persoane. Avem 3 dormitoare cu paturi pentru 6 persoane + o canapea extensibilă în living pentru cazuri excepționale."
+    },
+    "q2": {
+      "question": "Care este politica de check-in și check-out?",
+      "answer": "Check-in: ora {checkIn}. Check-out: ora {checkOut}. Pentru check-in târziu sau check-out prelungit, vă rugăm să ne contactați din timp - vom încerca să vă acomodăm cererile în funcție de disponibilitate."
+    },
+    "q3": {
+      "question": "Sunt permise animalele de companie?",
+      "answer": "Nu, din păcate nu acceptăm animale de companie. Această măsură este luată pentru confortul tuturor oaspeților, inclusiv al celor cu alergii."
+    },
+    "q4": {
+      "question": "Există parcare disponibilă?",
+      "answer": "Da, avem parcare privată gratuită pentru până la 3 mașini în curtea cabanei. Parcarea este pavată și iluminată pe timp de noapte."
+    },
+    "q5": {
+      "question": "Ciubarul și sauna sunt incluse în preț?",
+      "answer": "Da, atât ciubarul cât și sauna finlandeză sunt incluse în prețul cazării. Lemnele pentru încălzirea ciubarului sunt de asemenea incluse. Vă vom arăta cum să le folosiți la check-in."
+    },
+    "q6": {
+      "question": "Există WiFi disponibil?",
+      "answer": "Da, oferim WiFi gratuit de mare viteză în toată cabana. Viteza este suficientă pentru streaming, conferințe video și lucru de acasă."
+    },
+    "q7": {
+      "question": "Cum este accesul la cabană iarna?",
+      "answer": "Drumul către cabană este accesibil tot anul. Iarna, în caz de ninsoare abundentă, recomandăm cauciucuri de iarnă. Ultimul kilometru este pe drum forestier, dar este întreținut regulat."
+    },
+    "q8": {
+      "question": "Bucătăria este complet utilată?",
+      "answer": "Da, bucătăria este complet utilată cu aragaz, cuptor, frigider, mașină de spălat vase, cafetieră, fierbător, ustensile de gătit și tacâmuri. Trebuie să aduceți doar alimentele."
+    },
+    "q9": {
+      "question": "Ce atracții turistice sunt în apropiere?",
+      "categories": {
+        "nature": "Natură & Peisaje",
+        "trails": "Trasee Montane",
+        "cultural": "Obiective Culturale și Istorice (în Avrig)",
+        "activities": "Activități Recreaționale",
+        "modern": "Atracții Moderne / Parcuri"
+      },
+      "attractions": {
+        "avrigValley": "Valea Avrigului – zonă turistică ce se întinde pe cursul râului Avrig, cu cabane, pensiuni și peisaje montane liniștite",
+        "poianaNea": "Poiana Neamțului – capăt de vale și loc de plecare pentru trasee montane către Bârcaciu, Suru, Lacul Avrig",
+        "lakeAvrig": "Lacul Avrig (2011 m alt.) – lac glaciar spectaculos, unul dintre cele mai frumoase din Munții Făgăraș",
+        "trail1": "Avrig → Izvorul Florii → Suru → Lacul Avrig → Negoiu → Bâlea",
+        "trail2": "Poiana Neamțului → Cabana Bârcaciu → Lacul Avrig → Suru",
+        "trail3": "Trasee către vârfuri: Negoiu (2535m), Suru (2281m), Budislavu (2345m), Ciortea (2426m), Scara (2213m)",
+        "brukenthal": "Palatul Brukenthal – palat baroc cu parc, alei și zone istorice",
+        "museum": "Muzeul Avrig – colecții de artă populară, obiecte din sticlă, expoziții Gheorghe Lazăr",
+        "memorial": "Casa Memorială „Gheorghe Lazăr",
+        "evangelical": "Biserica Evanghelică (1265–1295) – cel mai vechi monument din Avrig",
+        "orthodox": "Biserica Ortodoxă (1762) – picturi valoroase ale meșterilor Ionașcu și Pană",
+        "carta": "Mănăstirea Cisterciană Cârța – ansamblu gotic medieval în ruină, foarte cunoscut (sec. XIX)",
+        "calendar": "Povestea Calendarului – parc tematic cu 12 case inspirate din calendarul tradițional",
+        "clay": "Castelul de Lut – Valea Zanelor – una dintre cele mai fotografiate destinații din România",
+        "hiking": "Drumeții pe trasee marcate",
+        "bikes": "Tururi cu biciclete electrice",
+        "horse": "Sesiuni de plimbări călare",
+        "pools": "Bazine de înot în aer liber",
+        "brambura": "Parcul Brambura & Casa cu Susul în Jos – atracție pentru familii",
+        "panoramic": "Parcul Panoramic & Satul Vikingilor – parc tematic",
+        "deer": "Poiana Neamțului – Ferma de Cerbi"
+      }
+    },
+    "q10": {
+      "question": "Trebuie să aduc lenjerie de pat și prosoape?",
+      "answer": "Nu, lenjeria de pat și prosoapele sunt incluse în preț și sunt puse la dispoziție pentru fiecare oaspete. Dacă aveți nevoie de prosoape suplimentare pentru ciubar/saună, vă rugăm să ne anunțați."
+    },
+    "q11": {
+      "question": "Există magazine sau restaurante în apropiere?",
+      "answer": "Cel mai apropiat restaurant, Popasul Montan, se află la 3 minute cu mașina sau 5 min la restaurantul Ghiocelul. În {city} (7.5 km) veți găsi supermarketuri, magazine și măcelării. Recomandăm să vă aprovizionați înainte de a ajunge la cabană."
+    },
+    "q12": {
+      "question": "Există semnal de telefon?",
+      "answer": "Da, există semnal pentru rețelele majore (Orange, Vodafone, Telekom). Puternicitatea semnalului poate varia în funcție de operator. WiFi-ul este disponibil ca alternativă pentru comunicare."
+    }
+  }
+}

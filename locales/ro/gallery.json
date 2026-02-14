@@ -1,0 +1,19 @@
+{
+  "title": "Galerie Foto",
+  "subtitle": "Descoperă frumusețea cabanei noastre",
+  "authenticity": {
+    "title": "Poze 100% Autentice",
+    "description": "Toate pozele pe care le vezi sunt reale, făcute la cabana noastră. Fără filtre exagerate sau trucaje – ce vezi este exact ce vei găsi când ajungi aici!"
+  },
+  "categories": {
+    "all": "Toate",
+    "exterior": "Exterior",
+    "interior": "Interior"
+  },
+  "cta": {
+    "heading": "Gata să experimentezi asta în persoană?",
+    "description": "Rezervă acum sejurul tău și creează propriile amintiri de neuitat",
+    "checkAvailability": "Verifică disponibilitatea",
+    "contactUs": "Contactează-ne"
+  }
+}

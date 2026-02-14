@@ -1,0 +1,25 @@
+{
+  "description": "Cabană de închiriat în {region}, {country}. Experiență unică în natură, cu dotări premium pentru confortul tău.",
+  "address": "Adresă:",
+  "phone": "Telefon:",
+  "email": "Email:",
+  "explore": {
+    "heading": "Explorare",
+    "cabin": "Cabana",
+    "gallery": "Galerie",
+    "rates": "Tarife",
+    "reservations": "Rezervări"
+  },
+  "info": {
+    "heading": "Informații",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "terms": "Termeni și condiții",
+    "privacy": "Politica de confidențialitate"
+  },
+  "social": {
+    "heading": "Urmărește-ne"
+  },
+  "copyright": "Toate drepturile rezervate.",
+  "tagline": "Dezvoltat cu ❤️ pentru experiențe unice în natură"
+}

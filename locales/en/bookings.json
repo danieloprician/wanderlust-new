@@ -1,0 +1,95 @@
+{
+  "title": "Book the Cottage",
+  "subtitle": "Fill out the form and we will contact you as soon as possible",
+  "form": {
+    "fullName": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Number of guests",
+    "message": "Message (optional)",
+    "messagePlaceholder": "Tell us more about your stay...",
+    "submit": "Send Request",
+    "submitting": "Sending..."
+  },
+  "validation": {
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email",
+    "phoneRequired": "Phone is required",
+    "phoneInvalid": "Invalid phone number",
+    "checkInRequired": "Check-in is required",
+    "checkOutRequired": "Check-out is required",
+    "guestsRequired": "Number of guests is required",
+    "guestsInvalid": "Invalid number of guests (1-8)"
+  },
+  "success": {
+    "title": "Request Sent Successfully!",
+    "message": "Thank you! We have received your booking request and will contact you as soon as possible.",
+    "backHome": "Back to Home Page"
+  },
+  "error": {
+    "title": "Oops! Something went wrong",
+    "message": "Please try again or contact us directly by phone.",
+    "tryAgain": "Try Again"
+  },
+  "sidebar": {
+    "nextSteps": {
+      "title": "Next Steps",
+      "step1": "We check availability for your chosen dates",
+      "step2": "We contact you by phone or email within 24h",
+      "step3": "We confirm the booking and stay details"
+    },
+    "directContact": {
+      "title": "Direct Contact",
+      "description": "Prefer to speak with us directly?"
+    },
+    "policies": {
+      "title": "Important Policies",
+      "checkIn": "Check-in: {checkInTime}",
+      "checkOut": "Check-out: {checkOutTime}",
+      "minStay": "Minimum stay: {minNights} nights",
+      "cancellation": "Flexible cancellation policy"
+    }
+  },
+  "rates": {
+    "tableHeaders": {
+      "period": "Period",
+      "weekend": "Weekend",
+      "weekendSubtitle": "(Friday - Sunday)",
+      "week": "Weekdays",
+      "weekSubtitle": "(Monday - Thursday)"
+    },
+    "popularBadge": "Popular",
+    "seasons": {
+      "low": "Low Season (November - March, excluding holidays)",
+      "medium": "Medium Season (April - May, September - October)",
+      "high": "High Season (June - August)",
+      "holidays": "Holidays (Christmas, New Year's, Easter)"
+    },
+    "bookingPolicy": {
+      "title": "Booking Policy",
+      "minStay": "Minimum stay: 2 nights (3 nights on long weekends and holidays)",
+      "checkInOut": "Check-in: after 3:00 PM | Check-out: before 11:00 AM",
+      "deposit": "Security deposit: 500 RON (refundable at checkout)",
+      "maxCapacity": "Maximum capacity: 8 people"
+    },
+    "cancellationPolicy": {
+      "title": "Cancellation Policy",
+      "days30Plus": "Cancellation 30+ days before: 100% refund",
+      "days15to29": "Cancellation 15-29 days before: 50% refund",
+      "days14Less": "Cancellation less than 14 days: no refund",
+      "forceMajeure": "In case of force majeure, policy can be renegotiated"
+    },
+    "included": {
+      "title": "What's Included in the Price",
+      "wifi": "Unlimited WiFi",
+      "parking": "Free parking",
+      "hotTubSauna": "Hot Tub + Sauna",
+      "firewood": "Firewood",
+      "bedLinen": "Bed linen",
+      "towels": "Towels"
+    }
+  }
+}

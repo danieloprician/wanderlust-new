@@ -1,0 +1,28 @@
+{
+  "heading": "De ce să alegi cabana noastră?",
+  "description": "Oferim o experiență completă pentru o evadare perfectă din rutină",
+  "hotTub": {
+    "title": "Ciubar cu apă caldă",
+    "description": "Relaxare totală sub cerul înstelat, în ciubarul tradițional cu apă încălzită pe lemne"
+  },
+  "firepit": {
+    "title": "Semineu & Fire Pit",
+    "description": "Pentru seri memorabile în jurul focului, cu lemne de foc și șemineu interior pentru un plus de confort"
+  },
+  "nature": {
+    "title": "Natură 100%",
+    "description": "Amplasată într-o zonă liniștită, înconjurată de pădure și cu privelişte spectaculoasă"
+  },
+  "family": {
+    "title": "Perfect pentru Familii",
+    "description": "Spațiu generos pentru 8 persoane, curte amenajată și activități pentru copii"
+  },
+  "wifi": {
+    "title": "WiFi",
+    "description": "Daca alegi sa lucrezi de la cabana, avem WiFi puternic pentru a te conecta cu lumea exterioară fără probleme"
+  },
+  "grill": {
+    "title": "Zonă de grătar",
+    "description": "Spațiu acoperit pentru grătar cu masă exterioară și scaune, perfect pentru mese în aer liber și seri la grătar cu familia sau prietenii"
+  }
+}

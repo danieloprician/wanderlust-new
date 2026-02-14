@@ -1,0 +1,69 @@
+{
+  "title": "Politica de Confidențialitate",
+  "description": "Politica de confidențialitate și protecție a datelor personale pentru {siteName}.",
+  "subtitle": "Transparență și protecție pentru datele dumneavoastră",
+  "lastUpdated": "Ultima actualizare: {date}",
+  "breadcrumb": {
+    "home": "Acasă",
+    "current": "Politica de Confidențialitate"
+  },
+  "introduction": {
+    "text": "Protejarea datelor dumneavoastră este importantă pentru noi. Această Politică de Confidențialitate explică ce tipuri de informații colectăm atunci când utilizați site-ul nostru și cum sunt acestea folosite. Site-ul nostru colectează doar cookie-uri și nu colectează date personale precum nume, email, telefon sau alte informații de identificare."
+  },
+  "sections": {
+    "cookies": {
+      "title": "1. Ce sunt cookie-urile?",
+      "content": "Cookie-urile sunt fișiere mici text stocate pe dispozitivul dumneavoastră atunci când vizitați un site web. Acestea ajută la îmbunătățirea experienței de navigare, permițând site-ului să rețină preferințe sau informații anonime despre interacțiunea dumneavoastră cu paginile vizitate."
+    },
+    "typesOfCookies": {
+      "title": "2. Ce cookie-uri utilizăm?",
+      "intro": "Site-ul nostru utilizează exclusiv cookie-uri necesare pentru funcționarea corectă a platformei. Acestea pot include:",
+      "types": {
+        "technical": {
+          "title": "Cookie-uri tehnice / funcționale",
+          "description": "Necesare pentru încărcarea și funcționarea corectă a site-ului."
+        },
+        "analytics": {
+          "title": "Cookie-uri de analiză anonimă",
+          "optional": "(opțional)",
+          "description": "Folosite pentru a înțelege, fără a identifica utilizatorii, modul în care este folosit site-ul (ex.: pagini vizitate, timp petrecut pe site)."
+        }
+      },
+      "note": "Cookie-urile pe care le folosim nu conțin date cu caracter personal și nu permit identificarea utilizatorilor."
+    },
+    "usage": {
+      "title": "3. Cum folosim informațiile colectate?",
+      "intro": "Informațiile colectate prin cookie-uri sunt utilizate exclusiv pentru:",
+      "items": [
+        "Îmbunătățirea funcționalității și performanței site-ului",
+        "Optimizarea experienței utilizatorilor",
+        "Analize statistice anonime (acolo unde este cazul)"
+      ]
+    },
+    "control": {
+      "title": "4. Cum puteți controla cookie-urile?",
+      "intro": "Majoritatea browserelor permit controlul cookie-urilor prin setări precum:",
+      "items": [
+        "Blocarea tuturor cookie-urilor",
+        "Ștergerea cookie-urilor existente",
+        "Primirea unei notificări înainte de salvarea unui cookie"
+      ],
+      "footer": "Pentru a modifica aceste setări, accesați secțiunea `Setări` sau `Preferințe` a browserului dumneavoastră."
+    },
+    "externalLinks": {
+      "title": "5. Linkuri către site-uri externe",
+      "content": "Site-ul nostru poate conține linkuri către site-uri externe. Nu suntem responsabili pentru conținutul sau politicile de confidențialitate ale acestor site-uri."
+    },
+    "changes": {
+      "title": "6. Modificări ale acestei politici",
+      "content": "Ne rezervăm dreptul de a actualiza această Politică de Confidențialitate atunci când este necesar. Orice modificare va fi publicată pe această pagină."
+    },
+    "contact": {
+      "title": "7. Contact",
+      "intro": "Dacă aveți întrebări legate de această politică, ne puteți contacta la:",
+      "email": "Email",
+      "phone": "Telefon",
+      "footer": "Aveți dreptul să depuneți o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP) dacă considerați că drepturile dumneavoastră nu sunt respectate."
+    }
+  }
+}

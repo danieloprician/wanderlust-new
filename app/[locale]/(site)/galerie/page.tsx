@@ -33,6 +33,12 @@ export default async function GaleriePage({ params: { locale } }: { params: { lo
     { name: tCommon('gallery'), path: '/galerie' },
   ];
 
+  const categoryLabels = {
+    all: t('categories.all'),
+    exterior: t('categories.exterior'),
+    interior: t('categories.interior'),
+  };
+
   return (
     <>
       <JsonLd data={generateBreadcrumbSchema(breadcrumbs)} />
@@ -69,7 +75,7 @@ export default async function GaleriePage({ params: { locale } }: { params: { lo
       {/* Gallery */}
       <section className="section">
         <div className="container-custom">
-          <Gallery columns={3} showFilters={true} />
+          <Gallery columns={3} showFilters={true} categoryLabels={categoryLabels} />
         </div>
       </section>
 

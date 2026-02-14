@@ -429,6 +429,11 @@
   "gallery": {
     "title": "Photo Gallery",
     "subtitle": "Discover the beauty of our cottage",
+    "categories": {
+      "all": "All",
+      "exterior": "Exterior",
+      "interior": "Interior"
+    },
     "authenticity": {
       "title": "100% Authentic Photos",
       "description": "All the photos you see are real, taken at our cottage. No exaggerated filters or tricks - what you see is exactly what you'll find when you get here!"

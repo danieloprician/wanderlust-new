@@ -1,0 +1,28 @@
+{
+  "heading": "Why choose our cottage?",
+  "description": "We offer a complete experience for a perfect escape from routine",
+  "hotTub": {
+    "title": "Hot Tub",
+    "description": "Total relaxation under the starry sky in a traditional wood-heated hot tub"
+  },
+  "firepit": {
+    "title": "Fireplace & Fire Pit",
+    "description": "For memorable evenings around the fire, with firewood and indoor fireplace for extra comfort"
+  },
+  "nature": {
+    "title": "100% Nature",
+    "description": "Located in a quiet area, surrounded by forest with spectacular views"
+  },
+  "family": {
+    "title": "Perfect for Families",
+    "description": "Spacious accommodation for 8 people, landscaped yard and activities for children"
+  },
+  "wifi": {
+    "title": "WiFi",
+    "description": "If you choose to work from the cottage, we have strong WiFi to connect with the outside world without any problems"
+  },
+  "grill": {
+    "title": "BBQ Area",
+    "description": "Covered BBQ area with outdoor table and chairs, perfect for outdoor dining and barbecue evenings with family or friends"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "title": "About the cottage",
+  "subtitle": "An authentic refuge with modern amenities in the heart of nature",
+  "story": {
+    "heading": "Our story",
+    "paragraph1": "was built with the idea of offering an authentic experience in nature, without compromising modern comfort. Located in the heart of {region}, our cottage is the result of a passion for traditional Romanian architecture and the desire to create a space where people can reconnect with nature.",
+    "paragraph2": "Completely renovated in 2024, the cottage combines traditional elements - solid wood, natural stone, rustic fireplace - with the modern facilities necessary for a comfortable stay: central heating, WiFi, fully equipped kitchen.",
+    "paragraph3": "We are proud to offer our guests not just a place to stay, but a complete experience: the hot tub under the starry sky, the sauna after a day in the mountains, the silence of the forest and the fresh mountain air."
+  },
+  "amenities": {
+    "heading": "Amenities & Facilities",
+    "relaxation": "Relaxation",
+    "kitchen": "Kitchen",
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "entertainment": "Entertainment",
+    "outdoor": "Outdoor",
+    "items": {
+      "relaxation": ["Hot tub", "Finnish sauna", "Stone fireplace", "Terrace with view"],
+      "kitchen": ["Stove", "Oven", "Refrigerator", "Dishwasher", "Complete utensils", "Coffee maker"],
+      "bedrooms": ["3 bedrooms", "Beds for 8 people", "Premium linen", "Spacious wardrobes"],
+      "bathrooms": ["2 complete bathrooms", "Hydromassage shower", "Underfloor heating", "Towels included"],
+      "entertainment": ["Smart TV", "High-speed WiFi", "Audio system", "Board games"],
+      "outdoor": ["Barbecue", "Garden furniture", "Swings for children", "Private parking", "Play area"]
+    }
+  },
+  "forWhom": {
+    "heading": "Who is the cottage suitable for?",
+    "families": {
+      "title": "Families with Children",
+      "description": "Spacious area, safe yard, games for children and complete facilities for the comfort of the whole family."
+    },
+    "friends": {
+      "title": "Groups of Friends",
+      "description": "Perfect for reunions, relaxing weekends or private parties in nature."
+    },
+    "couples": {
+      "title": "Romantic Couples",
+      "description": "Intimacy, quiet, hot tub under the stars and spectacular sunsets for unforgettable moments."
+    },
+    "events": {
+      "title": "Special Events",
+      "description": "Birthdays, marriage proposals, team-building or celebrations in private and exclusive setting."
+    }
+  },
+  "floorPlan": {
+    "heading": "Room Layout",
+    "groundFloor": "Ground Floor",
+    "firstFloor": "First Floor",
+    "outdoor": "Outdoor",
+    "rooms": {
+      "mainLiving": {
+        "label": "Main Living:",
+        "description": "Sofa bed, fireplace, smart TV, terrace access (35m²)"
+      },
+      "kitchen": {
+        "label": "Kitchen:",
+        "description": "Fully equipped, table for 8 people, bar (25m²)"
+      },
+      "bathroom1": {
+        "label": "Bathroom:",
+        "description": "Shower, WC, sink, underfloor heating (6m²)"
+      },
+      "bedroom1": {
+        "label": "Bedroom 1:",
+        "description": "Double bed, wardrobe, direct garden access (18m²)"
+      },
+      "bedroom2": {
+        "label": "Bedroom 2:",
+        "description": "Double bed, desk, balcony with view (20m²)"
+      },
+      "bedroom3": {
+        "label": "Bedroom 3:",
+        "description": "2 bunk beds, children's play area (16m²)"
+      },
+      "bathroom2": {
+        "label": "Bathroom:",
+        "description": "Bathtub, WC, sink, washing machine (7m²)"
+      },
+      "hotTub": {
+        "label": "Hot Tub:",
+        "description": "Wood-heated, capacity 6 people"
+      },
+      "sauna": {
+        "label": "Sauna:",
+        "description": "Finnish, capacity 4 people, changing rooms"
+      },
+      "barbecue": {
+        "label": "Barbecue:",
+        "description": "Covered area, outdoor table, chairs"
+      },
+      "garden": {
+        "label": "Garden:",
+        "description": "500m², swings, children's playhouse, parking for 3 cars"
+      }
+    }
+  },
+  "cta": {
+    "heading": "Convinced? Book Now!",
+    "description": "Don't let someone else take your perfect weekend. Check availability and book today.",
+    "checkAvailability": "Check availability",
+    "viewGallery": "See more photos"
+  }
+}

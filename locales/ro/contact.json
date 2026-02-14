@@ -1,0 +1,41 @@
+{
+  "title": "Contactează-ne",
+  "subtitle": "Suntem aici să răspundem la toate întrebările tale",
+  "phone": "Telefon",
+  "phoneSchedule": "Luni - Duminică, 9:00 - 21:00",
+  "email": "Email",
+  "emailResponse": "Răspundem în max 24h",
+  "address": "Adresă",
+  "mapHeading": "Locația Pe Hartă",
+  "gpsCoordinates": "Coordonate GPS:",
+  "directionsHeading": "Cum ajungi la cabană",
+  "byCar": {
+    "title": "Cu Mașina",
+    "fromBucharest": "Din Sibiu:",
+    "steps": [
+      "Mergi 28 km pe DN1/E68 spre Brașov (≈30 min).",
+      "Traversezi Avrigul, ții drumul principal și urmezi indicatoarele spre Valea Avrigului / Poiana Neamțului.",
+      "Urcare pe Valea Avrigului",
+      "Intri pe strada Fatanii și continui ~6–7 km pe drum asfaltat + forestier."
+    ],
+    "notes": "* Ultimii 500m este pe drum forestier, dar este întreținut regulat și accesibil cu mașini normale.",
+    "important": "Important:",
+    "importantNote": "Drumul este accesibil cu orice tip de vehicul. Iarna recomandăm cauciucuri de iarnă/lanțuri în caz de ninsoare abundentă."
+  },
+  "byPublicTransport": {
+    "title": "Cu Transportul în Comun",
+    "train": "Tren: Până la gara Brașov, apoi taxi/transfer (15 km, ~20 min)",
+    "bus": "Autobuz: Curse regulate București - Brașov, stație în centru",
+    "note": "* Putem organiza transfer de la gară/autogară la cerere (cost suplimentar)"
+  },
+  "social": {
+    "heading": "Urmărește-ne pe social media",
+    "description": "Descoperă cele mai recente update-uri, oferte speciale și poze frumoase din zonă"
+  },
+  "cta": {
+    "heading": "Hai să planificăm sejurul tău!",
+    "description": "Dacă ai întrebări suplimentare sau vrei să rezervi direct, suntem la un telefon distanță",
+    "bookingForm": "Rezervă acum ",
+    "callNow": "Sună acum"
+  }
+}

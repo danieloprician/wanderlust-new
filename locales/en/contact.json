@@ -1,0 +1,40 @@
+{
+  "title": "Contact Us",
+  "subtitle": "We are here to answer all your questions",
+  "phone": "Phone",
+  "phoneSchedule": "Monday - Sunday, 9:00 AM - 9:00 PM",
+  "email": "Email",
+  "emailResponse": "We respond within 24h",
+  "address": "Address",
+  "mapHeading": "Location on Map",
+  "gpsCoordinates": "GPS Coordinates:",
+  "directionsHeading": "How to get to the cottage",
+  "byCar": {
+    "title": "By Car",
+    "fromBucharest": "From Bucharest (approx. 170 km, 3 hours):",
+    "steps": [
+      "A1 Highway to Brașov exit",
+      "DN73A towards Fundata/Bran",
+      "Follow GPS directions to the cottage",
+      "Last section: 3km forest road (accessible year-round)"
+    ],
+    "important": "Important:",
+    "importantNote": "The road is accessible with any type of vehicle. In winter, we recommend winter tires/chains in case of heavy snowfall."
+  },
+  "byPublicTransport": {
+    "title": "By Public Transport",
+    "train": "Train: To Brașov station, then taxi/transfer (15 km, ~20 min)",
+    "bus": "Bus: Regular routes Bucharest - Brașov, stop in the center",
+    "note": "* We can arrange transfer from station/bus terminal on request (extra cost)"
+  },
+  "social": {
+    "heading": "Follow us on social media",
+    "description": "Discover the latest updates, special offers and beautiful photos from the area"
+  },
+  "cta": {
+    "heading": "Let's plan your stay!",
+    "description": "If you have additional questions or want to book directly, we are just a phone call away",
+    "bookingForm": "Book now",
+    "callNow": "Call now"
+  }
+}

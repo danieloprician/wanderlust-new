@@ -1,0 +1,19 @@
+{
+  "title": "Photo Gallery",
+  "subtitle": "Discover the beauty of our cottage",
+  "authenticity": {
+    "title": "100% Authentic Photos",
+    "description": "All the photos you see are real, taken at our cottage. No exaggerated filters or tricks - what you see is exactly what you'll find when you get here!"
+  },
+  "categories": {
+    "all": "All",
+    "exterior": "Exterior",
+    "interior": "Interior"
+  },
+  "cta": {
+    "heading": "Ready to experience this in person?",
+    "description": "Book your stay now and create your own unforgettable memories",
+    "checkAvailability": "Check availability",
+    "contactUs": "Contact Us"
+  }
+}

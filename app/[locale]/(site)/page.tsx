@@ -38,8 +38,15 @@ export default async function HomePage({ params: { locale } }: { params: { local
   const tCommon = await getTranslations({ locale, namespace: 'common' });
   const tHero = await getTranslations({ locale, namespace: 'hero' });
   const tHome = await getTranslations({ locale, namespace: 'home' });
+  const tGallery = await getTranslations({ locale, namespace: 'gallery' });
   
   const breadcrumbs = [{ name: tCommon('home'), path: '/' }];
+
+  const categoryLabels = {
+    all: tGallery('categories.all'),
+    exterior: tGallery('categories.exterior'),
+    interior: tGallery('categories.interior'),
+  };
 
   return (
     <>
@@ -80,7 +87,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
               {tHome('gallery.description')}
             </p>
           </div>
-          <Gallery columns={3} showFilters={false} />
+          <Gallery columns={3} showFilters={false} categoryLabels={categoryLabels} />
           <div className="text-center mt-8">
             <Link href="/galerie" className="btn-primary">
               {tHome('gallery.viewAll')}

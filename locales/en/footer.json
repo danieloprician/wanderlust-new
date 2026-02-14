@@ -1,0 +1,25 @@
+{
+  "description": "Cottage for rent in {region}, {country}. Unique experience in nature, with premium amenities for your comfort.",
+  "address": "Address:",
+  "phone": "Phone:",
+  "email": "Email:",
+  "explore": {
+    "heading": "Explore",
+    "cabin": "Cottage",
+    "gallery": "Gallery",
+    "rates": "Rates",
+    "reservations": "Reservations"
+  },
+  "info": {
+    "heading": "Information",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy"
+  },
+  "social": {
+    "heading": "Follow us"
+  },
+  "copyright": "All rights reserved.",
+  "tagline": "Developed with ❤️ for unique experiences in nature"
+}
