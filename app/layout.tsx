@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { siteConfig } from '@/lib/seo/config';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import { Analytics } from "@vercel/analytics/next"
 
 // Prevent Font Awesome from auto-adding CSS since we did it manually above
 config.autoAddCss = false;

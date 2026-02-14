@@ -30,11 +30,6 @@ const nextConfig = {
   // Note: Security headers not supported with static export
   // Configure in staticwebapp.config.json instead
 
-  // PWA manifest
-  async rewrites() {
-    return [];
-  },
-
   // Suppress next-intl webpack warnings
   webpack: (config, { isServer }) => {
     config.ignoreWarnings = [
