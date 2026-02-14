@@ -6,6 +6,10 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 const nextConfig = {
   reactStrictMode: true,
   
+  // Static export is disabled by default due to i18n middleware
+  // To enable static export, see DEPLOY_STATIC.md for instructions
+  // output: 'export',
+  
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -17,6 +21,7 @@ const nextConfig = {
         hostname: 'placehold.co',
       },
     ],
+    // unoptimized: true, // Uncomment for static export
   },
 
   // ISR configuration

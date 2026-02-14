@@ -247,44 +247,39 @@ Caută placeholder-urile `{{CABIN_NAME}}`, `{{REGION}}` etc. și înlocuiește-l
 
 ## 🌐 Deployment
 
-### Vercel (Recomandat)
+**📘 Pentru ghidul complet de deployment cu pași detaliați, vezi [DEPLOY_STATIC.md](./DEPLOY_STATIC.md)**
 
-1. Push codu pe GitHub/GitLab/Bitbucket
-2. Conectează repository în [Vercel](https://vercel.com)
-3. Setează variabilele de mediu (`.env.local`)
-4. Deploy automat la fiecare push
+Site-ul este configurat pentru **static export** și poate fi deployment pe orice platformă de hosting static.
 
-```bash
-# Sau deploy manual
-npx vercel
-```
+### Opțiuni recomandate:
 
-### Azure Static Web Apps
+| Platformă | Dificultate | Timp Setup | Documentație |
+|-----------|-------------|------------|--------------|
+| **Vercel** | ⭐ Foarte ușor | 3 min | [DEPLOY_VERCEL.md](./DEPLOY_VERCEL.md) |
+| **GitHub Pages** | ⭐⭐ Ușor | 5 min | [DEPLOY_STATIC.md](./DEPLOY_STATIC.md#-deployment-pe-github-pages) |
+| **Netlify** | ⭐ Foarte ușor | 3 min | [DEPLOY_STATIC.md](./DEPLOY_STATIC.md#-deployment-pe-netlify) |
+| **Azure Static Web Apps** | ⭐⭐⭐ Mediu | 10 min | [DEPLOY_AZURE.md](./DEPLOY_AZURE.md) |
 
-1. Creează Static Web App în Azure Portal
-2. Configurează GitHub Actions (generat automat)
-3. Adaugă variabile în GitHub Secrets
-4. Push pe `main` -> deploy automat
+### Quick Start - Vercel (Recomandat pentru beginners)
 
-### Netlify
+1. Push codul pe GitHub
+2. Mergi pe [vercel.com](https://vercel.com) și conectează repository-ul
+3. Adaugă variabilele de mediu din `.env.local`
+4. Click "Deploy" - gata! 🎉
 
-1. Conectează repository în [Netlify](https://netlify.com)
-2. Build command: `npm run build`
-3. Publish directory: `.next`
-4. Adaugă variabile de mediu
-5. Deploy
-
-### Build Static Export (Opțional)
-
-Pentru hosting static complet:
+### Build Local
 
 ```bash
-# Modifică next.config.mjs
-output: 'export'
+# Instalează dependințele
+npm install
 
-# Build
+# Build pentru producție
 npm run build
+
+# Fișierele statice vor fi în folder-ul `out/`
 ```
+
+Pentru deployment manual sau alte platforme, vezi [DEPLOY_STATIC.md](./DEPLOY_STATIC.md).
 
 ---
 
