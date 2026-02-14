@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
 import { generatePageMetadata, siteConfig } from '@/lib/seo/config';
 import { JsonLd, generateBreadcrumbSchema, generatePlaceSchema } from '@/lib/seo/schema';
@@ -9,16 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot, faCar, faBus, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { faAirbnb, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import BookNowButton from '@/components/BookNowButton';
-
-// Dynamically import Map component with SSR disabled
-const Map = dynamic(() => import('@/components/Map'), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-[400px] rounded-lg bg-surface flex items-center justify-center">
-      <div className="animate-pulse text-text-muted">Loading map...</div>
-    </div>
-  ),
-});
+import MapWrapper from '@/components/MapWrapper';
 
 export function generateStaticParams() {
   return [
@@ -146,7 +136,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
-            <Map
+            <MapWrapper
               lat={siteConfig.geo.lat}
               lng={siteConfig.geo.lng}
               zoom={14}
